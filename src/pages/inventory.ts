@@ -40,6 +40,19 @@ const content: PageContent = {
         { 'en-US': 'Rare to common', 'zh-CN': '品质从稀有到常见', 'reuse': true },
         { 'en-US': 'Common to rare', 'zh-CN': '品质从常见到稀有', 'reuse': true },
         { 'en-US': 'Rooms', 'zh-CN': '按激活状态', 'reuse': true },
+        { 'en-US': 'CPU Unlock', 'zh-CN': 'CPU 解锁', 'reuse': true },
+        { 'en-US': 'Pixels', 'zh-CN': 'Pixel', 'reuse': true },
+        { 'en-US': 'Access keys', 'zh-CN': '访问密钥', 'reuse': true },
+        {
+            'en-US': /Sale! \d+% discount on all items until .+ in our Item Shop/,
+            'zh-CN': (text: string) => text
+                .replace(/^Sale! /, '物品商店所有物品限时 ')
+                .replace(' discount on all items until ', '% 折扣，活动截至 ')
+                .replace(' in our Item Shop', ''),
+            'reuse': true
+        },
+        { 'en-US': 'You have no decorations yet', 'zh-CN': '您还没有装饰物', 'reuse': true },
+        { 'en-US': 'Drag to take from Steam', 'zh-CN': '从 Steam 拖拽物品至此', 'reuse': true },
         // 目标房间
         { 'en-US': 'Target room:', 'zh-CN': '目标房间:', 'reuse': true },
         // 中央抽奖区域

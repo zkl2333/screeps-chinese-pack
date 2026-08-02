@@ -61,6 +61,12 @@ const content: PageContent = {
             'zh-CN': '在永恒世界游玩您需要一个 Steam 许可或完全解锁的 CPU 权限。'
         },
         { 'en-US': 'Screeps on Steam', 'zh-CN': '在 Steam 上的 Screeps' },
+        { 'en-US': 'Steam license', 'zh-CN': 'Steam 许可证', 'reuse': true },
+        {
+            'en-US': 'Steam game license includes limited 20 CPU with no expiration',
+            'zh-CN': 'Steam 游戏许可证包含永久有效的 20 CPU',
+            'reuse': true
+        },
         { 'en-US': 'Gives limited 20 CPU indefinitely', 'zh-CN': '永远拥有有限的20 CPU' },
         { 'en-US': 'CPU Unlocks', 'zh-CN': '解锁 CPU' },
         { 'en-US': 'Activates full unlocked CPU for 1 day each', 'zh-CN': '每一个可以激活一天完全解锁的 CPU 权限' },
@@ -68,6 +74,10 @@ const content: PageContent = {
         { 'en-US': 'Enter your coupon code', 'zh-CN': '输入您的优惠码' },
         { 'en-US': 'Code', 'zh-CN': '优惠码' },
         { 'en-US': 'Required Field', 'zh-CN': '必填' },
+        { 'en-US': 'Start from a clean slate', 'zh-CN': '从零开始', 'reuse': true },
+        { 'en-US': 'on equal footing with other players', 'zh-CN': '与其他玩家在同一起点', 'reuse': true },
+        { 'en-US': 'and compete for valuable rewards.', 'zh-CN': '争夺丰厚奖励。', 'reuse': true },
+        { 'en-US': 'FREE ENTRY', 'zh-CN': '免费参加', 'reuse': true },
         { 'en-US': 'Ok', 'zh-CN': '确定' },
         { 'en-US': 'Cancel', 'zh-CN': '取消' }
     ]

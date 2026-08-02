@@ -12,12 +12,20 @@ const content: PageContent = {
         { 'en-US': 'World', 'zh-CN': '世界', 'reuse': true },
         { 'en-US': 'Market', 'zh-CN': '市场', 'reuse': true },
         { 'en-US': 'Inventory', 'zh-CN': '库存', 'reuse': true },
+        { 'en-US': 'Switch to', 'zh-CN': '切换至', 'reuse': true },
+        { 'en-US': 'Season world', 'zh-CN': '赛季世界', 'reuse': true },
+        { 'en-US': 'Arena', 'zh-CN': '竞技场', 'reuse': true },
 
         { 'en-US': 'Documentation', 'zh-CN': '文档', 'reuse': true },
         { 'en-US': 'Training', 'zh-CN': '练习', 'reuse': true },
         { 'en-US': 'Public Test Realm', 'zh-CN': '公共测试服务器', 'reuse': true },
+        { 'en-US': 'Seasons Overview', 'zh-CN': '赛季总览', 'reuse': true },
+        { 'en-US': 'Simulation', 'zh-CN': '模拟器', 'reuse': true },
+        { 'en-US': 'Tutorial', 'zh-CN': '教程', 'reuse': true },
 
         { 'en-US': 'Messages', 'zh-CN': '消息', 'reuse': true },
+        { 'en-US': 'Chat', 'zh-CN': '聊天', 'reuse': true },
+        { 'en-US': 'News', 'zh-CN': '新闻', 'reuse': true },
         { 'en-US': 'Report a problem', 'zh-CN': '问题上报', 'reuse': true },
 
         { 'en-US': 'Blog', 'zh-CN': '博客', 'reuse': true },
@@ -25,6 +33,14 @@ const content: PageContent = {
 
         { 'en-US': 'Terms of Service', 'zh-CN': '服务条款', 'reuse': true },
         { 'en-US': 'Privacy policy', 'zh-CN': '隐私政策', 'reuse': true },
+        { 'en-US': 'Privacy Policy', 'zh-CN': '隐私政策', 'reuse': true },
+
+        { 'en-US': 'SALE!', 'zh-CN': '促销！', 'reuse': true },
+        { 'en-US': 'NEW!', 'zh-CN': '新品！', 'reuse': true },
+        { 'en-US': 'Item Shop', 'zh-CN': '物品商店', 'reuse': true },
+        { 'en-US': '1 hour', 'zh-CN': '1 小时', 'reuse': true },
+        { 'en-US': '24 hours', 'zh-CN': '24 小时', 'reuse': true },
+        { 'en-US': '7 days', 'zh-CN': '7 天', 'reuse': true },
 
         { 'en-US': 'Respawn', 'zh-CN': '重生', 'reuse': true },
         { 'en-US': 'View profile', 'zh-CN': '查看资料', 'reuse': true },
@@ -34,6 +50,7 @@ const content: PageContent = {
         { 'en-US': 'New update is available', 'zh-CN': '有可用的更新' },
         { 'en-US': 'RELOAD', 'zh-CN': '重新加载' },
         { 'en-US': 'Your CPU is limited', 'zh-CN': '您的 CPU 受限' },
+        { 'en-US': 'Unlock your CPU here', 'zh-CN': '在此解锁 CPU', 'reuse': true },
         { 'en-US': 'Order a subscription here', 'zh-CN': '点此购买一个订阅 ' },
 
         // 登陆弹窗

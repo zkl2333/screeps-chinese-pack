@@ -82,7 +82,18 @@ const content: PageContent = {
             'en-US': 'By submitting this information you acknowledge that you have read and agree to be bound by the',
             'zh-CN': '提交这些信息，即表示您确认您已阅读并同意 '
         },
-        { 'en-US': 'Register', 'zh-CN': '注册' }
+        { 'en-US': 'Register', 'zh-CN': '注册' },
+
+        // 重置密码
+        { 'en-US': 'Password Reset', 'zh-CN': '重置密码' },
+        { 'en-US': 'Please specify your account e-mail address.', 'zh-CN': '请输入您账户的邮箱地址。' },
+        { 'en-US': 'Send', 'zh-CN': '发送' },
+        { 'en-US': 'This e-mail does not exist.', 'zh-CN': '邮箱不存在。', 'reuse': true },
+        {
+            'en-US': 'We have sent an e-mail to your account address with the instructions of how to change your password.',
+            'zh-CN': '我们已向您的账户地址发送了一封电子邮件，其中包含如何更改密码的说明。',
+            'reuse': true
+        }
     ]
 }
 

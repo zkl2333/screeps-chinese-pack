@@ -46,6 +46,18 @@ const content: PageContent = {
         { 'en-US': 'Global Power Level', 'zh-CN': '全局超能等级' },
         { 'en-US': 'Manage Power Creeps', 'zh-CN': '管理 power creep' },
         { 'en-US': 'Stats Period', 'zh-CN': '统计时长', 'reuse': true },
+        { 'en-US': 'Room', 'zh-CN': '房间', 'reuse': true },
+        { 'en-US': /Rooms: \d+/, 'zh-CN': (text: string) => text.replace('Rooms:', '房间数：'), 'reuse': true },
+        {
+            'en-US': /No rank in .+$/,
+            'zh-CN': (text: string) => `${text.replace('No rank in ', '暂无排名（')}）`,
+            'reuse': true
+        },
+        {
+            'en-US': /\d+ room on shard\d+/,
+            'zh-CN': (text: string) => text.replace(/(\d+) room on (shard\d+)/, '$1 个房间，位于 $2'),
+            'reuse': true
+        },
 
         { 'en-US': /Graph(:|)/, 'zh-CN': '图表', 'reuse': true },
         { 'en-US': 'Owner:', 'zh-CN': '所有者:' },
