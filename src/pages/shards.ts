@@ -1,7 +1,7 @@
 const content: PageContent = {
     hashs: ['#!/shards'],
     content: [
-        { 'en-US': 'Shards', 'zh-CN': '位面 Shards' },
+        { 'en-US': 'Shards', 'zh-CN': '分片' },
         {
             'selector': '._back',
             'zh-CN': (el: HTMLElement) => {
@@ -9,8 +9,8 @@ const content: PageContent = {
             }
         },
 
-        { 'en-US': 'World shards are isolated from each other and run your code separately.', 'zh-CN': ' 在世界中的不同位面是独立的，并且会分开运行您的代码。' },
-        { 'en-US': 'Your creeps can travel between them using special portals.', 'zh-CN': '通过使用特殊的传送门。您的 creep 可以在不同位面间穿行。' },
+        { 'en-US': 'World shards are isolated from each other and run your code separately.', 'zh-CN': '各个世界分片彼此独立，并分别运行你的代码。' },
+        { 'en-US': 'Your creeps can travel between them using special portals.', 'zh-CN': '你的 Creep 可通过特殊传送门在不同分片之间穿行。' },
         { 'en-US': 'Learn more', 'zh-CN': '了解更多' },
 
         { 'en-US': 'claimable rooms', 'zh-CN': '可占领房间', 'reuse': true },
@@ -26,7 +26,7 @@ const content: PageContent = {
         { 'en-US': 'Cancel', 'zh-CN': '取消' },
 
         // 分配确认提示
-        { 'en-US': 'You\'re going to re-assign your CPU to the following shards:', 'zh-CN': '您将要重新分配您的 CPU 到以下 shard：', 'reuse': true },
+        { 'en-US': 'You\'re going to re-assign your CPU to the following shards:', 'zh-CN': '你将把 CPU 重新分配给以下分片：', 'reuse': true },
         { 'en-US': 'You will not be able to change these settings in the next', 'zh-CN': '在接下来的 ', 'reuse': true },
         { 'en-US': /hours/, 'zh-CN': (text: string) => text.replace('hours', '小时里您将无法再次编辑该配置'), 'reuse': true },
         { 'en-US': 'Do you want to proceed?', 'zh-CN': '确定要继续么？', 'reuse': true },

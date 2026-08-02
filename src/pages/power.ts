@@ -181,7 +181,7 @@ const content: PageContent = {
         { 'en-US': 'for this creep?', 'zh-CN': ' 为该 creep 提升等级么？', 'reuse': true },
         {
             'en-US': 'You can activate a 24-hour experimentation period to work on your Power Creeps builds without losing levels.                 During an experimentation period:',
-            'zh-CN': '通过激活一个 24 小时的实验期，您可以在不消耗 GPL 等级的情况下创建一个新的 Power Creep。在实验期间：',
+            'zh-CN': '开启 24 小时实验期后，你可以测试 Power Creep 的配置而不会损失等级。实验期间：',
             'reuse': true
         },
         {

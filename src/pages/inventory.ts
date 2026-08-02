@@ -29,19 +29,19 @@ const content: PageContent = {
         { 'en-US': 'Winter', 'zh-CN': '凛冬', 'reuse': true },
         { 'en-US': 'Alien', 'zh-CN': '异域', 'reuse': true },
         { 'en-US': 'Sea', 'zh-CN': '海洋', 'reuse': true },
-        { 'en-US': 'Fire', 'zh-CN': '火热', 'reuse': true },
+        { 'en-US': 'Fire', 'zh-CN': '火焰', 'reuse': true },
         { 'en-US': 'Desert', 'zh-CN': '沙漠', 'reuse': true },
-        { 'en-US': 'Mono', 'zh-CN': '独行', 'reuse': true },
+        { 'en-US': 'Mono', 'zh-CN': '单色', 'reuse': true },
         { 'en-US': 'Custom Color', 'zh-CN': '自定义颜色', 'reuse': true },
         // 排序选择框
         { 'en-US': 'Sort', 'zh-CN': '排序', 'reuse': true },
-        { 'en-US': 'New to old', 'zh-CN': '获取时间从早到晚', 'reuse': true },
-        { 'en-US': 'Old to new', 'zh-CN': '获取时间从晚到早', 'reuse': true },
+        { 'en-US': 'New to old', 'zh-CN': '从新到旧', 'reuse': true },
+        { 'en-US': 'Old to new', 'zh-CN': '从旧到新', 'reuse': true },
         { 'en-US': 'Rare to common', 'zh-CN': '品质从稀有到常见', 'reuse': true },
         { 'en-US': 'Common to rare', 'zh-CN': '品质从常见到稀有', 'reuse': true },
         { 'en-US': 'Rooms', 'zh-CN': '按激活状态', 'reuse': true },
         { 'en-US': 'CPU Unlock', 'zh-CN': 'CPU 解锁', 'reuse': true },
-        { 'en-US': 'Pixels', 'zh-CN': 'Pixel', 'reuse': true },
+        { 'en-US': 'Pixels', 'zh-CN': '像素', 'reuse': true },
         { 'en-US': 'Access keys', 'zh-CN': '访问密钥', 'reuse': true },
         {
             'en-US': /Sale! \d+% discount on all items until .+ in our Item Shop/,
@@ -58,7 +58,7 @@ const content: PageContent = {
         // 中央抽奖区域
         {
             'en-US': 'Pixelization is available',
-            'zh-CN': '使用 pixel 来抽取装饰物',
+            'zh-CN': '可将像素转化为装饰物',
             'reuse': true
         },
         { 'en-US': 'You need', 'zh-CN': '您需要\u00A0', 'reuse': true },
@@ -69,8 +69,8 @@ const content: PageContent = {
             'reuse': true
         },
         { 'en-US': 'Restrict by theme', 'zh-CN': '限定主题', 'reuse': true },
-        { 'en-US': 'How to get pixels?', 'zh-CN': '如何获取 pixel?', 'reuse': true },
-        { 'en-US': 'Pixelization progress', 'zh-CN': 'pixel 收集进度', 'reuse': true },
+        { 'en-US': 'How to get pixels?', 'zh-CN': '如何获取像素？', 'reuse': true },
+        { 'en-US': 'Pixelization progress', 'zh-CN': '像素收集进度', 'reuse': true },
         // 侧边栏 Steam 交互相关
         { 'en-US': 'error connecting to Steam', 'zh-CN': '连接至 Steam 时发生错误', 'reuse': true },
         { 'en-US': 'Drag to Transfer to Steam', 'zh-CN': '拖拽物品转移到 Steam 库存', 'reuse': true },
@@ -80,9 +80,9 @@ const content: PageContent = {
             'reuse': true
         },
         { 'en-US': 'Transfer to Steam', 'zh-CN': '转移到 Steam 库存', 'reuse': true },
-        { 'en-US': 'Convert to pixels', 'zh-CN': '分解为 pixel', 'reuse': true },
-        { 'en-US': 'Convert to Pixels', 'zh-CN': '分解为 pixel', 'reuse': true },
-        { 'en-US': 'Are you sure you want to convert decoration(s) back to pixels?', 'zh-CN': '确定要将装饰物们分解为pixel吗？', 'reuse': true },
+        { 'en-US': 'Convert to pixels', 'zh-CN': '分解为像素', 'reuse': true },
+        { 'en-US': 'Convert to Pixels', 'zh-CN': '分解为像素', 'reuse': true },
+        { 'en-US': 'Are you sure you want to convert decoration(s) back to pixels?', 'zh-CN': '确定要将这些装饰物分解为像素吗？', 'reuse': true },
         { 'en-US': 'You', 'zh-CN': '你', 'reuse': true },
         { 'en-US': 'can not', 'zh-CN': '将不能', 'reuse': true },
         { 'en-US': 'use decoration in the future.', 'zh-CN': '继续使用此装饰物', 'reuse': true },

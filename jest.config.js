@@ -9,6 +9,9 @@ module.exports = {
     transform: {
         '^.+\\.tsx?$': 'ts-jest'
     },
-    moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/src/' }),
+    moduleNameMapper: {
+        ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/src/' }),
+        '^utils$': '<rootDir>/src/utils'
+    },
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
 }
