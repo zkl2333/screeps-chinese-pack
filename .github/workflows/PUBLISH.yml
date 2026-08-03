@@ -1,0 +1,37 @@
+name: PUBLISH
+
+# 推送 main 分支后,自动构建并将 dist/main.js 强制推送到 dist 分支,
+# Greasyfork 通过"同步"功能(仓库 zkl2333/screeps-chinese-pack, 分支 dist, 路径 dist/main.js)
+# 拉取该文件,配合仓库 Webhook 实现全自动发布。
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Push dist to dist branch
+        run: |
+          git config user.name "CI Publisher"
+          git config user.email "ci-publisher@users.noreply.github.com"
+          git add -f dist/main.js
+          git commit -m "build: publish dist/main.js" || { echo "dist/main.js 无变化"; exit 0; }
+          git push --force origin HEAD:dist
