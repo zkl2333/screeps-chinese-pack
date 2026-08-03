@@ -2,6 +2,8 @@
 
 本文档用于统一 `screeps-chinese-pack` 的中文翻译。新增或修改词条时，优先使用本表中的写法。
 
+建筑、资源及资源 UI 的详细词表见：[建筑与资源术语表](./buildings-resources-terminology.md)。
+
 ## 使用原则
 
 - **代码、API、常量和类名保留官方英文写法**，例如 `Creep`、`Spawn`、`Room`、`Memory`、`Game`、`CPU`、`tick`、`FIND_SOURCES`。
@@ -29,8 +31,8 @@
 | container | 容器 | `Container` 结构名称可保留 `Container`；普通 UI 说明译为“容器”。 |
 | link / Link | Link | 建筑名称保留 `Link`，避免与普通链接混淆。 |
 | tower / Tower | 防御塔 | `Tower` 建筑名称在 UI 中文中译为“防御塔”；API 和代码保留 `Tower`。 |
-| rampart / Rampart | 城墙 | `Rampart` 结构统一译为“城墙”。 |
-| wall / Wall | 墙 / 墙壁 | 普通说明使用“墙壁”；结构名称或与 `Rampart` 对照时使用“墙”。 |
+| rampart / Rampart | Rampart | `Rampart` 结构和普通说明均保留官方术语。 |
+| wall / Wall | 墙 | 普通说明和建筑名称统一使用“墙”；不要译为“墙壁”。 |
 | road / Road | 道路 | 普通说明和 UI 统一译为“道路”。 |
 | construction site | 建筑工地 | 统一使用“建筑工地”，不要在中文句子中保留 `construction site`。 |
 | flag / Flag | 旗帜 | 普通说明译为“旗帜”；API 和代码保留 `Flag`。 |
@@ -62,6 +64,9 @@
 | 英文/术语 | 统一写法 | 使用说明 |
 | --- | --- | --- |
 | shard | 分片 | 不使用“位面”。 |
+| portal / Portal | 传送门 | 连接房间或分片的特殊对象；`Portal` 作为代码/API 名称保留。 |
+| inter-shard portal | 跨分片传送门 | 连接不同分片的传送门。 |
+| intra-shard portal | 分片内传送门 | 连接同一分片内不同房间的传送门。 |
 | sector | 分区 | 地图和入侵者说明统一使用“分区”。 |
 | Novice Area | 新手区 | 首次出现可写“新手区（Novice Area）”。 |
 | Persistent World | 永恒世界 | 与 `Seasonal World` 对应。 |

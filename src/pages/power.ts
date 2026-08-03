@@ -116,19 +116,19 @@ const content: PageContent = {
         // SHIELD
         {
             'en-US': 'Create a temporary non-repairable rampart structure on the same square with',
-            'zh-CN': '在相同位置上创造一个临时的、不可修复的城墙，其血量为 ',
+            'zh-CN': '在相同位置上创造一个临时的、不可修复的 Rampart，其血量为 ',
             'reuse': true
         },
         {
             'en-US': 'hits.\nCannot be used on top of another rampart.',
-            'zh-CN': '点。已经位于城墙中时无法使用。',
+            'zh-CN': '点。已经位于 Rampart 中时无法使用。',
             'reuse': true
         },
 
         // FORTIFY
         {
             'en-US': 'Make a wall or rampart tile invulnerable to all creep attacks and powers.',
-            'zh-CN': '使一个墙或城墙地块免疫所有来自 creep 的攻击和超能效果。',
+            'zh-CN': '使一个墙或 Rampart 地块免疫所有来自 creep 的攻击和超能效果。',
             'reuse': true
         },
 

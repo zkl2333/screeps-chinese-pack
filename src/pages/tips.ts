@@ -11,7 +11,7 @@ const TIP_CONTENT = {
     '每个会影响游戏世界的动作都有 0.2 CPU 的固定成本。',
 
     'Towers can aim at any object in a room even through walls and obstacles.':
-    'tower 可以透过墙壁和障碍物瞄准同房间中的任何对象。',
+    'tower 可以透过墙和障碍物瞄准同房间中的任何对象。',
 
     'Power banks appear only in neutral rooms that divide living sectors on the map.':
     'power bank 仅出现在过道房间中，过道房是指分隔不同区块的空旷中立房间。',
@@ -77,7 +77,7 @@ const TIP_CONTENT = {
     'Rampart 不仅可以在空旷的地块上建造，还可以建造在已有的建筑上。',
 
     'Ramparts and walls initially have 1 hit point. Repair them after construction.':
-    '城墙和墙壁最初仅有 1 点生命值（hit），记得在建造好后及时进行维修（repair）。',
+    'Rampart 和墙最初仅有 1 点生命值（hit），记得在建造好后及时进行维修（repair）。',
 
     'It is too costly and senseless to maintain an army of military creeps in the peacetime.':
     '在和平时期维持一支由战斗 creep 组成的军队代价太高且毫无意义。',
@@ -89,7 +89,7 @@ const TIP_CONTENT = {
     '缓存常用路径是节省 CPU 的好方法。',
 
     'While not destroyed, a rampart protects a creep or building on its square from any type of attack.':
-    '只要一个城墙没有被摧毁，它就可以保护同地块上的 creep 或者建筑免受任何形式的攻击。',
+    '只要一个 Rampart 没有被摧毁，它就可以保护同地块上的 creep 或者建筑免受任何形式的攻击。',
 
     'The game is fully recorded, so you can see replay of any room for the past several days.':
     '游戏已经被完整录制，所以您可以随时回放过去几天发生的事情。',
@@ -143,7 +143,7 @@ const TIP_CONTENT = {
     '一个 creep 可以在同 tick 内同时执行多个不冲突命令，例如 <code>move</code>+<code>build</code>+<code>dropEnergy</code>。',
 
     'Walls, roads, and containers don’t belong to any player, so they should be searched with the help of <code>FIND_STRUCTURES</code>, not <code>FIND_MY_STRUCTURES</code>.':
-    'wall，road 和 container 不属于任何玩家，所以搜索它们需要使用 <code>FIND_STRUCTURES</code> 而不是 <code>FIND_MY_STRUCTURES</code> 常量。',
+    '墙、道路和容器不属于任何玩家，所以搜索它们需要使用 <code>FIND_STRUCTURES</code> 而不是 <code>FIND_MY_STRUCTURES</code> 常量。',
 
     'The <code>RANGED_ATTACK</code> body part is 3 times weaker than <code>ATTACK</code> and 2 times costlier at that.':
     '<code>RANGED_ATTACK</code> 身体部件的相对伤害是 <code>ATTACK</code> 部件的 1/3，但是其造价却是 <code>ATTACK</code> 的两倍。',

@@ -7,7 +7,7 @@ import { getBaseUIContent, getObjectiveTranslationContent } from './utils'
  */
 const TUTORIAL_CONTENT = {
     'The Controller upgrade gives access to some new structures: walls, ramparts, and extensions.\nWe’ll discuss walls and ramparts in the next Tutorial section, for now let’s talk about extensions.':
-    '控制器升级解锁了新的建筑：wall、rampart 以及 extension。我们将在下个教程部分讨论 wall 和 rampart，现在让我们先来了解一下 extension。',
+    '控制器升级解锁了新的建筑：墙、Rampart 以及 Extension。我们将在下一节讨论墙和 Rampart，现在让我们先来了解一下 Extension。',
 
     '<b>Extensions</b> are required to build larger creeps. A creep with only one body part of one type works poorly.\nGiving it several <code>WORKs</code> will make him work proportionally faster.':
     '<b>Extension</b> 被用来孵化更大型的 creep。每种身体类型只有一个部件的 creep 工作并不高效。多为其添加几个 <code>WORK</code> 部件可以让它们成比例的提高效率。',

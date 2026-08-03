@@ -106,7 +106,7 @@ const content: PageContent = {
             'zh-CN': translateMultiple({
                 'plain': '平原（plain）',
                 'swamp': '沼泽（swamp）',
-                'wall': '墙壁（wall）'
+                'wall': '墙（wall）'
             }),
             'protect': true,
             'reuse': true
@@ -272,9 +272,13 @@ const content: PageContent = {
             'reuse': true
         },
 
-        // 特殊建筑面板
-        // portal
+        // 传送门面板
+        { 'en-US': 'Portal', 'zh-CN': '传送门', 'reuse': true },
+        { 'en-US': 'portal', 'zh-CN': '传送门', 'reuse': true },
+        { 'en-US': 'Inter-shard Portal', 'zh-CN': '跨分片传送门', 'reuse': true },
+        { 'en-US': 'Intra-shard Portal', 'zh-CN': '分片内传送门', 'reuse': true },
         { 'en-US': 'Destination:', 'zh-CN': '目的地：', 'reuse': true },
+
 
         // controller
         { 'en-US': 'Reserved:', 'zh-CN': '预订：', 'reuse': true },
@@ -323,13 +327,13 @@ const content: PageContent = {
             'reuse': true
         },
 
-        { 'en-US': 'Rampart', 'zh-CN': '城墙', 'reuse': true },
+        { 'en-US': 'Rampart', 'zh-CN': 'Rampart', 'reuse': true },
         { 'en-US': 'Tower', 'zh-CN': '防御塔', 'reuse': true },
         { 'en-US': 'Terminal', 'zh-CN': '终端', 'reuse': true },
         { 'en-US': 'Store', 'zh-CN': '仓库', 'reuse': true },
         { 'en-US': 'Storage', 'zh-CN': '仓库', 'reuse': true },
         { 'en-US': 'Empty', 'zh-CN': '空', 'reuse': true },
-        { 'en-US': 'rampart', 'zh-CN': '城墙', 'reuse': true },
+        { 'en-US': 'rampart', 'zh-CN': 'Rampart', 'reuse': true },
         { 'en-US': 'road', 'zh-CN': '道路', 'reuse': true },
         { 'en-US': 'Road', 'zh-CN': '道路', 'reuse': true },
         { 'en-US': 'resource', 'zh-CN': '资源', 'reuse': true },
@@ -338,7 +342,7 @@ const content: PageContent = {
         { 'en-US': 'extractor', 'zh-CN': '抽取器', 'reuse': true },
         { 'en-US': 'Extractor', 'zh-CN': '抽取器', 'reuse': true },
         { 'en-US': 'Source', 'zh-CN': '资源点', 'reuse': true },
-        { 'en-US': 'Constructed Wall', 'zh-CN': '人造墙', 'reuse': true },
+        { 'en-US': 'Constructed Wall', 'zh-CN': '墙', 'reuse': true },
 
         // ===== 2026-08 从 build.min.js 补充 =====
 

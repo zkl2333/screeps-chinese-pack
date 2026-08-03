@@ -21,7 +21,7 @@ const content: PageContent = {
         { 'en-US': 'Badge', 'zh-CN': '徽章', 'reuse': true },
         { 'en-US': 'Creep', 'zh-CN': 'creep 皮肤', 'reuse': true },
         { 'en-US': 'Graffiti', 'zh-CN': '涂鸦', 'reuse': true },
-        { 'en-US': 'Wall texture', 'zh-CN': '墙壁材质', 'reuse': true },
+        { 'en-US': 'Wall texture', 'zh-CN': '墙材质', 'reuse': true },
         { 'en-US': 'Floor texture', 'zh-CN': '地面材质', 'reuse': true },
         // 主题选择框
         { 'en-US': 'Theme', 'zh-CN': '主题', 'reuse': true },
@@ -223,7 +223,7 @@ const content: PageContent = {
         // 墙纸
         {
             'en-US': 'You can place this image as a room-wide wall texture.',
-            'zh-CN': '您可以将此墙壁材质应用于一个房间。',
+            'zh-CN': '您可以将此墙材质应用于一个房间。',
             'reuse': true
         },
         { 'en-US': 'Stroke Brightness', 'zh-CN': '描边亮度', 'reuse': true },

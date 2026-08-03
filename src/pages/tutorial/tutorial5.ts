@@ -10,7 +10,7 @@ const TUTORIAL_CONTENT = {
     'Screeps 的世界并不安全。其他玩家可能想要占领您的领土。此外，您的房间也会偶尔遭到中立 NPC creep 的袭击。所以，您需要好好考虑殖民地的防御，这样才能更安全地发展自己。',
 
     'This hostile creep has come from the left entry and attacked your colony. It’s good that we have walls to\nrestrain it temporarily. But they will fall sooner or later, so we need to deal with the problem.':
-    '敌方 creep 从房间左边的入口入侵并袭击了您的殖民地。由于我们有墙壁可以暂时抵挡它的进攻，所以目前问题不大。但是墙壁迟早会被打穿，所以我们需要尽快解决这个问题。',
+    '敌方 creep 从房间左边的入口入侵并袭击了您的殖民地。由于我们有墙可以暂时抵挡它的进攻，所以目前问题不大。但是墙迟早会被打穿，所以我们需要尽快解决这个问题。',
 
     'The surest way to fend off an attack is using the room <strong>Safe Mode</strong>.\nIn safe mode, no other creep will be able to use any harmful methods in the room (but you’ll still be able to defend against strangers).':
     '抵御进攻最可靠的方法就是使用房间的 <strong>安全模式</strong>（Safe Mode）。在安全模式中，房间中任何非己方 creep 都无法执行任何有害的操作（但是您依旧可以进行反抗。）',
@@ -19,7 +19,7 @@ const TUTORIAL_CONTENT = {
     '安全模式是通过房间控制器（controller）激活的，不过首先我们要有可用的激活次数。现在让我们在房间中启动安全模式。',
 
     'As you can see, the enemy creep stopped attacking the wall – its harmful methods are blocked.\nWe recommend that you activate safe mode when your defenses fail.':
-    '如您所见，敌方 creep 已经不再进攻墙壁了 - 它的有害操作被阻止了。我们建议您在房间的防御失效时再激活安全模式。',
+    '如您所见，敌方 creep 已经不再进攻墙了——它的有害操作被阻止了。我们建议您在房间的防御失效时再激活安全模式。',
 
     'Now let’s cleanse the room from unwanted guests.':
     '现在，让我们把这些不速之客清理掉。',
@@ -28,7 +28,7 @@ const TUTORIAL_CONTENT = {
     '防御塔（tower）是防御房间最简单直接的手段。它们可以消耗能量来治疗或攻击房间中的任何 creep。治疗/攻击效果取决于 tower 和目标之间的直线距离。',
 
     'To start with, let’s lay a foundation for our new tower. You can set any place you wish inside the walls\nand place the construction site there with the help of the button “Construct” on the upper panel.':
-    '首先，让我们给新 tower 打好地基。您可以在墙壁之内的任何位置放置 tower 的工地，通过顶部面板中的 “建造” 按钮找到它。',
+    '首先，让我们给新的防御塔打好地基。您可以在墙之内的任何位置放置防御塔的建筑工地，通过顶部面板中的“建造”按钮找到它。',
 
     'The creep Builder1 has immediately started the construction. Let’s wait until it finishes.':
     'creep Builder1 立刻反应过来并开始了建造。现在让我们等它造好。',
@@ -46,13 +46,13 @@ const TUTORIAL_CONTENT = {
     '想要获取 tower 的对象，您可以使用它的 ID（右侧面板中）以及 <code>Game.getObjectById</code> 方法。',
 
     'The enemy creep is eliminated and our colony can breathe easy. However, the invader has damaged some walls during the brief\nattack. You’d better set up auto-repair.':
-    '敌方 creep 被消灭，我们终于可以松口气了。但是，在刚才短暂的袭击中，入侵者还是对一些墙壁造成了伤害。您最好设置一下自动维修机制。',
+    '敌方 creep 被消灭，我们终于可以松口气了。但是，在刚才短暂的袭击中，入侵者还是对一些墙造成了伤害。您最好设置一下自动维修机制。',
 
     'Damaged structures can be repaired by both creeps and towers. Let’s try to use a tower for that.\nWe’ll need the method <code>repair</code>. You will also need the method <code>Room.find</code> and a filter to locate the damaged walls.':
-    'creep 和 tower 都可以修复受损的建筑，这次让我们用 tower 来试一下。使用 <code>repair</code> 方法可以完成这个任务。除此之外，您还需要使用 <code>Room.find</code> 方法和一个 filter 去筛选除那些受损的墙壁（wall）。',
+    'creep 和防御塔都可以修复受损的建筑，这次让我们用防御塔来试一下。使用 <code>repair</code> 方法可以完成这个任务。除此之外，您还需要使用 <code>Room.find</code> 方法和一个 filter 去筛选那些受损的墙。',
 
     'Note that since walls don’t belong to any player, finding them requires the constant <code>FIND_STRUCTURES</code>\nrather than <code>FIND_MY_STRUCTURES</code>.':
-    '请注意，由于墙壁不属于任何玩家，所以我们需要使用 <code>FIND_STRUCTURES</code> 常量进行搜索而不是 <code>FIND_MY_STRUCTURES</code>。',
+    '请注意，由于墙不属于任何玩家，所以我们需要使用 <code>FIND_STRUCTURES</code> 常量进行搜索而不是 <code>FIND_MY_STRUCTURES</code>。',
 
     'All the damage from the attack has been repaired!':
     '所有在袭击中受损的建筑都被修好了！',
@@ -84,7 +84,7 @@ const OBJECTIVE_CONTENT = {
     '使用 tower 消灭敌方 creep。',
 
     'Repair all the damaged walls.':
-    '修复所有受损的墙壁（wall）。'
+    '修复所有受损的墙。'
 }
 
 /**
