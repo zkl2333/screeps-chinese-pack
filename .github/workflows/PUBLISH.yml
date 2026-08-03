@@ -1,20 +1,26 @@
 name: PUBLISH
 
-# 推送 main 分支后,自动构建并将 dist/main.js 强制推送到 dist 分支,
-# Greasyfork 通过"同步"功能(仓库 zkl2333/screeps-chinese-pack, 分支 dist, 路径 dist/main.js)
-# 拉取该文件,配合仓库 Webhook 实现全自动发布。
+# 推送 main 分支后，自动构建并将 dist/main.js 推送到 dist 分支。
+# GreasyFork 通过同步功能读取该分支中的 dist/main.js，再由 Webhook 触发发布。
 on:
   push:
     branches:
       - main
+
+# 同一时间只保留 main 的最新发布任务，避免旧构建覆盖新构建。
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -22,8 +28,14 @@ jobs:
           node-version: 20
           cache: yarn
 
+      - name: Setup Yarn
+        run: |
+          corepack enable
+          corepack prepare yarn@1.22.22 --activate
+          yarn --version
+
       - name: Install
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Build
         run: yarn build
@@ -33,5 +45,11 @@ jobs:
           git config user.name "CI Publisher"
           git config user.email "ci-publisher@users.noreply.github.com"
           git add -f dist/main.js
-          git commit -m "build: publish dist/main.js" || { echo "dist/main.js 无变化"; exit 0; }
+
+          if git diff --cached --quiet; then
+            echo "dist/main.js 无变化"
+            exit 0
+          fi
+
+          git commit -m "build: publish dist/main.js"
           git push --force origin HEAD:dist
