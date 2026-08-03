@@ -48,7 +48,7 @@ const content: PageContent = {
          */
         {
             'en-US': /You have \d+ experimentation periods left/,
-            'zh-CN': (text: string) => text.replace('You have', '你还剩余').replace('experimentation periods left', '个实验期')
+            'zh-CN': (text: string) => text.replace('You have', '您还剩余').replace('experimentation periods left', '个实验期')
         },
 
         /**

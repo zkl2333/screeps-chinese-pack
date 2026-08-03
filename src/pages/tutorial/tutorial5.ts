@@ -7,7 +7,7 @@ import { getBaseUIContent, getObjectiveTranslationContent } from './utils'
  */
 const TUTORIAL_CONTENT = {
     'The world of Screeps is not the safest place. Other players may have claims on your territory.\nBesides, your room may be raided by neutral NPC creeps occasionally. So you ought to think about your\ncolony defense in order to develop it successfully.':
-    'Screeps 的世界并不安全。其他玩家可能想要占领您的领土。此外，您的房间也会偶尔遭到中立 NPC creep 的袭击。所以，您需要好好考虑下殖民地的防御，这样您才能更加安全的发展自己。',
+    'Screeps 的世界并不安全。其他玩家可能想要占领您的领土。此外，您的房间也会偶尔遭到中立 NPC creep 的袭击。所以，您需要好好考虑殖民地的防御，这样才能更安全地发展自己。',
 
     'This hostile creep has come from the left entry and attacked your colony. It’s good that we have walls to\nrestrain it temporarily. But they will fall sooner or later, so we need to deal with the problem.':
     '敌方 creep 从房间左边的入口入侵并袭击了您的殖民地。由于我们有墙壁可以暂时抵挡它的进攻，所以目前问题不大。但是墙壁迟早会被打穿，所以我们需要尽快解决这个问题。',

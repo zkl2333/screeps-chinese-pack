@@ -129,7 +129,7 @@ const content: PageContent = {
     content: [
         ...getBaseUIContent(),
 
-        { 'en-US': 'Next section', 'zh-CN': '下一关', 'reuse': true },
+        { 'en-US': 'Next section', 'zh-CN': '下一节', 'reuse': true },
 
         // 翻译所有教程文本
         {

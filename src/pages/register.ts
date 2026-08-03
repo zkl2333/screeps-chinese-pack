@@ -69,7 +69,7 @@ const content: PageContent = {
         },
         {
             'en-US': 'Password doesn\'t match.',
-            'zh-CN': '密码不匹配',
+            'zh-CN': '密码不匹配。',
             'reuse': true
         },
 

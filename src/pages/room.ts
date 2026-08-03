@@ -48,13 +48,13 @@ const content: PageContent = {
 
         {
             'en-US': 'The Controller in this room is already captured by another player. It seems that somebody has come here ahead of you. Please choose another room.',
-            'zh-CN': '该房间的控制器已被另一位玩家占领。看起来有人比你先到了这里。请选择另一个房间。',
+            'zh-CN': '该房间的控制器已被另一位玩家占领。看起来有人比您先到了这里。请选择另一个房间。',
             'reuse': true
         },
 
         // 下方 Script 面板
         { 'en-US': 'Script', 'zh-CN': '脚本' },
-        { 'en-US': 'Branch:', 'zh-CN': '分支:', 'reuse': true },
+        { 'en-US': 'Branch:', 'zh-CN': '分支：', 'reuse': true },
         { 'en-US': 'Modules', 'zh-CN': '模块', 'reuse': true },
         { 'en-US': 'Choose active branch:', 'zh-CN': '选择活动分支', 'reuse': true },
         { 'en-US': 'Add normal module', 'zh-CN': '添加普通模块', 'reuse': true },
@@ -137,7 +137,7 @@ const content: PageContent = {
         { 'en-US': 'Amount:', 'zh-CN': '剩余量：', 'reuse': true },
 
         { 'en-US': 'Level:', 'zh-CN': '等级：', 'reuse': true },
-        { 'en-US': 'Safe modes available:', 'zh-CN': '剩余安全模式：', 'reuse': true },
+        { 'en-US': 'Safe modes available:', 'zh-CN': '可用安全模式：', 'reuse': true },
         { 'en-US': 'Downgrade in:', 'zh-CN': '降级倒计时：', 'reuse': true },
         { 'en-US': 'Power enabled:', 'zh-CN': '已启用超能：', 'reuse': true },
         { 'en-US': 'Activate safe mode', 'zh-CN': '激活安全模式', 'reuse': true },
@@ -150,7 +150,7 @@ const content: PageContent = {
         // 建筑过多弹窗
         {
             'en-US': 'You have too many construction sites. The maximum number of construction sites per player is 100.',
-            'zh-CN': '您创建的 construction site 过多。每个玩家能够创建的 construction site 上限为 100。',
+            'zh-CN': '您创建的建筑工地过多。每个玩家能够创建的建筑工地上限为 100。',
             'reuse': true
         },
         // 下方提示
@@ -159,8 +159,11 @@ const content: PageContent = {
             'zh-CN': translateMultiple(CONSTRUCT_NOTICE),
             'reuse': true
         },
-        // 建筑状态
-        // 无法更新可建筑数量，暂时禁用
+        { 'en-US': 'Available:', 'zh-CN': '可用：', 'reuse': true },
+        { 'en-US': 'required', 'zh-CN': '需要', 'reuse': true },
+        { 'en-US': 'No controller', 'zh-CN': '无控制器', 'reuse': true },
+        { 'en-US': 'Ticks remaining', 'zh-CN': '剩余 tick', 'reuse': true },
+        { 'en-US': 'ago', 'zh-CN': '前', 'reuse': true },
         // {
         //     'selector': 'div > div > div > button > .ng-scope > div',
         //     'zh-CN': (el: HTMLElement) => {
@@ -178,7 +181,7 @@ const content: PageContent = {
         { 'en-US': 'Cancel', 'zh-CN': '取消', 'reuse': true },
         { 'en-US': 'OK', 'zh-CN': '确认', 'reuse': true },
         // 建筑描述
-        { 'en-US': 'Contains additional energy which can be used by spawns for spawning bigger creeps.', 'zh-CN': '为 Spawn 提供生产更大体型 creep 所需要的储能空间。', 'reuse': true },
+        { 'en-US': 'Contains additional energy which can be used by spawns for spawning bigger creeps.', 'zh-CN': '为 Spawn 提供生产更大体型 creep 所需的额外储能空间。', 'reuse': true },
         { 'en-US': 'Decreases movement cost. Decays over time and requires repair.', 'zh-CN': '降低移动的消耗。会随着时间推移而老化并需要维护。', 'reuse': true },
         { 'en-US': 'Blocks movement of all creeps. Requires repair after construction.', 'zh-CN': '能够阻挡所有 creep。建造之后需要维护。', 'reuse': true },
         {
@@ -196,7 +199,7 @@ const content: PageContent = {
         { 'en-US': 'Remotely transfers energy to another Link in the same room.', 'zh-CN': '能够向同房间的 Link 远距离传送能量。', 'reuse': true },
         { 'en-US': 'Allows to mine a mineral deposit.', 'zh-CN': '允许玩家采集矿物。', 'reuse': true },
         { 'en-US': 'Produces mineral compounds and boosts creeps.', 'zh-CN': '能够制造矿物化合物并强化 creep。', 'reuse': true },
-        { 'en-US': 'Sends any resources to a\u00A0Terminal in another room.', 'zh-CN': '能够向另一房间的 Terminal 发送任意资源。', 'reuse': true },
+        { 'en-US': 'Sends any resources to a\u00A0Terminal in another room.', 'zh-CN': '能够向另一房间的终端发送任意资源。', 'reuse': true },
         { 'en-US': 'Produces trade commodities.', 'zh-CN': '能够生产可交易商品。', 'reuse': true },
         { 'en-US': 'Spawns creeps using energy contained in the room spawns and extensions.', 'zh-CN': '使用房间内 Spawn 与 Extension 储备的能量生产 creep。', 'reuse': true },
         { 'en-US': 'Provides visibility into a distant room from your script.', 'zh-CN': '能够使您的脚本获取远处一房间的视野。', 'reuse': true },
@@ -207,14 +210,14 @@ const content: PageContent = {
         {
             'selector': 'a.help.ng-scope',
             'zh-CN': (el: HTMLElement) => {
-                el.setAttribute('title', '该 controller 在降级时间达到最大之前无法升级（点击了解详情)')
+                el.setAttribute('title', '该控制器在降级时间达到最大之前无法升级（点击了解详情）')
             },
             'reuse': true
         },
         {
             'selector': 'div.damaged.ng-binding.ng-scope > a',
             'zh-CN': (el: HTMLElement) => {
-                el.setAttribute('title', '通过升级 controller 避免降级（点击了解详情）')
+                el.setAttribute('title', '通过升级控制器避免降级（点击了解详情）')
             },
             'reuse': true
         },
@@ -238,7 +241,7 @@ const content: PageContent = {
         { 'en-US': 'Show flags', 'zh-CN': '显示旗帜（flag）', 'reuse': true },
         { 'en-US': 'Show flags names', 'zh-CN': '显示旗帜（flag）名称', 'reuse': true },
         { 'en-US': 'Show creeps speech', 'zh-CN': '显示 creep 的对话气泡', 'reuse': true },
-        { 'en-US': 'Show visuals', 'zh-CN': '显示房间视觉效果（RoomVisual）', 'reuse': true },
+        { 'en-US': 'Show visuals', 'zh-CN': '显示房间视觉效果（RoomVisual）。', 'reuse': true },
         { 'en-US': 'Lighting:', 'zh-CN': '单位提供光照:', 'reuse': true },
         { 'en-US': 'Swamp texture:', 'zh-CN': '沼泽纹理:', 'reuse': true },
         { 'en-US': 'Hardware acceleration (WebGL)', 'zh-CN': '硬件加速（WebGL）', 'reuse': true },
@@ -274,16 +277,16 @@ const content: PageContent = {
         { 'en-US': 'Destination:', 'zh-CN': '目的地：', 'reuse': true },
 
         // controller
-        { 'en-US': 'Reserved:', 'zh-CN': '预定:', 'reuse': true },
+        { 'en-US': 'Reserved:', 'zh-CN': '预订：', 'reuse': true },
 
         // invader core
         { 'en-US': 'This structure is spawned by its parent nearby.', 'zh-CN': '该建筑由位于附近的父建筑生成', 'reuse': true },
-        { 'en-US': 'Deploying in:', 'zh-CN': '剩余部署时间:', 'reuse': true },
+        { 'en-US': 'Deploying in:', 'zh-CN': '剩余部署时间：', 'reuse': true },
 
         // invader core creep
         {
             'en-US': 'This creep is angry with your harvesting activity here. Its home is located somewhere in this sector.',
-            'zh-CN': '您的采集行为激怒了这个 creep。它的出生点位于本 sector 的某个位置。',
+            'zh-CN': '您的采集行为激怒了这个 creep。它的出生点位于本分区的某个位置。',
             'reuse': true
         },
 
@@ -292,14 +295,14 @@ const content: PageContent = {
 
         // deposite
         { 'en-US': 'Deposit:', 'zh-CN': '沉积物：', 'reuse': true },
-        { 'en-US': 'Last cooldown:', 'zh-CN': '上一次采集冷却:', 'reuse': true },
+        { 'en-US': 'Last cooldown:', 'zh-CN': '上一次采集冷却：', 'reuse': true },
 
         // powerbank
         { 'en-US': 'Power:', 'zh-CN': '超能量：', 'reuse': true },
         { 'en-US': 'This structure emits bright light and splashes of sparks.', 'zh-CN': '这个建筑散发着亮光，飞溅出火星。', 'reuse': true },
 
         // tombstone
-        { 'en-US': 'Death time:', 'zh-CN': '死亡时间:', 'reuse': true },
+        { 'en-US': 'Death time:', 'zh-CN': '死亡时间：', 'reuse': true },
         // {
         //     'selector': 'div.ng-scope > div.ng-binding.ng-scope',
         //     'zh-CN': (el: HTMLElement) => {
@@ -343,20 +346,20 @@ const content: PageContent = {
         { 'en-US': 'Go to Novice Area', 'zh-CN': '前往新手区', 'reuse': true },
         { 'en-US': 'Go to Tutorial', 'zh-CN': '前往教程', 'reuse': true },
         { 'en-US': 'Place first spawn', 'zh-CN': '放置第一个 Spawn', 'reuse': true },
-        { 'en-US': 'Before you start in the real World, we recommend you to take the Tutorial that explains the game basics and everything you are going to face step by step. Have you already taken the tutorial? ', 'zh-CN': '在正式开始之前，我们建议你先通过教程了解游戏基础与将要面对的种种挑战。你是否已经完成了教程？', 'reuse': true },
+        { 'en-US': 'Before you start in the real World, we recommend you to take the Tutorial that explains the game basics and everything you are going to face step by step. Have you already taken the tutorial? ', 'zh-CN': '在正式开始之前，我们建议您先通过教程了解游戏基础与将要面对的种种挑战。您是否已经完成了教程？', 'reuse': true },
         { 'en-US': 'Yes, I have', 'zh-CN': '是的，已完成', 'reuse': true },
         { 'en-US': 'Source Keeper', 'zh-CN': '源守卫', 'reuse': true },
 
         // 房间 / 建筑限制提示
         { 'en-US': 'It is not allowed to destroy a structure when hostile creeps are in the room.', 'zh-CN': '当房间中存在敌对 creep 时，不允许拆除建筑。', 'reuse': true },
         { 'en-US': 'There is a room in safe mode already. You can activate safe mode in only one room at the same time.', 'zh-CN': '已有房间处于安全模式中，同一时间只能在一个房间内激活安全模式。', 'reuse': true },
-        { 'en-US': 'There is no Controller in this room. Controllers allow players capture rooms and build facilities in them. A room with no Controller cannot be captured. Please choose another room.', 'zh-CN': '该房间中没有控制器（Controller）。控制器允许玩家占领房间并建造设施，没有控制器的房间无法被占领。请选择其他房间。', 'reuse': true },
-        { 'en-US': 'There is no Controller in this room. Controllers allow players capture rooms and build facilities in them. Construction is impossible in this room.', 'zh-CN': '该房间中没有控制器（Controller）。控制器允许玩家占领房间并建造设施。此房间中无法进行建造。', 'reuse': true },
+        { 'en-US': 'There is no Controller in this room. Controllers allow players capture rooms and build facilities in them. A room with no Controller cannot be captured. Please choose another room.', 'zh-CN': '该房间中没有控制器。控制器允许玩家占领房间并建造设施，没有控制器的房间无法被占领。请选择其他房间。', 'reuse': true },
+        { 'en-US': 'There is no Controller in this room. Controllers allow players capture rooms and build facilities in them. Construction is impossible in this room.', 'zh-CN': '该房间中没有控制器。控制器允许玩家占领房间并建造设施。此房间中无法进行建造。', 'reuse': true },
         { 'en-US': 'This room is not available for settlement yet. Please choose another room.', 'zh-CN': '该房间暂不开放定居，请选择其他房间。', 'reuse': true },
         { 'en-US': 'You cannot create more than 10,000 flags.', 'zh-CN': '旗帜数量不能超过 10,000 个。', 'reuse': true },
         { 'en-US': 'RCL not enough', 'zh-CN': '房间控制等级不足', 'reuse': true },
-        { 'en-US': "You don't have access to claim rooms on this shard.", 'zh-CN': '你没有权限在该分片上占领房间。', 'reuse': true },
-        { 'en-US': 'You must own or reserve this room to generate invaders.', 'zh-CN': '你必须拥有或预定该房间，才能生成入侵者。', 'reuse': true },
+        { 'en-US': "You don't have access to claim rooms on this shard.", 'zh-CN': '您没有权限在该分片上占领房间。', 'reuse': true },
+        { 'en-US': 'You must own or reserve this room to generate invaders.', 'zh-CN': '您必须拥有或预订该房间，才能生成入侵者。', 'reuse': true },
 
         // 脚本编辑器
         { 'en-US': 'A branch with this name already exists and will be overwritten!', 'zh-CN': '同名分支已存在，将被覆盖！', 'reuse': true },

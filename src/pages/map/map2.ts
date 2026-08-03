@@ -5,14 +5,14 @@
 const content: PageContent = {
     hashs: ['#!/map2'],
     content: [
-        { 'en-US': 'Owner:', 'zh-CN': '所有者: ', 'reuse': true },
+        { 'en-US': 'Owner:', 'zh-CN': '所有者：', 'reuse': true },
         { 'en-US': 'None', 'zh-CN': '无', 'reuse': true },
         { 'en-US': 'Safe mode', 'zh-CN': '安全模式', 'reuse': true },
         { 'en-US': 'Not available', 'zh-CN': '未开放', 'reuse': true },
-        { 'en-US': 'Sign:', 'zh-CN': '签名: ', 'reuse': true },
-        { 'en-US': 'Reservation:', 'zh-CN': '预定: ', 'reuse': true },
-        { 'en-US': 'Mineral:', 'zh-CN': '矿物类型: ', 'reuse': true },
-        { 'en-US': 'Density:', 'zh-CN': '储量: ', 'reuse': true },
+        { 'en-US': 'Sign:', 'zh-CN': '签名：', 'reuse': true },
+        { 'en-US': 'Reservation:', 'zh-CN': '预订：', 'reuse': true },
+        { 'en-US': 'Mineral:', 'zh-CN': '矿物类型：', 'reuse': true },
+        { 'en-US': 'Density:', 'zh-CN': '储量：', 'reuse': true },
 
         { 'en-US': 'Random Room', 'zh-CN': '随机房间', 'reuse': true },
         { 'en-US': 'Display', 'zh-CN': '展示项目：', 'reuse': true },
@@ -26,7 +26,7 @@ const content: PageContent = {
         {
             'selector': '.__search > input',
             'zh-CN': (el: HTMLElement) => {
-                el.setAttribute('placeholder', '通过房间名或玩家名来搜索 ...')
+                el.setAttribute('placeholder', '通过房间名或玩家名搜索……')
             }
         }
     ]

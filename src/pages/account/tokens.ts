@@ -12,7 +12,7 @@ const content: PageContent = {
     content: [
         { 'en-US': 'Auth Tokens', 'zh-CN': '验证令牌' },
         { 'en-US': 'Add new auth token', 'zh-CN': '添加一个新的验证令牌' },
-        { 'en-US': 'Description (optional)', 'zh-CN': '介绍（可选）' },
+        { 'en-US': 'Description (optional)', 'zh-CN': '描述（可选）' },
         { 'en-US': 'Only selected endpoints:', 'zh-CN': '仅允许访问选中接口' },
         { 'en-US': 'Generate token', 'zh-CN': '生成令牌' },
         {

@@ -10,7 +10,7 @@ const TUTORIAL_CONTENT = {
     '在本教程部分中，我们将来介绍您房间中的重要战略目标：<strong>房间控制器</strong>（controller）。控制这个不可摧毁的小东西将允许您在房间中建造建筑。控制器的等级越高，允许建造的建筑就越多。',
 
     'You will need a new worker creep to upgrade your controller level. Let\'s call it "Upgrader1".\nIn following sections we\'ll discuss how to create creeps automatically, but for now let\'s send a\ncommand manually to the console.':
-    '您将需要一个新 creep 工作单位去升级您的控制器等级，让我们称其为 “Upgrader1”。在接下来的章节中我们将介绍如何自动创建 creep，但是现在让我们还是和之前一样在控制器里输入下面的命令。',
+    '您将需要一个新 creep 工作单位去升级您的控制器等级，让我们称其为 “Upgrader1”。在接下来的章节中我们将介绍如何自动创建 creep，但是现在让我们还是和之前一样在控制台中输入下面的命令。',
 
     'Creep "Upgrader1" went to perform the same task as the harvester, but we don\'t want it to. We need to differentiate creep roles.':
     'creep “Upgrader1” 将执行和 harvester 相同的任务，但是我们并不想让它这么做。我们需要一个不同的 creep 角色（role）。',
@@ -19,7 +19,7 @@ const TUTORIAL_CONTENT = {
     '为此，我们需要利用每个 creep 都有的 <code>memory</code> 属性，该属性允许在 creep 的“内存”中写入自定义信息。这样，我们就可以给 creep 分配不同的角色。',
 
     'All your stored memory is accessible via the global <code>Memory</code> object. You can use it any way you like.':
-    '您储存的所有内存信息可以通过全局对象 <code>Memory</code> 访问。这两种方式您想用哪种都可以。',
+    '您储存的所有内存信息都可以通过全局对象 <code>Memory</code> 访问。您可以按任意方式使用它。',
 
     'You can check your creeps\' memory in either the creep information panel on the left or on the "Memory" tab.':
     '您可以在左侧的 creep 信息面板或者 “内存” 面板中查看您 creep 的内存。',
@@ -93,7 +93,7 @@ const content: PageContent = {
     content: [
         ...getBaseUIContent(),
 
-        { 'en-US': 'Next section', 'zh-CN': '下一关', 'reuse': true },
+        { 'en-US': 'Next section', 'zh-CN': '下一节', 'reuse': true },
         { 'en-US': 'Control', 'zh-CN': '控制', 'reuse': true },
         { 'en-US': 'Memory object', 'zh-CN': 'Memory 对象', 'reuse': true },
 

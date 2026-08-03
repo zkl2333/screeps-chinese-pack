@@ -8,9 +8,9 @@ const content: PageContent = {
         { 'en-US': 'My orders', 'zh-CN': '我的订单' },
         { 'en-US': 'History', 'zh-CN': '订单历史' },
         // 无订单时的翻译
-        { 'en-US': 'You have no orders', 'zh-CN': '你还没有订单', 'reuse': true },
+        { 'en-US': 'You have no orders', 'zh-CN': '您还没有订单', 'reuse': true },
         { 'en-US': 'Create an order using the', 'zh-CN': '创建订单请参考', 'reuse': true },
-        { 'en-US': 'Market API.', 'zh-CN': '市场API', 'reuse': true }
+        { 'en-US': 'Market API.', 'zh-CN': '市场 API。', 'reuse': true }
     ]
 }
 

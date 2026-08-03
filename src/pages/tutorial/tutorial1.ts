@@ -25,10 +25,10 @@ const TUTORIAL_CONTENT = {
     '屏幕中心的这个小东西是您的第一个 Spawn，它是您的殖民地核心。',
 
     'You play by writing code in the panel in the bottom of the screen.':
-    '您将通过在屏幕底部的面板中编写代码来进行游戏',
+    '您将通过在屏幕底部的面板中编写代码来进行游戏。',
 
     'You can enter your code in this field. It will run once.':
-    '您可以在这个输入框中执行您的代码，它们只会被执行一次。',
+    '您可以通过在这个输入框中输入代码来执行它，代码只会运行一次。',
 
     'Your command returns a response (or execution error) in the console below. All output is duplicated into your browser console (<strong>Ctrl+Shift+J</strong>) where you can expand objects for debugging purposes.\nYou can open and close the bottom panel by pressing <strong>Alt+Enter</strong>.':
     '您的命令在下面的控制台中返回响应（或执行错误）。所有日志都同步复制到了浏览器的控制台中（<strong>Ctrl+Shift+J</strong>）中，您可以在其中展开对象以更好的进行调试。您可以通过按下 <strong>Alt+Enter</strong> 打开和关闭底部面板。',
@@ -70,7 +70,7 @@ const TUTORIAL_CONTENT = {
     '想让 creep 去采集能量，您需要使用下面 “文档” 小节中介绍的方法，这些指令每个游戏 tick 都会被执行。而 <code>harvest</code> 方法则需要在 creep 相邻的位置上有一个能量源。',
 
     'You give orders to a creep by its name this way: <code>Game.creeps[\'Harvester1\']</code>.\nUse the <code>FIND_SOURCES</code> constant as an argument to the <code>Room.find</code> method.':
-    '您可以通过 creep 的名字来获取到它并对其下达命令，就像这样：<code>Game.creeps[\'Harvester1\']</code>。把 <code>FIND_SOURCES</code> 常量作为参数传递给 <code>Room.find</code> 方法可以房间中的能量源。',
+    '您可以通过 creep 的名字来获取到它并对其下达命令，就像这样：<code>Game.creeps[\'Harvester1\']</code>。把 <code>FIND_SOURCES</code> 常量作为参数传递给 <code>Room.find</code> 方法，就可以找到房间中的能量源。',
 
     'A bubbling yellow spot inside the creep means that it has started collecting energy from the source.':
     'creep 身体里逐渐变大的黄色圆点代表它已经开始从能量源中采集能量了。',
@@ -82,7 +82,7 @@ const TUTORIAL_CONTENT = {
     '当您把 <code>.store.getFreeCapacity()&nbsp;&gt;&nbsp;0</code> 作为检查条件添加到代码里时，creep 应该就可以自己一步步的把能量搬运回 spawn 然后走回能量源。',
 
     'Great! This creep will now work as a harvester until it dies. Remember that almost any creep has a life cycle of 1500\ngame ticks, then it "ages" and dies (this behavior is disabled in the Tutorial).':
-    'Nice！现在这个 creep 将会一直作为采集者（harvester）工作直到去世。请记住，几乎所有的 creep 都有 1500 游戏 tick 的生命周期，在此之后它就会 “老去” 然后死掉（这个设定在本教程中并不生效）。',
+    '太好了！现在这个 creep 将会一直作为采集者（harvester）工作直到死亡。请记住，几乎所有的 creep 都有 1500 游戏 tick 的生命周期，在此之后它就会“老去”然后死亡（这个设定在本教程中并不生效）。',
 
     'Let\'s create another worker creep to help the first one. It will cost another 200 energy units, so you may\nneed to wait until your harvester collects enough energy. The <code>spawnCreep</code> method will return an\nerror code <code>ERR_NOT_ENOUGH_ENERGY</code> (-6) until then.':
     '让我们孵化新的 creep 来帮助第一个。这会消耗掉 200 点能量，所以您可能需要等到采集单位收集到足够的能量。<code>spawnCreep</code> 方法会返回错误码 <code>ERR_NOT_ENOUGH_ENERGY</code>（-6）直到您能量足够为止。',
@@ -106,7 +106,7 @@ const TUTORIAL_CONTENT = {
     '现在看起来好多了！',
 
     'By adding new roles and modules to your creeps this way, you can control and manage the work of many creeps.\nIn the next Tutorial section, we’ll develop a new creep role.':
-    '通过这种方法向您的 creep 添加新的角色和模块，由此控制和管理众多 creep 的工作。在下一关里，我们将开发一个新的 creep 角色。'
+    '通过这种方法向您的 creep 添加新的角色和模块，由此控制和管理众多 creep 的工作。在下一节里，我们将开发一个新的 creep 角色。'
 }
 
 /**
@@ -209,7 +209,7 @@ const content: PageContent = {
     content: [
         ...getBaseUIContent(),
 
-        { 'en-US': 'Next section', 'zh-CN': '下一关', 'reuse': true },
+        { 'en-US': 'Next section', 'zh-CN': '下一节', 'reuse': true },
         { 'en-US': 'Welcome to Screeps!', 'zh-CN': '欢迎来到 Screeps！', 'reuse': true },
         { 'en-US': 'JavaScript Reference:', 'zh-CN': 'JavaScript 参考：', 'reuse': true },
 

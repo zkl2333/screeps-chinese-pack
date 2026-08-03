@@ -11,7 +11,8 @@ module.exports = {
     },
     moduleNameMapper: {
         ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/src/' }),
-        '^utils$': '<rootDir>/src/utils'
+            '^utils$': '<rootDir>/src/utils',
+            '^setting$': '<rootDir>/src/setting'
     },
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
 }

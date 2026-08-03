@@ -11,7 +11,7 @@ const content: PageContent = {
         { 'en-US': 'Remaining', 'zh-CN': '剩余' },
         { 'en-US': 'Total', 'zh-CN': '总量' },
         { 'en-US': 'Room', 'zh-CN': '房间' },
-        { 'en-US': 'Expires in', 'zh-CN': '过期于' }
+        { 'en-US': 'Expires in', 'zh-CN': '将在……后过期' }
     ]
 }
 

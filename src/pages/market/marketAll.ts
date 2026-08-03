@@ -7,7 +7,7 @@ const content: PageContent = {
         { 'en-US': 'Lab production', 'zh-CN': '实验室产物' },
         // 订单明细
         { 'en-US': 'Refresh', 'zh-CN': '刷新' },
-        { 'en-US': 'Target room:', 'zh-CN': '目标房间' },
+        { 'en-US': 'Target room:', 'zh-CN': '目标房间：' },
         { 'en-US': 'Selling', 'zh-CN': '出售中' },
         { 'en-US': 'Buying', 'zh-CN': '求购中' },
         { 'en-US': 'Order ID', 'zh-CN': '订单标识', 'reuse': true },
@@ -21,19 +21,19 @@ const content: PageContent = {
         { 'en-US': 'Date', 'zh-CN': '日期' },
         { 'en-US': 'Transactions', 'zh-CN': '交易次数' },
         { 'en-US': 'Total volume', 'zh-CN': '总成交量' },
-        { 'en-US': 'Price (avg ± stddev)', 'zh-CN': '单价 (均价 ± 标准差)' },
+        { 'en-US': 'Price (avg ± stddev)', 'zh-CN': '单价（均价 ± 标准差）' },
 
         // 翻译订单
         {
             'selector': '#mat-dialog-0 > app-dlg-resource-orders > header:nth-child(6) > div:nth-child(1) > span',
             'zh-CN': (el: HTMLElement) => {
-                el.innerHTML = el.innerHTML.replace('orders', '个订单')
+                el.innerHTML = el.innerHTML.replace(/orders?/g, '个订单')
             }
         },
         {
             'selector': '#mat-dialog-0 > app-dlg-resource-orders > header:nth-child(8) > div > span',
             'zh-CN': (el: HTMLElement) => {
-                el.innerHTML = el.innerHTML.replace('orders', '个订单')
+                el.innerHTML = el.innerHTML.replace(/orders?/g, '个订单')
             }
         }
     ]

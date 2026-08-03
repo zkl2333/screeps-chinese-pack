@@ -25,7 +25,6 @@ export default [
     room,
     roomSim,
     power,
-    room,
     ...market,
     profile,
     rank,

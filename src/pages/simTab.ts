@@ -28,7 +28,7 @@ const content: PageContent = {
         },
         {
             'en-US': 'Your script will be saved, but your simulation progress will be lost! Are you sure?',
-            'zh-CN': '您的代码将会保存，但是您的模拟器进度将会丢失！确定要退出么？',
+            'zh-CN': '您的代码将会保存，但是您的模拟器进度将会丢失！确定要退出吗？',
             'reuse': true
         },
         { 'en-US': 'Cancel', 'zh-CN': '取消', 'reuse': true },

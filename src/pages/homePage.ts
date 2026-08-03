@@ -56,7 +56,7 @@ const content: PageContent = {
             'selector': 'section.sc-scripting > div > div.sc-block > header > div',
             'zh-CN': (el: HTMLElement) => {
                 el.innerHTML = el.innerHTML.replace('Play by', '游戏方式')
-                el.innerHTML = el.innerHTML.replace('<b>S</b>cripting', '写<b>代码<b>')
+                el.innerHTML = el.innerHTML.replace('<b>S</b>cripting', '写<b>代码</b>')
             }
         },
         {
@@ -125,7 +125,7 @@ const content: PageContent = {
         {
             'selector': 'body > footer > div > section > header > div',
             'zh-CN': (el: HTMLElement) => {
-                el.innerHTML = el.innerHTML.replace('Our news ', '相关新闻')
+                el.innerHTML = el.innerHTML.replace(/Our news\s*/, '相关新闻')
                 el.innerHTML = el.innerHTML.replace('in Twitter', '来自 Twitter')
             }
         }

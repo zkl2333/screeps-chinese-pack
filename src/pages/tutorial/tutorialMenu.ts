@@ -9,8 +9,8 @@ const content: PageContent = {
         { 'en-US': 'Game UI and basic scripting', 'zh-CN': '游戏 UI 与基础编程', 'reuse': true },
         { 'en-US': 'Upgrading controller', 'zh-CN': '升级控制器', 'reuse': true },
         { 'en-US': 'Building structures', 'zh-CN': '建造建筑', 'reuse': true },
-        { 'en-US': 'Auto-spawning creeps', 'zh-CN': '自动孵化 creep', 'reuse': true },
-        { 'en-US': 'Defending your room', 'zh-CN': '防守您的房间', 'reuse': true },
+        { 'en-US': 'Auto-spawning creeps', 'zh-CN': '自动生成 creep', 'reuse': true },
+        { 'en-US': 'Defending your room', 'zh-CN': '防御您的房间', 'reuse': true },
 
         { 'en-US': 'Don\'t know how to code in JavaScript?', 'zh-CN': '不知道如何编写 JavaScript 代码？', 'reuse': true },
         { 'en-US': 'Check out this free interactive course!', 'zh-CN': '看看这个免费的互动教程！', 'reuse': true },
@@ -24,7 +24,7 @@ const content: PageContent = {
                 if (!oldContent.startsWith('This will remove your existing code from the')) return
 
                 const tutorialName = oldContent.match(/"tutorial-\d{1,}"/g)
-                el.innerHTML = `这将会移除 ${tutorialName} 分支上现存的代码，确定要重新开始这一教程部分么？`
+                el.innerHTML = `这将会移除 ${tutorialName} 分支上现存的代码，确定要重新开始这一教程部分吗？`
             },
             'reuse': true
         }

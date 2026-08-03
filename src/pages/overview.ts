@@ -10,14 +10,14 @@ const OVERVIEW_HEADER: MultipleMap = {
     'Energy<br>on creeps': '能量 - 孵化消耗',
     'Creeps<br>produced': 'creep 孵化',
     'Creeps<br>lost': 'creep 损失',
-    'Power<br>processed': 'power 处理'
+    'Power<br>processed': '超能量处理'
 }
 
 /**
  * 图表右上角的下拉框选项
  */
 const GRAPH_SELECT_LIST: MultipleMap = {
-    'Power processed': 'power 处理',
+    'Power processed': '超能量处理',
     'Control points': '控制点数',
     'Energy harvested': '能量采集',
     'Energy spent on construction': '能量 - 建筑消耗',
@@ -44,7 +44,7 @@ const content: PageContent = {
 
         { 'en-US': 'Global Control Level', 'zh-CN': '全局控制等级' },
         { 'en-US': 'Global Power Level', 'zh-CN': '全局超能等级' },
-        { 'en-US': 'Manage Power Creeps', 'zh-CN': '管理 power creep' },
+        { 'en-US': 'Manage Power Creeps', 'zh-CN': '管理超能 creep' },
         { 'en-US': 'Stats Period', 'zh-CN': '统计时长', 'reuse': true },
         { 'en-US': 'Room', 'zh-CN': '房间', 'reuse': true },
         { 'en-US': /Rooms: \d+/, 'zh-CN': (text: string) => text.replace('Rooms:', '房间数：'), 'reuse': true },
@@ -60,7 +60,7 @@ const content: PageContent = {
         },
 
         { 'en-US': /Graph(:|)/, 'zh-CN': '图表', 'reuse': true },
-        { 'en-US': 'Owner:', 'zh-CN': '所有者:' },
+        { 'en-US': 'Owner:', 'zh-CN': '所有者：' },
         { 'en-US': 'View leaderboard', 'zh-CN': '查看排行榜', 'reuse': true },
 
         getOverviewHeaderContent(),

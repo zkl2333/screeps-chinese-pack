@@ -5,7 +5,7 @@ const content: PageContent = {
         {
             'en-US':
                 'This section contains ephemeral resources that are stored directly in your account.',
-            'zh-CN': '这里展示了直接存储在您帐户中的临时资源。',
+            'zh-CN': '这里展示了直接存储在您账户中的临时资源。',
             'reuse': true
         },
         // 装饰状态
@@ -19,7 +19,7 @@ const content: PageContent = {
         // 类型选择框
         { 'en-US': 'Type', 'zh-CN': '类别', 'reuse': true },
         { 'en-US': 'Badge', 'zh-CN': '徽章', 'reuse': true },
-        { 'en-US': 'Creep', 'zh-CN': 'creep皮肤', 'reuse': true },
+        { 'en-US': 'Creep', 'zh-CN': 'creep 皮肤', 'reuse': true },
         { 'en-US': 'Graffiti', 'zh-CN': '涂鸦', 'reuse': true },
         { 'en-US': 'Wall texture', 'zh-CN': '墙壁材质', 'reuse': true },
         { 'en-US': 'Floor texture', 'zh-CN': '地面材质', 'reuse': true },
@@ -39,7 +39,7 @@ const content: PageContent = {
         { 'en-US': 'Old to new', 'zh-CN': '从旧到新', 'reuse': true },
         { 'en-US': 'Rare to common', 'zh-CN': '品质从稀有到常见', 'reuse': true },
         { 'en-US': 'Common to rare', 'zh-CN': '品质从常见到稀有', 'reuse': true },
-        { 'en-US': 'Rooms', 'zh-CN': '按激活状态', 'reuse': true },
+        { 'en-US': 'Rooms', 'zh-CN': '房间', 'reuse': true },
         { 'en-US': 'CPU Unlock', 'zh-CN': 'CPU 解锁', 'reuse': true },
         { 'en-US': 'Pixels', 'zh-CN': '像素', 'reuse': true },
         { 'en-US': 'Access keys', 'zh-CN': '访问密钥', 'reuse': true },
@@ -54,7 +54,7 @@ const content: PageContent = {
         { 'en-US': 'You have no decorations yet', 'zh-CN': '您还没有装饰物', 'reuse': true },
         { 'en-US': 'Drag to take from Steam', 'zh-CN': '从 Steam 拖拽物品至此', 'reuse': true },
         // 目标房间
-        { 'en-US': 'Target room:', 'zh-CN': '目标房间:', 'reuse': true },
+        { 'en-US': 'Target room:', 'zh-CN': '目标房间：', 'reuse': true },
         // 中央抽奖区域
         {
             'en-US': 'Pixelization is available',
@@ -83,7 +83,7 @@ const content: PageContent = {
         { 'en-US': 'Convert to pixels', 'zh-CN': '分解为像素', 'reuse': true },
         { 'en-US': 'Convert to Pixels', 'zh-CN': '分解为像素', 'reuse': true },
         { 'en-US': 'Are you sure you want to convert decoration(s) back to pixels?', 'zh-CN': '确定要将这些装饰物分解为像素吗？', 'reuse': true },
-        { 'en-US': 'You', 'zh-CN': '你', 'reuse': true },
+        { 'en-US': 'You', 'zh-CN': '您', 'reuse': true },
         { 'en-US': 'can not', 'zh-CN': '将不能', 'reuse': true },
         { 'en-US': 'use decoration in the future.', 'zh-CN': '继续使用此装饰物', 'reuse': true },
         { 'en-US': 'Steam inventory', 'zh-CN': 'Steam 库存', 'reuse': true },
@@ -146,12 +146,12 @@ const content: PageContent = {
         { 'en-US': 'Select all', 'zh-CN': '全选', 'reuse': true },
         {
             'en-US': 'Are you sure you want to deactivate decoration(s)?',
-            'zh-CN': '确定要停用勾选的装饰吗?',
+            'zh-CN': '确定要停用勾选的装饰吗？',
             'reuse': true
         },
         {
             'en-US': 'They will be saved in your account and can be reactivated in the future.',
-            'zh-CN': '这些装饰将会继续存储在您的账户中，您可以之后再启用他们。',
+            'zh-CN': '这些装饰将会继续存储在您的账户中，您可以之后再启用它们。',
             'reuse': true
         },
         { 'en-US': 'Deactivate', 'zh-CN': '停用', 'reuse': true },
@@ -201,7 +201,7 @@ const content: PageContent = {
             'zh-CN': '您可以在停用之后把它分解为 ',
             'reuse': true
         },
-        { 'en-US': 'after deactivation', 'zh-CN': '', 'reuse': true },
+        { 'en-US': 'after deactivation', 'zh-CN': '停用后', 'reuse': true },
         // 涂鸦明细
         {
             'en-US': 'You can place this image as a graffiti on walls.',
@@ -223,7 +223,7 @@ const content: PageContent = {
         // 墙纸
         {
             'en-US': 'You can place this image as a room-wide wall texture.',
-            'zh-CN': '您可以将此墙壁材质应用于一个房间',
+            'zh-CN': '您可以将此墙壁材质应用于一个房间。',
             'reuse': true
         },
         { 'en-US': 'Stroke Brightness', 'zh-CN': '描边亮度', 'reuse': true },
@@ -231,7 +231,7 @@ const content: PageContent = {
         // 地砖
         {
             'en-US': 'You can place this image as a room-wide floor texture.',
-            'zh-CN': '您可以将此地面材质应用于一个房间',
+            'zh-CN': '您可以将此地面材质应用于一个房间。',
             'reuse': true
         },
         {
@@ -253,7 +253,7 @@ const content: PageContent = {
         {
             'en-US':
                 'This item allows you to unlock full CPU in your account for 1 day.',
-            'zh-CN': '此物品可以让您解锁账户中的全额 CPU 1天。',
+            'zh-CN': '此物品可以让您解锁账户中的全额 CPU 1 天。',
             'reuse': true
         },
         {
@@ -284,7 +284,7 @@ const content: PageContent = {
         // pixel
         {
             'en-US': 'Pixels are used to pixelize new decorations.',
-            'zh-CN': 'Pixels 可以用来抽取新装饰物。',
+            'zh-CN': '像素可以用来抽取新的装饰物。',
             'reuse': true
         },
         {
