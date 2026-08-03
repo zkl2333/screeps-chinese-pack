@@ -8,7 +8,7 @@ export default `
 // ==UserScript==
 // @name         screeps-chinese-pack
 // @namespace    http://tampermonkey.net/
-// @version      1.5
+// @version      1.6
 // @description  用于汉化 screeps.com 网站的油猴脚本
 // @author       zkl2333
 // @match        https://screeps.com/*
