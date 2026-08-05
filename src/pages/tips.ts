@@ -14,7 +14,7 @@ const TIP_CONTENT = {
     'tower 可以透过墙和障碍物瞄准同房间中的任何对象。',
 
     'Power banks appear only in neutral rooms that divide living sectors on the map.':
-    'power bank 仅出现在过道房间中，过道房是指分隔不同区块的空旷中立房间。',
+    '超能量仓只会出现在地图上分隔各个活跃分区的中立过道房间中。',
 
     'Modular architecture of a script will allow easy testing of individual functions in the simulator.':
     '脚本的模块化架构使得您可以在模拟器中轻松测试单个函数。',
@@ -23,7 +23,7 @@ const TIP_CONTENT = {
     '在模拟器中测试各种游戏场景，以应对随时可能发生的意外。',
 
     'Sources in neutral rooms have reduced capacity. Reserve or claim the room to restore it to full capacity.':
-    '中立房间矿的能量矿（Source）上限只有1500。预订（reserve）或占领（claim）房间可以使其恢复到最大容量。',
+    '中立房间中资源点的容量较低。预订（reserve）或占领（claim）房间可以使其恢复到最大容量。',
 
     'To save your CPU, use less creeps of a larger size.':
     '生成数量更少、身体部件更多的 creep 来节省您的 CPU。',
@@ -62,7 +62,7 @@ const TIP_CONTENT = {
     'storage 里储存的能量不能直接用来孵化 creep，要先将能量转移到一个 spawn 或 extension 中。',
 
     'The more body parts of one type a creep has, the greater its productivity.':
-    '一个 creep 的身体部件越多，其效率也就越高。',
+    '一个 creep 拥有的同类型身体部件越多，该类型对应的工作效率就越高。',
 
     'More spawns in a room allows building more creeps at a time.':
     '一个房间中存在的 spawn 越多，能同时孵化的 creep 也就越多。',
@@ -95,7 +95,7 @@ const TIP_CONTENT = {
     '游戏已经被完整录制，所以您可以随时回放过去几天发生的事情。',
 
     'The more small objects in the Memory, the more CPU spent on its parsing.':
-    'Memory 中的对象越多、越复杂，解析它所花费的 CPU 也就越多。',
+    'Memory 中的小对象越多，解析它们所消耗的 CPU 就越多。',
 
     'Use try/catch blocks in right places to avoid a complete halt of your script due to errors.':
     '在适当的位置使用 try/catch 代码块，以避免由异常导致的脚本崩溃。',
@@ -152,16 +152,16 @@ const TIP_CONTENT = {
     '使用 <code>Room.energyAvailable</code> 和 <code>Room.energyCapacityAvailable</code> 来确定房间中所有 spawn 和 extensions 包含多少能量及能量上限是多少。',
 
     'Observers allow to get the <code>Room</code> object for the rooms that have no objects of yours.':
-    'Observer 允许获取那些没有您的单位存在的 <code>Room</code> 对象。',
+    '观察器可以让您获取那些没有己方 creep 或建筑的房间所对应的 <code>Room</code> 对象。',
 
     'To control a room continuously, you need to upgrade your controller from time to time.':
     '想要持续控制一个房间，您需要经常升级您的房间控制器。',
 
     'The <code>Game.notify</code> function automatically groups identical messages using the specified interval.':
-    '<code>Game.notify</code> 方法将把信息按照指定的时间间隔分组并发送。',
+    '<code>Game.notify</code> 会按照指定的时间间隔自动合并相同的消息。',
 
     'Dead body parts have weight and generate fatigue as well.':
-    '一个坏掉的身体部件也会产生疲劳。',
+    '失效的身体部件仍有重量，也会产生疲劳。',
 
     'Use branches to test and debug your temporary code and also do backups.':
     '使用分支（branch）来测试和调试您的临时代码，并记得时刻进行备份。',
@@ -194,7 +194,7 @@ const TIP_CONTENT = {
     'creep 死亡后其内存依旧存在，所以请清除 <code>Memory.creeps.*</code> 以避免内存溢出。',
 
     'A creep with an <code>ATTACK</code> part automatically strikes back at every attacker by <code>ATTACK</code>.':
-    '一个带有 <code>ATTACK</code> 身体部件的 creep 将会对敌方 <code>ATTACK</code> 进行自动反击。',
+    '拥有 <code>ATTACK</code> 部件的 creep 会使用 <code>ATTACK</code> 自动反击每个攻击者。',
 
     'A spawn automatically replenishes itself with power until the energy in the room reaches 300 units.':
     '当房间中用于孵化的能量小于 300 时，spawn 将会自动开始恢复能量，直到其能量等于 300 点。',
@@ -203,7 +203,7 @@ const TIP_CONTENT = {
     '排行榜每个月都会重置，您的游戏进度并不会受到影响。',
 
     'Use links to save on creep building and CPU.':
-    '使用 link 来节省要孵化的 creep 以及 CPU',
+    '使用 Link 可以减少需要生产的 creep 数量并节省 CPU。',
 
     'Use storage to not lose surplus of mined resources.':
     '使用仓库来存储开采出来的过量资源。'

@@ -7,8 +7,8 @@ const content: PageContent = {
         { 'en-US': 'Refresh', 'zh-CN': '刷新' },
         { 'en-US': 'Date', 'zh-CN': '成交时间', 'reuse': true },
         { 'en-US': 'Shard', 'zh-CN': '分片', 'reuse': true },
-        { 'en-US': 'Tick', 'zh-CN': '时刻', 'reuse': true },
-        { 'en-US': 'Change', 'zh-CN': '成交金额', 'reuse': true },
+        { 'en-US': 'Tick', 'zh-CN': 'tick', 'reuse': true },
+        { 'en-US': 'Change', 'zh-CN': '余额变动', 'reuse': true },
         { 'en-US': 'Balance', 'zh-CN': '余额', 'reuse': true },
         { 'en-US': 'Description', 'zh-CN': '描述', 'reuse': true },
 

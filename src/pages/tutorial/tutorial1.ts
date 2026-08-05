@@ -10,7 +10,7 @@ const TUTORIAL_CONTENT = {
     '这个教程将帮助您一步步地了解这个游戏的基础概念。您可以稍后再进行这个教程，但是我们强烈建议您在开始真正的游戏前先来试试手。',
 
     'If you experience any performance issues, please note that Screeps is best played in Chrome browser.':
-    '如果您遇到了任何异常的问题，请记住，Screeps 在 Chrome 浏览器上可以带来最佳的表现。',
+    '如果您遇到任何性能问题，请注意，使用 Chrome 浏览器可以获得最佳的 Screeps 游戏体验。',
 
     'Screeps is a game for programmers. If you don\'t know how to code in JavaScript, check out this&nbsp;<a app-nw-external-link="" href="https://codecademy.com/learn/javascript" target="_blank">free interactive course</a>.':
     'Screeps 是一个为程序员们设计的游戏，如果您不知道如何编写 JavaScript 代码，来试试这个 <a app-nw-external-link="" href="https://codecademy.com/learn/javascript" target="_blank">免费的交互式课程</a>',
@@ -61,7 +61,7 @@ const TUTORIAL_CONTENT = {
     '您在这里写下的代码每个游戏 tick 都会执行一遍。所以您可以编写一段持续工作的程序来让 creep 一直干活，哪怕您已经离线了（仅就实际游戏而言，对于模拟模式并不生效）。',
 
     'To commit a script to the game so it can run, use this button or <strong>Ctrl+Enter</strong>.':
-    '使用 <strong>Ctrl+Enter</strong> 来向游戏提交代码，这样就可以让代码开始运行。',
+    '使用此按钮或按 <strong>Ctrl+Enter</strong> 向游戏提交脚本，使其开始运行。',
 
     'The code for each Tutorial section is created in its own branch. You can view code from these branches for\nfurther use in your scripts.':
     '每个教程章节的代码都会创建并保存到独有的分支中。您可以从这些分支中查看代码以便以后使用。',

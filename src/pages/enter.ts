@@ -21,16 +21,16 @@ const content: PageContent = {
         },
         {
             'en-US': 'The season entry fee is changed according to the following schedule:',
-            'zh-CN': '赛季服门票将会根据以下时间表进行调整：'
+            'zh-CN': '赛季入场费用将按以下时间表调整：'
         },
         {
             'en-US': 'Grants access to the Seasonal World or a special event in the Persistent World.',
-            'zh-CN': '解锁赛季世界或者永恒世界中的特殊事件',
+            'zh-CN': '解锁赛季世界或永恒世界中的特殊事件',
             'reuse': true
         },
         {
             'en-US': 'Remember that by buying resources in our store',
-            'zh-CN': '请记住，在我们的商店中购买物品',
+            'zh-CN': '请记住，在我们的商店中购买资源',
             'reuse': true
         },
         {
@@ -54,8 +54,8 @@ const content: PageContent = {
             'reuse': true
         }, */
         { 'en-US': 'View details', 'zh-CN': '了解更多细节' },
-        { 'en-US': 'To join the season you need to have', 'zh-CN': '您需要' },
-        { 'en-US': 'season keys.', 'zh-CN': '赛季key。' },
+        { 'en-US': 'To join the season you need to have', 'zh-CN': '要加入赛季，您需要持有' },
+        { 'en-US': 'season keys.', 'zh-CN': '赛季钥匙。' },
         {
             'en-US': 'You need a Steam license or full unlocked CPU to start playing in the Persistent World.',
             'zh-CN': '在永恒世界游玩您需要一个 Steam 许可或完全解锁的 CPU 权限。'
@@ -64,11 +64,11 @@ const content: PageContent = {
         { 'en-US': 'Steam license', 'zh-CN': 'Steam 许可证', 'reuse': true },
         {
             'en-US': 'Steam game license includes limited 20 CPU with no expiration',
-            'zh-CN': 'Steam 游戏许可证包含永久有效的 20 CPU',
+            'zh-CN': 'Steam 游戏许可证永久提供上限为 20 的 CPU 额度',
             'reuse': true
         },
-        { 'en-US': 'Gives limited 20 CPU indefinitely', 'zh-CN': '永远拥有有限的20 CPU' },
-        { 'en-US': 'CPU Unlocks', 'zh-CN': '解锁 CPU' },
+        { 'en-US': 'Gives limited 20 CPU indefinitely', 'zh-CN': '永久提供上限为 20 的 CPU 额度' },
+        { 'en-US': 'CPU Unlocks', 'zh-CN': 'CPU 解锁' },
         { 'en-US': 'Activates full unlocked CPU for 1 day each', 'zh-CN': '每一个可以激活一天完全解锁的 CPU 权限' },
         { 'en-US': 'I have a coupon', 'zh-CN': '我有一个优惠码' },
         { 'en-US': 'Enter your coupon code', 'zh-CN': '输入您的优惠码' },

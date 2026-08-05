@@ -19,11 +19,11 @@ const content: PageContent = {
         { 'en-US': 'Learn more', 'zh-CN': '了解更多', 'reuse': true },
         {
             'en-US': 'Link your Steam account to use the same account in both web and Steam versions of the game.',
-            'zh-CN': '关联您的 Steam 账户来同步 Web 和 Steam 版本的游戏内容。'
+            'zh-CN': '关联您的 Steam 账户，以便在网页版和 Steam 版游戏中使用同一账户。'
         },
         {
             'en-US': 'You can link your GitHub account and automatically pull code to Screeps from any of your GitHub repositories.',
-            'zh-CN': '您可以关联您的 GitHub 账户并从任何仓库中自动推送代码到 Screeps。'
+            'zh-CN': '您可以关联 GitHub 账户，并让 Screeps 自动从您的任意 GitHub 仓库拉取代码。'
         },
 
         { 'en-US': 'CPU Unlock', 'zh-CN': 'CPU 解锁', 'reuse': true },

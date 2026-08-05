@@ -5,7 +5,7 @@ const content: PageContent = {
         { 'en-US': 'Refresh', 'zh-CN': '刷新' },
         { 'en-US': 'Order ID', 'zh-CN': '订单标识' },
         { 'en-US': 'Type', 'zh-CN': '类型' },
-        { 'en-US': 'Active', 'zh-CN': '激活' },
+        { 'en-US': 'Active', 'zh-CN': '有效' },
         { 'en-US': 'Price', 'zh-CN': '单价' },
         { 'en-US': 'Available', 'zh-CN': '可用' },
         { 'en-US': 'Remaining', 'zh-CN': '剩余' },

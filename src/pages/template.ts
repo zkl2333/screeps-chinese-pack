@@ -65,7 +65,7 @@ const content: PageContent = {
             'zh-CN': (el: HTMLElement) => {
                 el.innerHTML = el.innerHTML.replace(
                     'use this button or <strong>Ctrl+Enter</strong>.',
-                    '使用 <strong>Ctrl+Enter</strong> 来向游戏提交代码。'
+                    '使用此按钮或按 <strong>Ctrl+Enter</strong> 向游戏提交代码。'
                 )
             }
         }

@@ -5,25 +5,25 @@ import { translateMultiple } from 'utils'
  */
 const OVERVIEW_HEADER: MultipleMap = {
     'Control<br>points': '控制点数',
-    'Energy<br>harvested': '能量采集',
-    'Energy<br>on construct': '能量 - 建筑消耗',
-    'Energy<br>on creeps': '能量 - 孵化消耗',
-    'Creeps<br>produced': 'creep 孵化',
-    'Creeps<br>lost': 'creep 损失',
-    'Power<br>processed': '超能量处理'
+    'Energy<br>harvested': '能量采集量',
+    'Energy<br>on construct': '建造消耗的能量',
+    'Energy<br>on creeps': '生产 creep 消耗的能量',
+    'Creeps<br>produced': '生产的 creep 数',
+    'Creeps<br>lost': '损失的 creep 数',
+    'Power<br>processed': '超能量处理量'
 }
 
 /**
  * 图表右上角的下拉框选项
  */
 const GRAPH_SELECT_LIST: MultipleMap = {
-    'Power processed': '超能量处理',
+    'Power processed': '超能量处理量',
     'Control points': '控制点数',
-    'Energy harvested': '能量采集',
-    'Energy spent on construction': '能量 - 建筑消耗',
-    'Energy spent on creeps': '能量 - 孵化消耗',
-    'Creeps produced': 'creep 孵化',
-    'Creeps lost': 'creep 损失'
+    'Energy harvested': '能量采集量',
+    'Energy spent on construction': '建造消耗的能量',
+    'Energy spent on creeps': '生产 creep 消耗的能量',
+    'Creeps produced': '生产的 creep 数',
+    'Creeps lost': '损失的 creep 数'
 }
 
 /**

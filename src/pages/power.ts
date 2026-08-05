@@ -84,7 +84,7 @@ const content: PageContent = {
         // OPERATE_EXTENSION
         { 'en-US': 'Instantly fill', 'zh-CN': '使用目标（容器、仓库或终端）中的能量立即充满房间内 ', 'reuse': true },
         { 'en-US': 'of all extensions in the room using energy from the target structure (container, storage, or terminal).', 'zh-CN': '的所有 extension。', 'reuse': true },
-        { 'en-US': 'Cooldown 50 ticks.', 'zh-CN': ' 冷却 50 ticks。 ', 'reuse': true },
+        { 'en-US': 'Cooldown 50 ticks.', 'zh-CN': '冷却 50 tick。', 'reuse': true },
 
         // OPERATE_TOWER
         { 'en-US': 'Increase damage, repair and heal amount by', 'zh-CN': '提升防御塔的伤害、修复与治疗效果 ', 'reuse': true },
@@ -116,12 +116,12 @@ const content: PageContent = {
         // SHIELD
         {
             'en-US': 'Create a temporary non-repairable rampart structure on the same square with',
-            'zh-CN': '在相同位置上创造一个临时的、不可修复的 Rampart，其血量为 ',
+            'zh-CN': '在当前位置创建一个临时且无法维修的 Rampart，拥有 ',
             'reuse': true
         },
         {
             'en-US': 'hits.\nCannot be used on top of another rampart.',
-            'zh-CN': '点。已经位于 Rampart 中时无法使用。',
+            'zh-CN': '点生命值。不能在已有 Rampart 的位置上使用。',
             'reuse': true
         },
 
@@ -135,20 +135,20 @@ const content: PageContent = {
         // OPERATE_FACTORY
         {
             'en-US': 'Set the level of the factory to the level of the power. This action is permanent, it cannot be undone, and another power level cannot be applied. Apply the same power again to renew its effect.',
-            'zh-CN': '将工厂的等级设置为该超能量的等级。该操作是永久性的，无法撤销，并且无法用其他等级的同类超能量覆盖。施加相同等级的超能量来重新激活该效果。',
+            'zh-CN': '将工厂等级设为该超能力的等级。该操作是永久性的，无法撤销，也不能再施加其他等级的该能力。再次施加同一能力可刷新其效果。',
             'reuse': true
         },
 
         // REGEN_SOURCE
-        { 'en-US': 'Regenerate', 'zh-CN': '重新生成 ', 'reuse': true },
-        { 'en-US': 'energy units in a source every 15 ticks.', 'zh-CN': '点能量于资源点中 / 每 15 tick。', 'reuse': true },
+        { 'en-US': 'Regenerate', 'zh-CN': '再生 ', 'reuse': true },
+        { 'en-US': 'energy units in a source every 15 ticks.', 'zh-CN': '点能量（每 15 tick，在资源点中）。', 'reuse': true },
 
         // REGEN_MINERAL
-        { 'en-US': 'mineral units in a deposit every 10 ticks.', 'zh-CN': '点矿物于沉积物中 / 每 10 tick。', 'reuse': true },
+        { 'en-US': 'mineral units in a deposit every 10 ticks.', 'zh-CN': '点矿物（沉积物中，每 10 tick）。', 'reuse': true },
 
         // OPERATE_POWER
-        { 'en-US': 'Increase power processing speed of a Power Spawn by', 'zh-CN': '提高超能 Spawn 的单次超能量处理速率', 'reuse': true },
-        { 'en-US': 'units per tick.', 'zh-CN': ' 点每 tick。', 'reuse': true },
+        { 'en-US': 'Increase power processing speed of a Power Spawn by', 'zh-CN': '使超能 Spawn 的超能量处理速度每 tick 提高 ', 'reuse': true },
+        { 'en-US': 'units per tick.', 'zh-CN': '点。', 'reuse': true },
 
         // DISRUPT_TERMINAL
         { 'en-US': 'Block withdrawing resources from the terminal.', 'zh-CN': '阻止从终端中取出资源。', 'reuse': true },
@@ -196,7 +196,7 @@ const content: PageContent = {
         },
         {
             'en-US': /You have \d+ periods left. Would you like to activate it?/,
-            'zh-CN': (text: string) => text.replace('You have', '您还有 ').replace('periods left. Would you like to activate it?', ' 个试用期，您确定要激活一个吗？'),
+            'zh-CN': (text: string) => text.replace('You have', '您还剩 ').replace('periods left. Would you like to activate it?', '个实验期。是否要激活一个？'),
             'reuse': true
         },
         {

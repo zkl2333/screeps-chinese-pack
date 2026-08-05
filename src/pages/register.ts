@@ -33,7 +33,7 @@ const content: PageContent = {
         // 邮箱
         {
             'en-US': 'You will be able to use this e-mail to notify yourself on custom events via in-game API. No spam, we promise.',
-            'zh-CN': '您可以通过游戏内 API 向该邮箱发送邮件来提醒您自己游戏内发生了什么事，我们保证不会发送垃圾邮件。',
+            'zh-CN': '您可以通过游戏内 API，在自定义事件发生时向该邮箱发送通知。我们保证不会发送垃圾邮件。',
             'reuse': true
         },
         {
@@ -60,7 +60,7 @@ const content: PageContent = {
         },
         {
             'en-US': 'Confirm Password',
-            'zh-CN': '重复密码。'
+            'zh-CN': '确认密码'
         },
         {
             'en-US': 'Once again please.',

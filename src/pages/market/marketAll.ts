@@ -16,7 +16,7 @@ const content: PageContent = {
         { 'en-US': 'Remaining', 'zh-CN': '剩余', 'reuse': true },
         { 'en-US': 'Total', 'zh-CN': '总量', 'reuse': true },
         { 'en-US': 'Room', 'zh-CN': '房间', 'reuse': true },
-        { 'en-US': 'Range', 'zh-CN': '范围', 'reuse': true },
+        { 'en-US': 'Range', 'zh-CN': '距离', 'reuse': true },
         { 'en-US': 'Price history', 'zh-CN': '历史单价' },
         { 'en-US': 'Date', 'zh-CN': '日期' },
         { 'en-US': 'Transactions', 'zh-CN': '交易次数' },

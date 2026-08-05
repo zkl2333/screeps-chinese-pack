@@ -4,7 +4,7 @@ const content: PageContent = {
         { 'en-US': 'Simulation mode', 'zh-CN': '模拟模式' },
         {
             'en-US': 'In this mode your script runs not on the server, but locally on your machine, so that you can pause and debug it.',
-            'zh-CN': '该模式下，您的代码将运行在本地机器而不是服务器上。因此，您可以暂停并对代码进行调试。'
+            'zh-CN': '该模式下，您的脚本将在本地机器而不是服务器上运行。因此，您可以暂停并调试脚本。'
         },
 
         { 'en-US': 'Tutorial', 'zh-CN': '教程', 'reuse': true },
@@ -24,11 +24,11 @@ const content: PageContent = {
         { 'en-US': 'Custom', 'zh-CN': '自定义' },
         {
             'en-US': 'Modify the landscape, create any objects, and test your scripts playing for two virtual players at once.',
-            'zh-CN': '修改地形、创建任何对象并同时操控两个虚拟玩家来测试您的代码。'
+            'zh-CN': '修改地形、创建任意对象，并同时操控两个虚拟玩家来测试您的脚本。'
         },
         {
             'en-US': 'Your script will be saved, but your simulation progress will be lost! Are you sure?',
-            'zh-CN': '您的代码将会保存，但是您的模拟器进度将会丢失！确定要退出吗？',
+            'zh-CN': '您的脚本将会保存，但是您的模拟进度将会丢失！确定要退出吗？',
             'reuse': true
         },
         { 'en-US': 'Cancel', 'zh-CN': '取消', 'reuse': true },

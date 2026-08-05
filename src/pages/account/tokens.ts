@@ -17,7 +17,7 @@ const content: PageContent = {
         { 'en-US': 'Generate token', 'zh-CN': '生成令牌' },
         {
             'en-US': 'You can create tokens to authenticate to our Web API endpoints in external tools.\nThese tokens allow to skip solving CAPTCHA on login, but rate limiting is applied.',
-            'zh-CN': '您可以创建一个令牌来使外部工具可以访问我们的 Web API。这些令牌允许在访问时跳过验证码，但是会有一定的访问速率限制。'
+            'zh-CN': '您可以创建令牌，供外部工具调用我们的 Web API 接口时进行身份验证。这些令牌可让您在登录时跳过验证码，但仍会受到访问速率限制。'
         },
         { 'en-US': 'Full access', 'zh-CN': '完全访问权限', 'reuse': true },
         { 'en-US': 'WebSockets (console)', 'zh-CN': 'WebSockets (控制台)', 'reuse': true },

@@ -16,7 +16,7 @@ const content: PageContent = {
 
         { 'en-US': 'Random Room', 'zh-CN': '随机房间', 'reuse': true },
         { 'en-US': 'Display', 'zh-CN': '展示项目：', 'reuse': true },
-        { 'en-US': 'Owner control level', 'zh-CN': '房间拥有者房间控制等级', 'reuse': true },
+        { 'en-US': 'Owner control level', 'zh-CN': '所有者的房间控制等级', 'reuse': true },
         { 'en-US': 'Minerals', 'zh-CN': '矿物类型', 'reuse': true },
         { 'en-US': 'Settings', 'zh-CN': '设置', 'reuse': true },
         { 'en-US': 'Preferences', 'zh-CN': '偏好' },

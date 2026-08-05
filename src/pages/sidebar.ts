@@ -128,7 +128,7 @@ const content: PageContent = {
         // 服务器维护
         { 'en-US': 'The server is under maintenance. Please reload the page.', 'zh-CN': '服务器正在维护中，请重新加载页面。', 'reuse': true },
         { 'en-US': 'The server is under maintenance. Please restart.', 'zh-CN': '服务器正在维护中，请重新启动。', 'reuse': true },
-        { 'en-US': 'Under construction', 'zh-CN': '维护中', 'reuse': true },
+        { 'en-US': 'Under construction', 'zh-CN': '建设中', 'reuse': true },
         { 'en-US': 'Unknown error', 'zh-CN': '未知错误', 'reuse': true },
 
         // Steam / 激活码
@@ -142,7 +142,7 @@ const content: PageContent = {
 
         // 其他
         { 'en-US': 'In Development', 'zh-CN': '开发中', 'reuse': true },
-        { 'en-US': 'The game is not launched yet. Please try again on August 12', 'zh-CN': '游戏尚未启动，请于 8 月 12 日再试。', 'reuse': true }
+        { 'en-US': 'The game is not launched yet. Please try again on August 12', 'zh-CN': '游戏尚未上线，请于 8 月 12 日再试。', 'reuse': true }
     ]
 }
 

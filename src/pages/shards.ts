@@ -21,7 +21,7 @@ const content: PageContent = {
         // { 'en-US': /CPU assigned/, 'zh-CN': (text: string) => text.replace('assigned', '被分配'), 'reuse': true, 'protect': true },
         { 'en-US': 'Re-assign CPU', 'zh-CN': '重新分配 CPU', 'reuse': true },
 
-        { 'en-US': 'Unused CPU left:', 'zh-CN': '未使用的 CPU 剩余：' },
+        { 'en-US': 'Unused CPU left:', 'zh-CN': '剩余未分配 CPU：' },
         { 'en-US': 'Save CPU', 'zh-CN': '保存 CPU 分配' },
         { 'en-US': 'Cancel', 'zh-CN': '取消' },
 

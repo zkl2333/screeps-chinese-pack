@@ -14,7 +14,7 @@ const content: PageContent = {
         { 'en-US': 'Sign in', 'zh-CN': '登录' },
 
         { 'en-US': 'MMO sandbox game for programmers', 'zh-CN': '为程序员量身打造的 MMO 沙盒游戏' },
-        { 'en-US': 'It means "scripting creeps"', 'zh-CN': 'Screeps 的含义是编程（scripting）您的爬虫（creep）。' },
+        { 'en-US': 'It means "scripting creeps"', 'zh-CN': 'Screeps 一词意为“为 creep 编写脚本”（scripting creeps）。' },
         {
             'en-US': 'It\'s an open-source game for programmers,\nwherein the core mechanic is programming',
             'zh-CN': 'Screeps 是一款面向编程爱好者的开源 MMO RTS 沙盒游戏，其核心机制是为您的单位编写 AI。'
@@ -64,7 +64,7 @@ const content: PageContent = {
             'zh-CN': (el: HTMLElement) => {
                 el.innerHTML = el.innerHTML.replace(
                     '<em>Real programming</em>, not just pseudocode. You can use libs from real projects.',
-                    '<em>用真实的代码编程</em>，而不是伪代码。您可以调用任何真正的第三方库。'
+                    '<em>用真实的代码编程</em>，而不是伪代码。您可以使用实际项目中的库。'
                 )
                 el.innerHTML = el.innerHTML.replace('Use JavaScript or ', '使用 JavaScript 或者通过 WebAssembly')
                 el.innerHTML = el.innerHTML.replace('compile other languages', '编译其它语言。')
@@ -86,7 +86,7 @@ const content: PageContent = {
                 )
                 el.innerHTML = el.innerHTML.replace(
                     '<em>40-server cluster</em> (160 CPU cores) processing player scripts using Node.js.',
-                    '<em>40 个服务器集群</em>（160 CPU核心）运行基于 Node.js 的玩家脚本。'
+                    '由 <em>40 台服务器组成的集群</em>（160 个 CPU 核心）使用 Node.js 处理玩家脚本。'
                 )
                 el.innerHTML = el.innerHTML.replace(
                     'Programmable world living a continuous life <em>24/7 in real-time</em> even when you\'re offline.',
@@ -118,8 +118,10 @@ const content: PageContent = {
             'selector': 'div.sc-reviews__left-side > a > div',
             'zh-CN': (el: HTMLElement) => {
                 el.innerHTML = el.innerHTML.replace('Read reviews on Steam', '浏览 Steam 上的评论')
-                el.innerHTML = el.innerHTML.replace('%&nbsp;of&nbsp;', '%\u00A0中有\u00A0')
-                el.innerHTML = el.innerHTML.replace('&nbsp;reviews are positive', '\u00A0条积极评论')
+                el.innerHTML = el.innerHTML.replace(
+                    /(\d+)%&nbsp;of&nbsp;([\d,]+)&nbsp;reviews are positive/,
+                    '$2\u00A0条评价中有\u00A0$1%\u00A0为好评'
+                )
             }
         },
         {
