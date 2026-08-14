@@ -81,7 +81,7 @@ jobs:
 
           git -C "$RUNNER_TEMP/dist-branch" config user.name "CI Publisher"
           git -C "$RUNNER_TEMP/dist-branch" config user.email "ci-publisher@users.noreply.github.com"
-          git -C "$RUNNER_TEMP/dist-branch" add dist/main.js
+          git -C "$RUNNER_TEMP/dist-branch" add -f dist/main.js
 
           if git -C "$RUNNER_TEMP/dist-branch" diff --cached --quiet; then
             echo "dist/main.js 无变化"
