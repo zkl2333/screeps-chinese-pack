@@ -10,10 +10,7 @@ const content: PageContent = {
             'selector': 'body > app2-router-outlet > app-enter-base > section > p',
             'zh-CN': '无限制地发展您的殖民地，在这个巨大的永恒世界的历史上留下您的印记。'
         },
-        // 这两个 enter，一个是主世界的进入按钮，一个是赛季服的进入按钮
-        // 主世界的进入按钮有图标，所以需要加一个空格
-        { 'en-US': 'Enter', 'zh-CN': '\u00A0进入' },
-        { 'en-US': 'Enter', 'zh-CN': '进入' },
+        { 'en-US': 'Enter', 'zh-CN': '进入', 'reuse': true },
         { 'en-US': 'Seasonal World', 'zh-CN': '赛季世界' },
         {
             'selector': 'body > app2-router-outlet > app-enter-base > aside > div.__intro.--flex.--hcenter.--vcenter.--column > p',
