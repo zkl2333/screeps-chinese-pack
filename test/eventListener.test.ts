@@ -46,17 +46,19 @@ describe('eventListener 模块', () => {
         document.querySelector('.except').innerHTML = 'test'
         document.querySelector('.include').innerHTML = 'test'
 
-        // MutationObserver 的回调触发有延迟，所以需要加个 timeout
-        setTimeout(() => {
-            const { calls } = onElementChange.mock
-            // 触发变更的元素里不会有 .except 的内容
-            expect(calls.length).toBe(1)
+        // MutationObserver 和翻译回调都异步执行，需要等待渲染帧完成
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                const { calls } = onElementChange.mock
+                // 触发变更的元素里不会有 .except 的内容
+                expect(calls.length).toBe(1)
 
-            const [firstArg] = calls[0]
-            expect(firstArg.length).toBe(1)
-            expect(firstArg[0]).toBeInstanceOf(Text)
-            observer.disconnect()
-            done()
+                const [firstArg] = calls[0]
+                expect(firstArg.length).toBe(1)
+                expect(firstArg[0]).toBeInstanceOf(Text)
+                observer.disconnect()
+                done()
+            })
         })
     })
 

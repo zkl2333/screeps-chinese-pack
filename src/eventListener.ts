@@ -13,6 +13,10 @@
 import { getContent, updateContent } from './storage'
 import { getNoQueryHash, isExceptElement } from './utils'
 
+const reportError = function (error: unknown): void {
+    console.warn('[screeps-chinese-pack] 翻译脚本发生异常', error)
+}
+
 
 /**
  * 设置该插件所需的回调
@@ -42,35 +46,70 @@ export default function (callbacks: ListenerCallbacks): MutationObserver {
  * @param callback 要触发的实际回调
  */
 const getMutationCallback = function ({ onHashChange, onElementChange }: ListenerCallbacks) {
-    return function (mutationsList: MutationRecord[]) {
-        // 获取发生变更的节点
-        const changedNodes: Node[] = [].concat(...mutationsList.map(mutation => {
-            if (isExceptElement(mutation.target)) return []
+    // 同一渲染帧内可能收到多批 DOM 变更；合并后统一翻译，避免阻塞主线程。
+    let pendingNodes: Node[] = []
+    let frameId: number | undefined
 
-            if (mutation.type === 'childList') {
-                if (mutation.addedNodes.length > 0) return [...mutation.addedNodes]
-            }
-            // 是节点内容变更的话就直接返回变更的节点
-            else if (mutation.type === 'characterData') {
-                return [mutation.target]
-            }
+    const flush = function (): void {
+        frameId = undefined
 
-            return []
-        }))
-
-        // 如果没有发生变化的节点，就不需要翻译
+        // 取出并清空队列，避免翻译过程产生的新变更与本次混在一起
+        const changedNodes = pendingNodes
+        pendingNodes = []
         if (changedNodes.length <= 0) return
 
-        // 翻译前检查下 hash 有没有变
-        const { hash } = getContent()
-        const newHash = getNoQueryHash(document.location.hash)
-        // hash 变了，重新加载翻译源然后再更新
-        if (hash !== newHash) {
-            onHashChange(document.location.hash)
-            updateContent({ hash: newHash })
-        }
+        try {
+            // 翻译前检查下 hash 有没有变
+            const { hash } = getContent()
+            const newHash = getNoQueryHash(document.location.hash)
+            // hash 变了，重新加载翻译源然后再更新
+            if (hash !== newHash) {
+                try {
+                    onHashChange(document.location.hash)
+                }
+                catch (error) {
+                    reportError(error)
+                }
+                updateContent({ hash: newHash })
+            }
 
-        // 触发回调
-        onElementChange(changedNodes)
+            try {
+                onElementChange(changedNodes)
+            }
+            catch (error) {
+                reportError(error)
+            }
+        }
+        catch (error) {
+            reportError(error)
+        }
+    }
+
+    return function (mutationsList: MutationRecord[]) {
+        // 获取发生变更的节点
+        try {
+            const changedNodes: Node[] = [].concat(...mutationsList.map(mutation => {
+                if (isExceptElement(mutation.target)) return []
+
+                if (mutation.type === 'childList') {
+                    if (mutation.addedNodes.length > 0) return [...mutation.addedNodes]
+                }
+                // 是节点内容变更的话就直接返回变更的节点
+                else if (mutation.type === 'characterData') {
+                    return [mutation.target]
+                }
+
+                return []
+            }))
+
+            // 如果没有发生变化的节点，就不需要翻译
+            if (changedNodes.length <= 0) return
+
+            pendingNodes.push(...changedNodes)
+            if (frameId === undefined) frameId = requestAnimationFrame(flush)
+        }
+        catch (error) {
+            reportError(error)
+        }
     }
 }
