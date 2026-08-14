@@ -3,6 +3,8 @@ import { contentCache, getContent, updateContent } from './storage'
 import { isExceptElement, isHTMLElement, isText, trim } from './utils'
 import { updateTextContent } from './mutation'
 
+const protectObservers = new WeakMap<HTMLElement, MutationObserver>()
+
 
 /**
  * 递归获取该元素下所有包含内容的 text 元素
@@ -90,10 +92,20 @@ const updateProtectElement = function (el: HTMLElement, content: TranslationCont
     // 由于某些节点可能会存在 class 变化的问题
     // （比如 map 界面中房间介绍的储量，会通过加入临时的 class 来实现 in-out 效果，但是这些临时 class 会一直在替身节点身上，导致样式有问题）
     // 所以这里开启一个监听，以保证替身节点的样式一致
+    const previousObserver = protectObservers.get(el)
+    if (previousObserver) previousObserver.disconnect()
+
     const observer = new MutationObserver(() => {
-        el.standNode.className = el.className
+        if (!el.isConnected) {
+            observer.disconnect()
+            protectObservers.delete(el)
+            return
+        }
+
+        if (el.standNode) el.standNode.className = el.className
     })
     observer.observe(el, { attributes: true })
+    protectObservers.set(el, observer)
 
     // 受保护节点会一直返回翻译前的内容
     return el.innerHTML
@@ -110,7 +122,7 @@ const updateText = function (el: Text, content: TranslationContent): void {
     const newContent = content[TRANSLATE_TO]
     if (typeof newContent === 'string') updateTextContent(el, newContent)
     else if (typeof newContent === 'function') {
-        const newText = newContent(el.wholeText as (HTMLElement & string))
+        const newText = newContent(el.data as (HTMLElement & string))
         updateTextContent(el, newText)
     }
 }
@@ -131,6 +143,7 @@ const translateQueryContent = function (allQueryContents: TranslationContent[]):
         // 执行翻译
         targetElements.forEach((element, index) => {
             if (!isHTMLElement(element) || isExceptElement(element)) return
+            if (content.protect && element.isStandNode) return
 
             // 没有跳过检查的就从缓存里读出之前的内容进行检查
             if (!content.ingnoreRepeatedCheck) {
@@ -177,7 +190,7 @@ const translateNormalContent = function (el: Node, allContents: TranslationConte
         // 这个文本有可能在之前已经被翻译了（被从其父节点上剔除），所以这里不再进行无效翻译
         if (!text.parentElement) return
 
-        const originContent: string = text.wholeText
+        const originContent: string = text.data
 
         // 找到符合的翻译内容，并保存其索引
         let translationIndex: number

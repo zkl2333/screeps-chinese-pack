@@ -70,6 +70,22 @@ describe('translate 模块', () => {
         expect(target.childNodes[0]).toBe(textNode)
     })
 
+    test('相邻 Text 元素只匹配各自内容', () => {
+        const pageContent: PageContent = {
+            hashs: ['page'],
+            content: [{ 'en-US': 'Hello world', 'zh-CN': '你好世界' }]
+        }
+        updateSource('page', [pageContent])
+
+        const target = document.createElement('div')
+        target.appendChild(document.createTextNode('Hello'))
+        target.appendChild(document.createTextNode(' world'))
+        document.body.appendChild(target)
+        translate([target])
+
+        expect(target.textContent).toBe('Hello world')
+    })
+
     test('可以传入函数进行翻译', () => {
         const pageContent: PageContent = {
             hashs: ['page'],
@@ -254,6 +270,26 @@ describe('translate 模块', () => {
             expect(targetsWithExtend.length).toBe(2)
             done()
         })
+    })
+
+    test('指定 protect 后不会重复翻译替身节点', () => {
+        const mockFn = jest.fn((el: HTMLElement) => el.innerHTML = `${el.innerHTML}-protect`)
+        const pageContent: PageContent = {
+            hashs: ['page'],
+            content: [{
+                'selector': '.target',
+                'zh-CN': mockFn,
+                'protect': true,
+                'reuse': true
+            }]
+        }
+        updateSource('page', [pageContent])
+
+        document.body.innerHTML = '<div class="target">A</div>'
+        translate([document.body])
+        translate([document.body])
+
+        expect(mockFn).toHaveBeenCalledTimes(1)
     })
 
     test('ingnoreRepeatedCheck 可以跳过重复检查', () => {

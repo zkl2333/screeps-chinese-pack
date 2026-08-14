@@ -51,6 +51,8 @@ export const isExceptElement = function (el: Node): boolean {
 export const dontTranslate = function (selector: string): TranslationContent {
     return {
         'selector': selector,
+        'reuse': true,
+        'ingnoreRepeatedCheck': true,
         'zh-CN': (el: HTMLElement) => el.stopTranslateSearch = true
     }
 }

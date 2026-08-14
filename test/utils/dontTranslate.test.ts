@@ -30,4 +30,27 @@ describe('dontTranslate 可用', () => {
         expect(document.querySelector('.divA').innerHTML).toBe('A')
         expect(document.querySelector('.divB').innerHTML).toBe('b')
     })
+
+    test('动态重建的元素仍会被禁止翻译', () => {
+        const pageContent: PageContent = {
+            hashs: ['page'],
+            content: [
+                dontTranslate('.divA'),
+                { 'en-US': 'A', 'zh-CN': 'a', 'reuse': true }
+            ]
+        }
+        updateSource('page', [pageContent])
+
+        document.body.innerHTML = '<div class="target"><div class="divA">A</div></div>'
+        translate([document.body])
+
+        document.querySelector('.divA').remove()
+        const replacement = document.createElement('div')
+        replacement.className = 'divA'
+        replacement.textContent = 'A'
+        document.querySelector('.target').appendChild(replacement)
+        translate([replacement])
+
+        expect(replacement.innerHTML).toBe('A')
+    })
 })
