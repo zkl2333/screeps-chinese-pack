@@ -37,4 +37,14 @@ describe('translateMultiple 可用', () => {
         expect(document.querySelector('.b').innerHTML).toBe('b')
         expect(document.querySelector('.c').innerHTML).toBe('c')
     })
+
+    test('可以将内容翻译为空字符串', () => {
+        const update = translateMultiple({ A: '' })
+        const target = document.createElement('div')
+        target.innerHTML = 'A'
+
+        update(target)
+
+        expect(target.innerHTML).toBe('')
+    })
 })

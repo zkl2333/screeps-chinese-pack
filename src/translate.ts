@@ -5,6 +5,10 @@ import { updateTextContent } from './mutation'
 
 const protectObservers = new WeakMap<HTMLElement, MutationObserver>()
 
+const reportTranslationError = function (target: string, error: unknown): void {
+    console.warn(`[screeps-chinese-pack] 翻译 ${target} 失败`, error)
+}
+
 
 /**
  * 递归获取该元素下所有包含内容的 text 元素
@@ -137,7 +141,14 @@ const updateText = function (el: Text, content: TranslationContent): void {
 const translateQueryContent = function (allQueryContents: TranslationContent[]): TranslationContent[] {
     // 翻译所有有选择器的元素
     return allQueryContents.filter(content => {
-        const targetElements = document.body.querySelectorAll(content.selector)
+        let targetElements: NodeListOf<Element>
+        try {
+            targetElements = document.body.querySelectorAll(content.selector)
+        }
+        catch (error) {
+            reportTranslationError(`selector ${content.selector}`, error)
+            return false
+        }
         if (targetElements.length === 0) return true
 
         // 执行翻译
@@ -145,25 +156,30 @@ const translateQueryContent = function (allQueryContents: TranslationContent[]):
             if (!isHTMLElement(element) || isExceptElement(element)) return
             if (content.protect && element.isStandNode) return
 
-            // 没有跳过检查的就从缓存里读出之前的内容进行检查
-            if (!content.ingnoreRepeatedCheck) {
-                const cacheKey = content.selector + index
-                // 如果元素的内容没有发生变更，就不执行更新
-                const preContent = contentCache.get(cacheKey)
-                if (preContent !== undefined && preContent === element.innerHTML) return
+            try {
+                // 没有跳过检查的就从缓存里读出之前的内容进行检查
+                if (!content.ingnoreRepeatedCheck) {
+                    const cacheKey = content.selector + index
+                    // 如果元素的内容没有发生变更，就不执行更新
+                    const preContent = contentCache.get(cacheKey)
+                    if (preContent !== undefined && preContent === element.innerHTML) return
 
-                const newContent = content.protect ?
-                    updateProtectElement(element, content) :
-                    updateElement(element, content)
+                    const newContent = content.protect ?
+                        updateProtectElement(element, content) :
+                        updateElement(element, content)
 
-                // 更新缓存
-                contentCache.set(cacheKey, newContent)
-                return
+                    // 更新缓存
+                    contentCache.set(cacheKey, newContent)
+                    return
+                }
+
+                // 不然就直接进行更新
+                if (content.protect) updateProtectElement(element, content)
+                else updateElement(element, content)
             }
-
-            // 不然就直接进行更新
-            if (content.protect) updateProtectElement(element, content)
-            else updateElement(element, content)
+            catch (error) {
+                reportTranslationError(`selector ${content.selector}`, error)
+            }
         })
 
         return content.reuse
@@ -215,9 +231,14 @@ const translateNormalContent = function (el: Node, allContents: TranslationConte
             return
         }
 
-        // 更新文本，如果没指定重用的话就将其移除
-        updateText(text, currentTranslation)
-        if (!currentTranslation.reuse) allContents.splice(translationIndex, 1)
+        try {
+            // 更新文本，如果没指定重用的话就将其移除
+            updateText(text, currentTranslation)
+            if (!currentTranslation.reuse) allContents.splice(translationIndex, 1)
+        }
+        catch (error) {
+            reportTranslationError(`文本 ${originContent}`, error)
+        }
     })
 
     return allContents

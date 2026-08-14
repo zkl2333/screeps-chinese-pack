@@ -157,6 +157,27 @@ describe('translate 模块', () => {
         expect(document.querySelector('.target').innerHTML).toContain('12 个房间')
     })
 
+    test('单个 selector 翻译失败不会阻断其他翻译', () => {
+        const warn = jest.spyOn(console, 'warn').mockImplementation()
+        const pageContent: PageContent = {
+            hashs: ['page'],
+            content: [
+                { 'selector': '.broken', 'zh-CN': () => { throw new Error('broken') } },
+                { 'selector': '.working', 'zh-CN': '正常' },
+                { 'en-US': 'Text', 'zh-CN': '文本' }
+            ]
+        }
+        updateSource('page', [pageContent])
+        document.body.innerHTML = '<div class="broken">Broken</div><div class="working">Working</div><div>Text</div>'
+
+        translate([document.body])
+
+        expect(document.querySelector('.working').innerHTML).toBe('正常')
+        expect(document.body.textContent).toContain('文本')
+        expect(warn).toHaveBeenCalled()
+        warn.mockRestore()
+    })
+
     test('指定复用的可以重复翻译', () => {
         const pageContent: PageContent = {
             hashs: ['page'],

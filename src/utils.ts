@@ -79,6 +79,6 @@ export const trim = function (str: string): string {
 export const translateMultiple = function (contents: MultipleMap) {
     return (el: HTMLElement) => {
         const newContent = contents[trim(el.innerHTML)]
-        if (newContent) el.innerHTML = newContent
+        if (newContent !== undefined) el.innerHTML = newContent
     }
 }
