@@ -6,7 +6,7 @@
 A [tampermonkey script](https://www.tampermonkey.net/) for translating the [screeps.com](https://screeps.com) content to Chinese. It is spontaneously created and maintained by Screeps Chinese players. Click [here](./CONTRIBUTING.md) to see how to join this project!
 
 The canonical source repository is [zkl2333/screeps-chinese-pack](https://github.com/zkl2333/screeps-chinese-pack).
-The script is published on [GreasyFork](https://greasyfork.org/scripts/589620-screeps-chinese-pack) and checks GitHub build updates through its metadata after installation.
+The script is published on [GreasyFork](https://greasyfork.org/scripts/589620-screeps-chinese-pack), which provides updates for installations made through GreasyFork.
 Please report issues through [GitHub Issues](https://github.com/zkl2333/screeps-chinese-pack/issues).
 
 # require

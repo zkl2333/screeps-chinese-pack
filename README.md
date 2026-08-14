@@ -6,7 +6,7 @@
 用于汉化 [screeps.com](https://screeps.com) 网站的 [油猴脚本](https://www.tampermonkey.net/)。由 Screeps 中国玩家自发创建并维护。[点此](./CONTRIBUTING.md) 来查看如何参与本项目！
 
 本项目的唯一维护源为 [zkl2333/screeps-chinese-pack](https://github.com/zkl2333/screeps-chinese-pack)。
-脚本发布于 [GreasyFork](https://greasyfork.org/zh-CN/scripts/589620-screeps-chinese-pack)，安装后通过脚本元数据检查 GitHub 构建更新。
+脚本发布于 [GreasyFork](https://greasyfork.org/zh-CN/scripts/589620-screeps-chinese-pack)，从 GreasyFork 安装后由 GreasyFork 提供更新。
 问题反馈请提交至 [GitHub Issues](https://github.com/zkl2333/screeps-chinese-pack/issues)。
 
 Click [here](./README.en-US.md) to read the English readme.
