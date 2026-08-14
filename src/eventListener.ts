@@ -26,6 +26,9 @@ const reportError = function (error: unknown): void {
  */
 export default function (callbacks: ListenerCallbacks): MutationObserver {
     const observer = new MutationObserver(getMutationCallback(callbacks))
+    const onHashChange = function (): void {
+        if (updateHash(callbacks)) safelyChangeElements(callbacks.onElementChange, [document.body])
+    }
 
     // 启动监听
     observer.observe(document.body, {
@@ -33,6 +36,13 @@ export default function (callbacks: ListenerCallbacks): MutationObserver {
         characterData: true,
         subtree: true
     })
+    window.addEventListener('hashchange', onHashChange)
+
+    const disconnect = observer.disconnect.bind(observer)
+    observer.disconnect = function (): void {
+        window.removeEventListener('hashchange', onHashChange)
+        disconnect()
+    }
 
     return observer
 }
@@ -60,26 +70,8 @@ const getMutationCallback = function ({ onHashChange, onElementChange }: Listene
         if (changedNodes.length <= 0) return
 
         try {
-            // 翻译前检查下 hash 有没有变
-            const { hash } = getContent()
-            const newHash = getNoQueryHash(document.location.hash)
-            // hash 变了，重新加载翻译源然后再更新
-            if (hash !== newHash) {
-                try {
-                    onHashChange(document.location.hash)
-                }
-                catch (error) {
-                    reportError(error)
-                }
-                updateContent({ hash: newHash })
-            }
-
-            try {
-                onElementChange(changedNodes)
-            }
-            catch (error) {
-                reportError(error)
-            }
+            updateHash({ onHashChange, onElementChange })
+            safelyChangeElements(onElementChange, changedNodes)
         }
         catch (error) {
             reportError(error)
@@ -113,5 +105,30 @@ const getMutationCallback = function ({ onHashChange, onElementChange }: Listene
         catch (error) {
             reportError(error)
         }
+    }
+}
+
+const updateHash = function ({ onHashChange }: ListenerCallbacks): boolean {
+    const { hash } = getContent()
+    const newHash = getNoQueryHash(document.location.hash)
+    if (hash === newHash) return true
+
+    try {
+        onHashChange(document.location.hash)
+        updateContent({ hash: newHash })
+        return true
+    }
+    catch (error) {
+        reportError(error)
+        return false
+    }
+}
+
+const safelyChangeElements = function (onElementChange: ListenerCallbacks['onElementChange'], nodes: Node[]): void {
+    try {
+        onElementChange(nodes)
+    }
+    catch (error) {
+        reportError(error)
     }
 }

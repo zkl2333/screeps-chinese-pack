@@ -13,24 +13,47 @@ describe('eventListener 模块', () => {
     })
 
     test('hash 变更时可以触发回调', done => {
-        // onHashChange 会在 onElementChange 之前调用
-        const observer = listener({
-            onHashChange,
-            onElementChange: data => {
-                // onHashChange 会被触发且收到对应的 hash
-                expect(onHashChange.mock.calls).toEqual([['#testHash']])
-                // onElementChange 会收到变更的新 innerHTML
-                expect(data.length).toBe(1)
-                expect(isText(data[0])).toBe(true)
-                expect((data[0] as Text).wholeText).toBe('newContent')
-
-                observer.disconnect()
-                done()
-            }
-        })
+        const observer = listener({ onHashChange, onElementChange })
 
         document.location.hash = 'testHash'
         document.body.innerHTML = 'newContent'
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                expect(onHashChange.mock.calls).toEqual([['#testHash']])
+                const changedNodes: Node[] = [].concat(...onElementChange.mock.calls.map(([nodes]) => nodes))
+                expect(changedNodes.some(node => isText(node) && node.wholeText === 'newContent')).toBe(true)
+                observer.disconnect()
+                done()
+            })
+        })
+    })
+
+    test('没有 DOM 变更时也会处理 hash 变更', done => {
+        const observer = listener({
+            onHashChange: hash => {
+                expect(hash).toBe('#hash-only')
+                observer.disconnect()
+                done()
+            },
+            onElementChange
+        })
+
+        document.location.hash = 'hash-only'
+    })
+
+    test('hash 回调失败后仍会重试', done => {
+        const retryHashChange = jest.fn()
+            .mockImplementationOnce(() => { throw new Error('temporary failure') })
+            .mockImplementation(() => {
+                expect(retryHashChange).toHaveBeenCalledTimes(2)
+                observer.disconnect()
+                done()
+            })
+        const observer = listener({ onHashChange: retryHashChange, onElementChange })
+
+        document.location.hash = 'hash-retry'
+        setTimeout(() => document.body.appendChild(document.createTextNode('retry')), 0)
     })
 
     test('被排除的元素变更时不会触发回调', done => {
