@@ -67,6 +67,7 @@ describe('translate 模块', () => {
 
         // Text 可以被正常翻译
         expect(target.innerHTML).toBe('a')
+        expect(target.childNodes[0]).toBe(textNode)
     })
 
     test('可以传入函数进行翻译', () => {

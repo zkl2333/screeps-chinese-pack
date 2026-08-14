@@ -1,4 +1,6 @@
 import listener from '@/eventListener'
+import translate from '@/translate'
+import { updateSource } from '@/storage'
 import { isText } from '@/utils'
 
 describe('eventListener 模块', () => {
@@ -80,5 +82,37 @@ describe('eventListener 模块', () => {
             observer.disconnect()
             done()
         })
+    })
+
+    test('汉化自身的文本变更不会递归触发回调', done => {
+        document.location.hash = 'own-mutation'
+        updateSource(document.location.hash, [{
+            hashs: ['#own-mutation'],
+            content: [{ 'en-US': 'A', 'zh-CN': 'a', 'reuse': true }]
+        }])
+        const translateCallback = jest.fn((nodes: Node[]) => {
+            translate(nodes)
+
+            if (translateCallback.mock.calls.length === 1) {
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        expect(target.textContent).toBe('a')
+                        expect(translateCallback).toHaveBeenCalledTimes(1)
+                        target.firstChild.textContent = 'A'
+                    })
+                })
+            }
+            else {
+                expect(target.textContent).toBe('a')
+                expect(translateCallback).toHaveBeenCalledTimes(2)
+                observer.disconnect()
+                done()
+            }
+        })
+        const observer = listener({ onHashChange, onElementChange: translateCallback })
+
+        const target = document.createElement('div')
+        target.textContent = 'A'
+        document.body.appendChild(target)
     })
 })

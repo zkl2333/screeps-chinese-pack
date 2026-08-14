@@ -1,6 +1,7 @@
 import { TRANSLATE_FROM, TRANSLATE_TO } from './setting'
 import { contentCache, getContent, updateContent } from './storage'
 import { isExceptElement, isHTMLElement, isText, trim } from './utils'
+import { updateTextContent } from './mutation'
 
 
 /**
@@ -107,10 +108,10 @@ const updateProtectElement = function (el: HTMLElement, content: TranslationCont
  */
 const updateText = function (el: Text, content: TranslationContent): void {
     const newContent = content[TRANSLATE_TO]
-    if (typeof newContent === 'string') el.parentElement.replaceChild(new Text(newContent), el)
+    if (typeof newContent === 'string') updateTextContent(el, newContent)
     else if (typeof newContent === 'function') {
         const newText = newContent(el.wholeText as (HTMLElement & string))
-        el.parentElement.replaceChild(new Text(newText), el)
+        updateTextContent(el, newText)
     }
 }
 

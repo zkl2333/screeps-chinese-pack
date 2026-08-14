@@ -12,6 +12,7 @@
 
 import { getContent, updateContent } from './storage'
 import { getNoQueryHash, isExceptElement } from './utils'
+import { isOwnTextMutation } from './mutation'
 
 const reportError = function (error: unknown): void {
     console.warn('[screeps-chinese-pack] 翻译脚本发生异常', error)
@@ -54,7 +55,7 @@ const getMutationCallback = function ({ onHashChange, onElementChange }: Listene
         frameId = undefined
 
         // 取出并清空队列，避免翻译过程产生的新变更与本次混在一起
-        const changedNodes = pendingNodes
+        const changedNodes = [...new Set(pendingNodes)].filter(node => node.isConnected)
         pendingNodes = []
         if (changedNodes.length <= 0) return
 
@@ -89,6 +90,7 @@ const getMutationCallback = function ({ onHashChange, onElementChange }: Listene
         // 获取发生变更的节点
         try {
             const changedNodes: Node[] = [].concat(...mutationsList.map(mutation => {
+                if (isOwnTextMutation(mutation)) return []
                 if (isExceptElement(mutation.target)) return []
 
                 if (mutation.type === 'childList') {
