@@ -1,12 +1,13 @@
 # Screeps-chinese-pack
 
-![build badge](https://github.com/screeps-cn/screeps-chinese-pack/workflows/BUILD/badge.svg)
+![publish badge](https://github.com/zkl2333/screeps-chinese-pack/actions/workflows/PUBLISH.yml/badge.svg?branch=main)
 ![Base on](https://img.shields.io/badge/Base%20on-Tampermonkey-blue)
-[![Coverage Status](https://coveralls.io/repos/github/screeps-cn/screeps-chinese-pack/badge.svg?branch=screeps-chinese-pack)](https://coveralls.io/github/screeps-cn/screeps-chinese-pack?branch=screeps-chinese-pack)
 
 A [tampermonkey script](https://www.tampermonkey.net/) for translating the [screeps.com](https://screeps.com) content to Chinese. It is spontaneously created and maintained by Screeps Chinese players. Click [here](./CONTRIBUTING.md) to see how to join this project!
 
-This script is published on **[greasyfork - screeps-chinese-pack](https://greasyfork.org/scripts/416651-screeps-chinese-pack)**, refer to [installing-user-scripts](https://greasyfork.org/help/installing-user-scripts) for installation.
+The canonical source repository is [zkl2333/screeps-chinese-pack](https://github.com/zkl2333/screeps-chinese-pack).
+The script is published on [GreasyFork](https://greasyfork.org/scripts/589620-screeps-chinese-pack) and checks GitHub build updates through its metadata after installation.
+Please report issues through [GitHub Issues](https://github.com/zkl2333/screeps-chinese-pack/issues).
 
 # require
 
