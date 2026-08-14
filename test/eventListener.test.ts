@@ -43,10 +43,12 @@ describe('eventListener 模块', () => {
     })
 
     test('hash 回调失败后仍会重试', done => {
+        const warn = jest.spyOn(console, 'warn').mockImplementation()
         const retryHashChange = jest.fn()
             .mockImplementationOnce(() => { throw new Error('temporary failure') })
             .mockImplementation(() => {
                 expect(retryHashChange).toHaveBeenCalledTimes(2)
+                warn.mockRestore()
                 observer.disconnect()
                 done()
             })
