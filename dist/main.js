@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         screeps-chinese-pack
 // @namespace    https://github.com/zkl2333/screeps-chinese-pack
-// @version      1.9.0
+// @version      1.9.1
 // @description  用于汉化 screeps.com 网站的油猴脚本
 // @author       zkl2333
 // @homepageURL  https://github.com/zkl2333/screeps-chinese-pack
@@ -584,6 +584,30 @@
         }
     };
 
+    const MONTH_NAMES = {
+        January: '1 月',
+        February: '2 月',
+        March: '3 月',
+        April: '4 月',
+        May: '5 月',
+        June: '6 月',
+        July: '7 月',
+        August: '8 月',
+        September: '9 月',
+        October: '10 月',
+        November: '11 月',
+        December: '12 月'
+    };
+    /**
+     * 将 "No rank in August 2026" 译为 "2026 年 8 月暂无排名"
+     */
+    const translateNoRank = function (text) {
+        const matched = text.match(/^No rank in ([A-Za-z]+) (\d{4})$/);
+        if (!matched)
+            return text.replace('No rank in ', '暂无排名：');
+        const month = MONTH_NAMES[matched[1]] || matched[1];
+        return `${matched[2]} 年 ${month}暂无排名`;
+    };
     /**
      * 中间横排的信息一览
      */
@@ -630,8 +654,8 @@
             { 'en-US': /Rooms: \d+/, 'zh-CN': (text) => text.replace('Rooms:', '房间数：'), 'reuse': true },
             { 'en-US': 'Rooms:', 'zh-CN': '房间数：', 'reuse': true },
             {
-                'en-US': /No rank in .+$/,
-                'zh-CN': (text) => `${text.replace('No rank in ', '暂无排名（')}）`,
+                'en-US': /^No rank in .+$/,
+                'zh-CN': (text) => translateNoRank(text),
                 'reuse': true
             },
             {
@@ -849,7 +873,12 @@
                 'reuse': true
             },
             { 'en-US': 'Unlock CPU in PTR activated', 'zh-CN': '公共测试服 CPU 解锁已激活', 'reuse': true },
-            { 'en-US': 'Your Global Power Level has been upgraded!', 'zh-CN': '您的全局超能等级已提升！', 'reuse': true }
+            { 'en-US': 'Your Global Power Level has been upgraded!', 'zh-CN': '您的全局超能等级已提升！', 'reuse': true },
+            {
+                'en-US': /^No rank in .+$/,
+                'zh-CN': (text) => translateNoRank(text),
+                'reuse': true
+            }
         ]
     };
 
@@ -2288,6 +2317,23 @@
             { 'en-US': 'CPU Unlock', 'zh-CN': 'CPU 解锁', 'reuse': true },
             { 'en-US': 'Pixels', 'zh-CN': '像素', 'reuse': true },
             { 'en-US': 'Access keys', 'zh-CN': '访问密钥', 'reuse': true },
+            { 'en-US': 'Access Keys', 'zh-CN': '访问密钥', 'reuse': true },
+            { 'en-US': 'Buy Access Keys', 'zh-CN': '购买访问密钥', 'reuse': true },
+            { 'en-US': 'Unlimited Access Keys', 'zh-CN': '无限访问密钥', 'reuse': true },
+            { 'en-US': 'Unlimited access', 'zh-CN': '无限访问', 'reuse': true },
+            {
+                'en-US': 'Grants access to special features and events.',
+                'zh-CN': '用于解锁特殊功能与活动。',
+                'reuse': true
+            },
+            {
+                'en-US': 'Get full access to all features once and for all',
+                'zh-CN': '一次性永久解锁全部功能',
+                'reuse': true
+            },
+            { 'en-US': 'Get full access to all', 'zh-CN': '一次性永久解锁全部', 'reuse': true },
+            { 'en-US': 'features once and for all', 'zh-CN': '功能', 'reuse': true },
+            { 'en-US': 'In-game Market', 'zh-CN': '游戏内市场', 'reuse': true },
             {
                 'en-US': /Sale! \d+% discount on all items until .+ in our Item Shop/,
                 'zh-CN': (text) => text
@@ -2316,6 +2362,23 @@
             { 'en-US': 'Restrict by theme', 'zh-CN': '限定主题', 'reuse': true },
             { 'en-US': 'How to get pixels?', 'zh-CN': '如何获取像素？', 'reuse': true },
             { 'en-US': 'Pixelization progress', 'zh-CN': '像素收集进度', 'reuse': true },
+            {
+                'en-US': 'Get 500 and pixelize your first decoration!',
+                'zh-CN': '获取 500 像素并抽取您的第一个装饰！',
+                'reuse': true
+            },
+            {
+                'en-US': /^Get [\d,]+ and pixelize your first decoration!$/,
+                'zh-CN': (text) => text
+                    .replace(/^Get /, '获取 ')
+                    .replace(' and pixelize your first decoration!', ' 像素并抽取您的第一个装饰！'),
+                'reuse': true
+            },
+            {
+                'en-US': /^[\d,]+ and pixelize your first decoration!$/,
+                'zh-CN': (text) => text.replace(' and pixelize your first decoration!', ' 像素并抽取您的第一个装饰！'),
+                'reuse': true
+            },
             // 侧边栏 Steam 交互相关
             { 'en-US': 'error connecting to Steam', 'zh-CN': '连接至 Steam 时发生错误', 'reuse': true },
             { 'en-US': 'Drag to Transfer to Steam', 'zh-CN': '拖拽物品转移到 Steam 库存', 'reuse': true },
@@ -2557,8 +2620,13 @@
             },
             { 'en-US': 'using command', 'zh-CN': '生成 pixel', 'reuse': true },
             {
+                'en-US': /^This will consume [\d,]+ CPU\.$/,
+                'zh-CN': (text) => text.replace('This will consume ', '这将消耗 ').replace(' CPU.', ' CPU。'),
+                'reuse': true
+            },
+            {
                 'en-US': 'This will consume 5,000 CPU.',
-                'zh-CN': '这会消耗 5000 CPU。',
+                'zh-CN': '这将消耗 5,000 CPU。',
                 'reuse': true
             },
             {
@@ -2578,7 +2646,12 @@
             // access key
             {
                 'en-US': 'Grants access to the Seasonal World or a special event in the Persistent World.',
-                'zh-CN': '获得参与赛季服务器或者特殊事件的权限。',
+                'zh-CN': '获得参与赛季世界或者特殊事件的权限。',
+                'reuse': true
+            },
+            {
+                'en-US': /^No rank in .+$/,
+                'zh-CN': (text) => translateNoRank(text),
                 'reuse': true
             }
         ]
@@ -2640,6 +2713,11 @@
             { 'en-US': 'Your Rank', 'zh-CN': '您的排名', 'reuse': true },
             { 'en-US': 'Leaderboards', 'zh-CN': '排行榜', 'reuse': true },
             { 'en-US': 'No rank', 'zh-CN': '暂无排名', 'reuse': true },
+            {
+                'en-US': /^No rank in .+$/,
+                'zh-CN': (text) => translateNoRank(text),
+                'reuse': true
+            },
             { 'en-US': 'Learn more', 'zh-CN': '了解更多' }
         ]
     };
