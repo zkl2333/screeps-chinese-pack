@@ -7,7 +7,7 @@
 ## 使用原则
 
 - **代码、API、常量和类名保留官方英文写法**，例如 `Creep`、`Spawn`、`Room`、`Memory`、`Game`、`CPU`、`tick`、`FIND_SOURCES`。
-- **自然语言中的普通名词使用中文**，例如“房间”“控制器”“资源点”。
+- **自然语言中的普通名词使用中文**，例如“房间”“控制器”“能量源”。
 - Screeps 专有名词与代码术语混排时，中文与英文之间保留一个半角空格；代码标签内部不改写。
 - 面向玩家的说明统一使用“您”，避免同一页面混用“你/您”。
 - 中文 UI 标签使用全角标点：`：`、`？`、`！`、`。`；代码和英文原文中的标点不改动。
@@ -18,31 +18,39 @@
 | --- | --- | --- |
 | creep / Creep | creep | 普通说明中使用小写 `creep`；API 类名、代码和官方名称保留 `Creep`。不译为“爬虫”。 |
 | power creep / Power Creep | 超能 creep | `Power Creep` 作为类名或代码文本保留原文；中文说明使用“超能 creep”。 |
-| spawn / Spawn | Spawn | 建筑名称保留官方术语 `Spawn`；自然语言中可写“Spawn 建筑”，不译为“孵化器”。 |
-| power spawn / Power Spawn | 超能 Spawn | 代码/API 名称保留 `PowerSpawn`；中文说明使用“超能 Spawn”。 |
+| spawn / Spawn | 母巢 | 建筑名称统一译为“母巢”；代码/API 名称保留 `Spawn`，不译为“孵化器”。 |
+| power spawn / Power Spawn | 超能母巢 | 代码/API 名称保留 `PowerSpawn`；中文说明使用“超能母巢”。 |
 | room / Room | 房间 | 普通 UI 和说明译为“房间”；`Room` 类名、API 和代码标签保留原文。 |
 | room object / RoomObject | 房间对象 | `RoomObject` 作为 API 名称保留原文。 |
 | controller / Controller | 控制器 | 普通说明译为“控制器”；`Controller` 类名或 API 保留原文。 |
-| source / Source | 资源点 | `Source` 作为对象名、API 或代码标签保留原文；说明文本译为“资源点”。 |
+| source / Source | 能量源 | `Source` 作为对象名、API 或代码标签保留原文；说明文本译为“能量源”。 |
 | mineral | 矿物 | 矿物资源和矿藏统一使用“矿物”。 |
 | deposit | 沉积物 | Deposit 面板中的资源沉积物使用“沉积物”。 |
 | storage | 仓库 | `Storage` 结构名称可保留 `Storage`；普通 UI 说明译为“仓库”。 |
 | terminal | 终端 | `Terminal` 结构名称可保留 `Terminal`；普通 UI 说明译为“终端”。 |
 | container | 容器 | `Container` 结构名称可保留 `Container`；普通 UI 说明译为“容器”。 |
 | link / Link | Link | 建筑名称保留 `Link`，避免与普通链接混淆。 |
-| tower / Tower | 防御塔 | `Tower` 建筑名称在 UI 中文中译为“防御塔”；API 和代码保留 `Tower`。 |
-| rampart / Rampart | Rampart | `Rampart` 结构和普通说明均保留官方术语。 |
-| wall / Wall | 墙 | 普通说明和建筑名称统一使用“墙”；不要译为“墙壁”。 |
+| tower / Tower | 塔 | `Tower` 建筑名称在 UI 中文中译为“塔”；API 和代码保留 `Tower`。 |
+| rampart / Rampart | 城墙 | `Rampart` 建筑名称在中文说明中译为“城墙”；代码/API 名称保留 `Rampart`。 |
+| wall / Wall | 墙 / 建筑墙壁 | 天然地形墙和普通描述使用“墙”；玩家建造的 `StructureWall` 使用“建筑墙壁”。 |
 | road / Road | 道路 | 普通说明和 UI 统一译为“道路”。 |
 | construction site | 建筑工地 | 统一使用“建筑工地”，不要在中文句子中保留 `construction site`。 |
 | flag / Flag | 旗帜 | 普通说明译为“旗帜”；API 和代码保留 `Flag`。 |
 | nuke | 核弹 | UI 和说明统一译为“核弹”。 |
 
+## 地形
+
+| 英文/术语 | 统一写法 | 使用说明 |
+| --- | --- | --- |
+| plain | 平原 | 普通地面地形，移动消耗为 2；不使用“平地”。 |
+| swamp | 沼泽 | 移动消耗为 10 的特殊地形。 |
+| wall（地形） | 墙 | 天然阻挡墙；玩家建造的 `StructureWall` 见建筑术语表中的“建筑墙壁”。 |
+
 ## 资源、数值和机制
 
 | 英文/术语 | 统一写法 | 使用说明 |
 | --- | --- | --- |
-| power | 超能量 | 作为资源或排行榜内容时译为“超能量”；API/代码中的 `power` 保留原文。 |
+| power | 超能 | 作为资源或排行榜内容时译为“超能”，例如“超能资源”“超能等级”；API/代码中的 `power` 保留原文。不使用“超能量”。 |
 | Power Level | 超能等级 | 账户或 Power Creep 等级使用“超能等级”。 |
 | Global Power Level | 全局超能等级 | 统一使用“全局超能等级”。 |
 | Power points | 超能点数 | 排行榜中的统计项使用“超能点数”。 |
@@ -63,10 +71,10 @@
 
 | 英文/术语 | 统一写法 | 使用说明 |
 | --- | --- | --- |
-| shard | 分片 | 不使用“位面”。 |
-| portal / Portal | 传送门 | 连接房间或分片的特殊对象；`Portal` 作为代码/API 名称保留。 |
-| inter-shard portal | 跨分片传送门 | 连接不同分片的传送门。 |
-| intra-shard portal | 分片内传送门 | 连接同一分片内不同房间的传送门。 |
+| shard | 镜面 | 统一译作“镜面”；不使用“分片”“位面”。 |
+| portal / Portal | 传送门 | 连接房间或镜面的特殊对象；`Portal` 作为代码/API 名称保留。 |
+| inter-shard portal | 跨镜面传送门 | 连接不同镜面的传送门。 |
+| intra-shard portal | 镜面内传送门 | 连接同一镜面内不同房间的传送门。 |
 | sector | 分区 | 地图和入侵者说明统一使用“分区”。 |
 | Novice Area | 新手区 | 首次出现可写“新手区（Novice Area）”。 |
 | Persistent World | 永恒世界 | 与 `Seasonal World` 对应。 |
@@ -110,3 +118,11 @@
 - 确认/警告文案统一使用“吗”，不使用“么”。
 - 叙述和按钮提示统一使用“您”；只有引用原文或代码时保留英文的 `you`。
 - 中文与英文术语之间保留一个空格，例如“升级您的 controller”“消耗 10 点 ops”。
+
+## 参考来源
+
+本表与中文社区保持一致，主要参考：
+
+- 术语翻译标准化讨论：[screeps-cn/docs#18](https://github.com/screeps-cn/docs/issues/18)
+- 社区翻译包实际用词：[screeps-cn/screeps-chinese-pack](https://github.com/screeps-cn/screeps-chinese-pack)
+- 社区文档实际用词：[screeps-cn/docs](https://github.com/screeps-cn/docs)

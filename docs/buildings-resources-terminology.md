@@ -6,7 +6,7 @@
 
 - 建筑名称在代码/API 中保留官方名称，例如 `StructureSpawn`、`StructureStorage`、`PowerSpawn`。
 - 面向玩家的 UI 文案使用表中的中文名称；首次出现时可以写成“中文名（英文名）”。
-- `energy`、`power`、`ops` 等资源常量保留英文代码名；普通说明分别译为“能量”“超能量”“ops”。
+- `energy`、`power`、`ops` 等资源常量保留英文代码名；普通说明分别译为“能量”“超能”“ops”。
 - `creep`、`Spawn`、`Room`、`Controller` 等官方游戏对象名称遵循主术语表，不在本表另行改写。
 - 资源数量、容量和价格与单位之间保留一个空格，例如“1,000 点能量”“5,000 CPU”。
 
@@ -14,29 +14,29 @@
 
 | 英文名称 / API | 统一中文名 | 说明 |
 | --- | --- | --- |
-| Spawn / `StructureSpawn` | Spawn | 生产 creep 的核心建筑；不译为“孵化器”。 |
-| Extension / `StructureExtension` | Extension | 为 Spawn 提供额外能量容量；普通说明可写“扩展建筑”。 |
+| Spawn / `StructureSpawn` | 母巢 | 生产 creep 的核心建筑；代码/API 名称保留 `Spawn`，不译为“孵化器”。 |
+| Extension / `StructureExtension` | 扩展 | 为母巢提供额外能量容量；代码/API 名称保留 `Extension`。 |
 | Road / `StructureRoad` | 道路 | 降低 creep 在其上的移动消耗。 |
-| Wall / `StructureWall` | 墙 | 阻挡移动的建筑；与 Rampart 区分。 |
-| Rampart / `StructureRampart` | Rampart | 可保护同位置的 creep 和建筑；普通说明也保留官方术语。 |
+| Wall / `StructureWall` | 建筑墙壁 | 阻挡移动的建筑；天然地形中的墙称“墙”。与 Rampart 区分。 |
+| Rampart / `StructureRampart` | 城墙 | 可保护同位置的 creep 和建筑；代码/API 名称保留 `Rampart`。 |
 | Container / `StructureContainer` | 容器 | 临时存储资源的建筑。 |
 | Storage / `StructureStorage` | 仓库 | 房间内的大容量资源存储建筑；API 名称保留 `Storage`。 |
 | Terminal / `StructureTerminal` | 终端 | 跨房间发送资源的建筑；API 名称保留 `Terminal`。 |
-| Tower / `StructureTower` | 防御塔 | 攻击、治疗和维修建筑；不在普通中文中写作 `tower`。 |
+| Tower / `StructureTower` | 塔 | 攻击、治疗和维修建筑；不在普通中文中写作 `tower`。 |
 | Link / `StructureLink` | Link | 在同一房间内传输能量的建筑；为避免与普通“链接”混淆，保留 `Link`。 |
-| Extractor / `StructureExtractor` | 提取器 | 从矿物沉积物中提取矿物的建筑。 |
+| Extractor / `StructureExtractor` | 矿机 | 从矿物沉积物中提取矿物的建筑。 |
 | Lab / `StructureLab` | 实验室 | 生产化合物、反应资源并强化 creep 的建筑。 |
-| Observer / `StructureObserver` | 观察器 | 获取远处房间视野的建筑。 |
-| Power Spawn / `StructurePowerSpawn` | 超能 Spawn | 处理超能量并生成 GPL 的建筑；API 名称为 `PowerSpawn`。 |
-| Nuker / `StructureNuker` | 核弹发射器 | 向远处房间发射核弹的建筑。 |
+| Observer / `StructureObserver` | 观察者 | 获取远处房间视野的建筑。 |
+| Power Spawn / `StructurePowerSpawn` | 超能母巢 | 处理超能并生成 GPL 的建筑；API 名称为 `PowerSpawn`。 |
+| Nuker / `StructureNuker` | 核弹发射井 | 向远处房间发射核弹的建筑。 |
 | Factory / `StructureFactory` | 工厂 | 生产可交易商品的建筑。 |
 | Invader Core / `StructureInvaderCore` | 入侵核心 | 入侵者使用的特殊建筑。 |
-| Keeper Lair / `StructureKeeperLair` | 源守卫巢穴 | 生成 Source Keeper 的特殊建筑。 |
+| Keeper Lair / `StructureKeeperLair` | 守卫巢穴 | 生成 Source Keeper 的特殊建筑；不写“源守卫巢穴”。 |
 | Construction Site | 建筑工地 | 建筑尚未完成时的临时对象；不要保留英文 `construction site`。 |
-| Power Bank | 超能量仓 | 地图中可开采超能量的特殊中立对象。 |
-| Portal | 传送门 | 连接不同房间或分片的特殊对象。 |
-| Inter-shard Portal | 跨分片传送门 | 连接不同分片的传送门；不译为“跨位面传送门”。 |
-| Intra-shard Portal | 分片内传送门 | 连接同一分片内不同房间的传送门。 |
+| Power Bank | 超能宝库 | 地图中可开采超能的特殊中立对象。 |
+| Portal | 传送门 | 连接不同房间或镜面的特殊对象。 |
+| Inter-shard Portal | 跨镜面传送门 | 连接不同镜面的传送门。 |
+| Intra-shard Portal | 镜面内传送门 | 连接同一镜面内不同房间的传送门。 |
 | Tombstone | 墓碑 | creep 死亡后留下的资源存储对象。 |
 | Ruin | 废墟 | 建筑被摧毁后短时间保留的资源对象。 |
 | Resource | 资源对象 | 地面上的资源掉落对象；不要泛称为“物品”。 |
@@ -68,15 +68,15 @@
 | Destination | 目的地 | 传送门面板中的目标位置标签，使用“目的地：”。 |
 | Portal decay | 传送门衰减 | 传送门剩余可用时间的机制。 |
 | Decay in | 剩余时间 | 传送门或建筑的剩余时间标签。 |
-| Inter-shard | 跨分片 | 描述不同分片之间的连接或移动。 |
-| Intra-shard | 分片内 | 描述同一分片内的连接或移动。 |
+| Inter-shard | 跨镜面 | 描述不同镜面之间的连接或移动。 |
+| Intra-shard | 镜面内 | 描述同一镜面内的连接或移动。 |
 
 ## 基础资源
 
 | 常量 / 英文 | 统一中文名 | 说明 |
 | --- | --- | --- |
 | `RESOURCE_ENERGY` / energy | 能量 | 生产 creep、升级控制器和运行建筑的基础资源。 |
-| `RESOURCE_POWER` / power | 超能量 | Power Spawn 和 Power Creep 使用的资源；普通说明不写作“power”。 |
+| `RESOURCE_POWER` / power | 超能 | Power Spawn 和 Power Creep 使用的资源；普通说明不写作“power”，也不写作“超能量”。 |
 | `RESOURCE_OPS` / ops | ops | Power Creep 技能消耗的资源；代码名保持 `ops`。 |
 | `RESOURCE_HYDROGEN` / H | 氢 | 基础矿物资源。 |
 | `RESOURCE_OXYGEN` / O | 氧 | 基础矿物资源。 |
@@ -114,6 +114,10 @@
 | Biomass | 生物质 | 基础商品资源。 |
 | Silicon | 硅 | 基础商品资源。 |
 | Mist | 迷雾 | 基础商品资源。 |
+| Mechanical | 机械 | 消耗金属的商品类别。 |
+| Biological | 生物 | 消耗生物质的商品类别。 |
+| Electronical | 电子 | 消耗硅的商品类别。 |
+| Mystical | 奥秘 | 消耗迷雾的商品类别。 |
 | Bar | 金属锭 / 资源锭 | 例如 `UTRIUM_BAR` 译为“铀锭”；具体资源名优先保留元素中文名。 |
 | Battery | 电池 | 工厂商品。 |
 | Wire | 电线 | 工厂商品。 |
@@ -142,12 +146,12 @@
 | Resource | 资源 | 泛称。 |
 | Resources | 资源 | 复数不额外翻译。 |
 | Energy | 能量 | 基础资源。 |
-| Power | 超能量 | 资源、排行榜和处理量语境。 |
+| Power | 超能 | 资源、排行榜和处理量语境。 |
 | Mineral | 矿物 | 矿藏类型。 |
 | Deposit | 沉积物 | 地图上的可采集资源沉积物。 |
 | Amount | 数量 / 剩余量 | 资源面板中优先使用“剩余量”。 |
 | Density | 储量 | 地图矿物信息使用“储量”。 |
-| Regeneration in | 再生倒计时 | 资源点或矿物再生时间。 |
+| Regeneration in | 再生倒计时 | 能量源或矿物再生时间。 |
 | Last cooldown | 上一次采集冷却 | Deposit 面板中的标签。 |
 | Transfer | 转移 | 资源转移操作；代码方法 `transfer` 保留原文。 |
 | Withdraw | 取出 | 从仓库、终端等建筑取出资源。 |
@@ -158,7 +162,7 @@
 | Total | 总量 | 市场资源数量。 |
 | Remaining | 剩余 | 市场订单剩余数量。 |
 | Available | 可用 | 市场或建筑中的可用数量。 |
-| Power processed | 超能量处理量 | 总览、地图和统计图表统一使用。 |
+| Power processed | 超能处理量 | 总览、地图和统计图表统一使用。 |
 | Energy harvested | 能量采集量 | 统计图表统一使用。 |
 | Energy spent | 能量消耗量 | 统计图表统一使用。 |
 | Resource units | 点资源 | 数值说明中可按具体资源替换，例如“点能量”。 |
@@ -167,18 +171,35 @@
 
 | 不建议 | 建议改为 |
 | --- | --- |
-| 孵化器 | Spawn |
+| 孵化器 | 母巢 |
 | 建筑（作为 Construct 动词） | 建造 |
 | construction site | 建筑工地 |
-| power（普通中文说明） | 超能量 |
+| power（普通中文说明） | 超能 |
+| 超能量 | 超能 |
 | Power Creep（普通中文说明） | 超能 creep |
-| source（普通中文说明） | 资源点 |
+| source（普通中文说明） | 能量源 |
 | storage（普通中文说明） | 仓库 |
 | terminal（普通中文说明） | 终端 |
-| tower（普通中文说明） | 防御塔 |
-| rampart（普通中文说明） | Rampart |
-| wall（普通中文说明） | 墙 |
+| tower（普通中文说明） | 塔 |
+| rampart（普通中文说明） | 城墙 |
+| wall（普通中文说明） | 墙（天然）/ 建筑墙壁（建造） |
+| 防御塔 | 塔 |
+| 超能量仓 | 超能宝库 |
+| 超能 Spawn | 超能母巢 |
+| 提取器 | 矿机 |
+| 核弹发射器 | 核弹发射井 |
+| 源守卫巢穴 | 守卫巢穴 |
+| 跨分片传送门 | 跨镜面传送门 |
+| 分片 / 位面 | 镜面 |
 | 资源物品 | 资源 |
 | 预定 | 预订 |
 | CPU 上线 | CPU 限制 |
 | 1 格/秒 | 1 格/tick |
+
+## 参考来源
+
+本表与中文社区保持一致，主要参考：
+
+- 术语翻译标准化讨论：[screeps-cn/docs#18](https://github.com/screeps-cn/docs/issues/18)
+- 社区翻译包实际用词：[screeps-cn/screeps-chinese-pack](https://github.com/screeps-cn/screeps-chinese-pack)
+- 社区文档实际用词：[screeps-cn/docs](https://github.com/screeps-cn/docs)
