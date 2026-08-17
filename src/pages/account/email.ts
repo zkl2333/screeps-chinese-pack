@@ -8,7 +8,12 @@ const content: PageContent = {
         { 'en-US': 'Change e-mail', 'zh-CN': '邮箱设置' },
         { 'en-US': 'New e-mail', 'zh-CN': '新的邮箱' },
         { 'en-US': 'Save', 'zh-CN': '保存' },
-        { 'en-US': 'Cancel', 'zh-CN': '取消' }
+        { 'en-US': 'Cancel', 'zh-CN': '取消' },
+        {
+            'en-US': 'Please specify your e-mail address first.',
+            'zh-CN': '请先设置您的邮箱地址。',
+            'reuse': true
+        }
     ]
 }
 

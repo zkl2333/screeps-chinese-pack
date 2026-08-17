@@ -366,6 +366,34 @@ const content: PageContent = {
         { 'en-US': 'You must own or reserve this room to generate invaders.', 'zh-CN': '您必须拥有或预订该房间，才能生成入侵者。', 'reuse': true },
 
         // 脚本编辑器
+        { 'en-US': 'Clone branch', 'zh-CN': '克隆分支', 'reuse': true },
+        {
+            'en-US': 'This branch will be cloned to the new branch. Please enter a new branch name:',
+            'zh-CN': '该分支将被克隆到新分支，请输入新分支名称：',
+            'reuse': true
+        },
+        {
+            'selector': 'input[placeholder="Branch name"]',
+            'zh-CN': (el: HTMLElement) => el.setAttribute('placeholder', '分支名称'),
+            'reuse': true
+        },
+        {
+            'en-US': 'This pop-up editor is out of sync. Please re-open the editor.',
+            'zh-CN': '此弹出式编辑器已不同步，请重新打开编辑器。',
+            'reuse': true
+        },
+        {
+            'selector': '.modal-body, md-dialog-content',
+            'zh-CN': (el: HTMLElement) => {
+                if (!el.innerHTML.includes('only 1 energy source')) return
+                el.innerHTML = el.innerHTML.replace(
+                    'There is only 1 energy source in this room. It may create a resource deficit when developing your new colony. We recommend to choose a room with 2 energy sources for your first start in the game.<br><br>Do you really want to place your spawn in this room?',
+                    '该房间只有 1 个能量源。在发展新殖民地时可能会造成资源短缺。我们建议首次开局选择拥有 2 个能量源的房间。<br><br>您确定要在此房间放置母巢吗？'
+                )
+            },
+            'reuse': true,
+            'ingnoreRepeatedCheck': true
+        },
         { 'en-US': 'A branch with this name already exists and will be overwritten!', 'zh-CN': '同名分支已存在，将被覆盖！', 'reuse': true },
         { 'en-US': 'You cannot create more than 30 branches. Please remove some existing branches to clone this branch.', 'zh-CN': '分支数量不能超过 30 个，请先删除部分分支再克隆。', 'reuse': true },
         { 'en-US': 'You have unsaved changes in your current branch! It will be lost if you switch to another branch. Proceed?', 'zh-CN': '当前分支有未保存的修改！切换分支将丢失这些修改，确定继续吗？', 'reuse': true },

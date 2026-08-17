@@ -62,6 +62,10 @@ const content: PageContent = {
         { 'en-US': /Graph(:|)/, 'zh-CN': '图表', 'reuse': true },
         { 'en-US': 'Owner:', 'zh-CN': '所有者：' },
         { 'en-US': 'View leaderboard', 'zh-CN': '查看排行榜', 'reuse': true },
+        { 'en-US': 'Construction points', 'zh-CN': '建造点数', 'reuse': true },
+        { 'en-US': 'Normalize by tick duration', 'zh-CN': '按 tick 时长归一化', 'reuse': true },
+        { 'en-US': 'Loading replay...', 'zh-CN': '正在加载回放……', 'reuse': true },
+        { 'en-US': 'Replay not found', 'zh-CN': '未找到回放', 'reuse': true },
 
         getOverviewHeaderContent(),
 

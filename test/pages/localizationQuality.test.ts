@@ -7,6 +7,7 @@ import tutorial1 from '@/pages/tutorial/tutorial1'
 import tutorial2 from '@/pages/tutorial/tutorial2'
 import getTips from '@/pages/tips'
 import enter from '@/pages/enter'
+import marketAll from '@/pages/market/marketAll'
 
 type Entry = TranslationContent
 
@@ -63,5 +64,14 @@ describe('历史汉化质量', () => {
         expect(findTranslation(enter.content, 'with no time limit')).toBe('不受时间限制')
         expect(findTranslation(enter.content, 'In-game Market')).toBe('游戏内市场')
         expect(findTranslation(enter.content, 'Activate')).toBe('激活')
+    })
+
+    test('账户通知与市场漏译词条应已覆盖', () => {
+        const entryPage = require('@/pages/account/entryPage').default
+        expect(findTranslation(entryPage.content, 'Immediately')).toBe('立即')
+        expect(findTranslation(entryPage.content, 'Send notifications when your script throws an error.'))
+            .toBe('当您的脚本抛出错误时发送通知。')
+        expect(findTranslation(marketAll.content, 'Back to resources list')).toBe('返回资源列表')
+        expect(findTranslation(room.content, 'Clone branch')).toBe('克隆分支')
     })
 })

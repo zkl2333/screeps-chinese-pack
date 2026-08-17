@@ -35,6 +35,33 @@ const content: PageContent = {
         { 'en-US': 'Notify on errors', 'zh-CN': '代码异常时通知', 'reuse': true },
         { 'en-US': 'Notify on new messages', 'zh-CN': '有新消息时通知', 'reuse': true },
 
+        // 通知间隔与说明
+        { 'en-US': 'Immediately', 'zh-CN': '立即', 'reuse': true },
+        { 'en-US': 'Every 10 min', 'zh-CN': '每 10 分钟', 'reuse': true },
+        { 'en-US': 'Every 30 min', 'zh-CN': '每 30 分钟', 'reuse': true },
+        { 'en-US': 'Every 1 hour', 'zh-CN': '每 1 小时', 'reuse': true },
+        { 'en-US': 'Every 3 hours', 'zh-CN': '每 3 小时', 'reuse': true },
+        { 'en-US': 'Every 6 hours', 'zh-CN': '每 6 小时', 'reuse': true },
+        { 'en-US': 'Every 12 hours', 'zh-CN': '每 12 小时', 'reuse': true },
+        { 'en-US': 'Every 24 hours', 'zh-CN': '每 24 小时', 'reuse': true },
+        { 'en-US': 'Every 3 days', 'zh-CN': '每 3 天', 'reuse': true },
+        { 'en-US': 'Never', 'zh-CN': '从不', 'reuse': true },
+        {
+            'en-US': 'All notifications will be grouped and mailed out periodically using this interval.',
+            'zh-CN': '所有通知将按此间隔合并后定期发送邮件。',
+            'reuse': true
+        },
+        {
+            'en-US': 'Send notifications when your script throws an error.',
+            'zh-CN': '当您的脚本抛出错误时发送通知。',
+            'reuse': true
+        },
+        {
+            'en-US': 'Please specify your e-mail address first.',
+            'zh-CN': '请先设置您的邮箱地址。',
+            'reuse': true
+        },
+
         // steam 关联
         {
             'en-US': 'Do you really want to unlink your Steam account?',
@@ -55,6 +82,11 @@ const content: PageContent = {
         { 'en-US': 'GitHub user', 'zh-CN': 'GitHub 用户' },
         { 'en-US': 'Sync from repository', 'zh-CN': '从仓库同步' },
         { 'en-US': 'Not set', 'zh-CN': '未设置' },
+        {
+            'en-US': 'All your scripts in Screeps account will be overwritten with this action! Are you sure?',
+            'zh-CN': '此操作将覆盖您 Screeps 账户中的所有脚本！确定要继续吗？',
+            'reuse': true
+        },
 
         { 'en-US': 'Cancel', 'zh-CN': '取消', 'reuse': true },
         { 'en-US': 'OK', 'zh-CN': '确定', 'reuse': true },

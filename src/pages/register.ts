@@ -83,6 +83,7 @@ const content: PageContent = {
             'zh-CN': '提交这些信息，即表示您确认您已阅读并同意 '
         },
         { 'en-US': 'Register', 'zh-CN': '注册' },
+        { 'en-US': 'Set username', 'zh-CN': '设置用户名', 'reuse': true },
 
         // 重置密码
         { 'en-US': 'Password Reset', 'zh-CN': '重置密码' },

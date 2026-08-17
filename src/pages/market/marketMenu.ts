@@ -7,6 +7,10 @@ const content: PageContent = {
         { 'en-US': 'All orders', 'zh-CN': '全部订单' },
         { 'en-US': 'My orders', 'zh-CN': '我的订单' },
         { 'en-US': 'History', 'zh-CN': '订单历史' },
+        { 'en-US': 'Choose resource:', 'zh-CN': '选择资源：', 'reuse': true },
+        { 'en-US': 'No orders', 'zh-CN': '暂无订单', 'reuse': true },
+        { 'en-US': 'Back to resources list', 'zh-CN': '返回资源列表', 'reuse': true },
+        { 'en-US': 'Your market history is empty', 'zh-CN': '您的市场历史记录为空', 'reuse': true },
         // 无订单时的翻译
         { 'en-US': 'You have no orders', 'zh-CN': '您还没有订单', 'reuse': true },
         { 'en-US': 'Create an order using the', 'zh-CN': '创建订单请参考', 'reuse': true },

@@ -21,6 +21,9 @@ const content: PageContent = {
             'zh-CN': '在月末时您的排名将会被重置。'
         },
         { 'en-US': 'YOUR RANK', 'zh-CN': '您的排名' },
+        { 'en-US': 'Your Rank', 'zh-CN': '您的排名', 'reuse': true },
+        { 'en-US': 'Leaderboards', 'zh-CN': '排行榜', 'reuse': true },
+        { 'en-US': 'No rank', 'zh-CN': '暂无排名', 'reuse': true },
         { 'en-US': 'Learn more', 'zh-CN': '了解更多' }
     ]
 }

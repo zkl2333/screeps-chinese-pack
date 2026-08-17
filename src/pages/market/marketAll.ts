@@ -22,6 +22,13 @@ const content: PageContent = {
         { 'en-US': 'Transactions', 'zh-CN': '交易次数' },
         { 'en-US': 'Total volume', 'zh-CN': '总成交量' },
         { 'en-US': 'Price (avg ± stddev)', 'zh-CN': '单价（均价 ± 标准差）' },
+        {
+            'en-US': /Price \(avg .+ stddev\)/,
+            'zh-CN': '单价（均价 ± 标准差）',
+            'reuse': true
+        },
+        { 'en-US': 'Back to resources list', 'zh-CN': '返回资源列表', 'reuse': true },
+        { 'en-US': 'No orders', 'zh-CN': '暂无订单', 'reuse': true },
 
         // 翻译订单
         {

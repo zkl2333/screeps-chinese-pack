@@ -16,6 +16,7 @@ import map from './map'
 import homePage from './homePage'
 import register from './register'
 import message from './message'
+import lobby from './lobby'
 
 export default [
     overview,
@@ -35,5 +36,6 @@ export default [
     inventory,
     homePage,
     register,
-    message
+    message,
+    lobby
 ]

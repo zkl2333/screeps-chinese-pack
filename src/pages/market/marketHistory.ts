@@ -39,6 +39,7 @@ const content: PageContent = {
         },
         // 历史为空
         { 'en-US': 'You have no orders', 'zh-CN': '您还没有订单' },
+        { 'en-US': 'Your market history is empty', 'zh-CN': '您的市场历史记录为空', 'reuse': true },
         { 'en-US': 'Create an order using the', 'zh-CN': '若要创建订单请使用' },
         { 'en-US': 'Market API', 'zh-CN': '市场 API' },
 
