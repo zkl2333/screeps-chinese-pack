@@ -7,7 +7,7 @@ import { getBaseUIContent, getObjectiveTranslationContent } from './utils'
  */
 const TUTORIAL_CONTENT = {
     'Until now, we have created new creeps directly in the console. It’s not a good idea to do it constantly since\nthe very idea of Screeps is making your colony control itself. You will do well if you teach your spawn to\nproduce creeps in the room on its own.':
-    '到目前为止，我们都是通过在控制台中输入命令来手动创建新的 creep。我们并不推荐经常这么做，因为 Screeps 的主旨就是让您的殖民地实现自我控制。更好的做法是教会您这个房间中的 spawn 自己生产 creep。',
+    '到目前为止，我们都是通过在控制台中输入命令来手动创建新的 creep。我们并不推荐经常这么做，因为 Screeps 的主旨就是让您的殖民地实现自我控制。更好的做法是教会您这个房间中的母巢自己生产 creep。',
 
     'This is a rather complicated topic and many players spend months perfecting and refining their auto-spawning\ncode. But let’s try at least something simple and master some basic principles to start with.':
     '这是一个相当复杂的问题，许多玩家会花费几个月的时间来完善和增强他们的自动孵化代码。但是先让我们从简单开始，来了解一些相关的基本原则。',
@@ -28,7 +28,7 @@ const TUTORIAL_CONTENT = {
     '现在让我们模拟一下，当一个采集单位死掉了的情况。您可以在控制台中对指定 creep 执行 <code>suicide</code> 命令，或者直接在右侧的属性面板中点击 “自杀” 按钮。',
 
     'As you can see from the console, after we lacked one harvester, the spawn instantly started building a new\none with a new name.':
-    '您可以看到，当我们失去了一个采集单位后，spawn 会立刻开始孵化新的 creep，并且它还有个全新的名字。',
+    '您可以看到，当我们失去了一个采集单位后，母巢会立刻开始孵化新的 creep，并且它还有个全新的名字。',
 
     'An important point here is that the memory of dead creeps is not erased but kept for later reuse.\nIf you create creeps with random names each time it may lead to memory overflow, so you should clear\nit in the beginning of each tick (prior to the creep creation code).':
     '还有一件事，由于死亡 creep 的内存我们之后可能会用到，所以它们并不会被自动清除。如果您每次都用随机名称去孵化新 creep 的话，内存可能会因此溢出，所以您需要在每个 tick 开始的时候将它们清除掉（creep 创建代码之前）。',

@@ -22,7 +22,7 @@ const TUTORIAL_CONTENT = {
     '让我们开始吧！这是一个被称为 “房间（room）” 的游戏窗口，在实际游戏中，房间会通过出口（exit）与其他房间相连，但是在模拟模式下，只有一个房间可以供您使用。',
 
     'The object in the center of the screen is your first spawn, your colony center.':
-    '屏幕中心的这个小东西是您的第一个 Spawn，它是您的殖民地核心。',
+    '屏幕中心的这个小东西是您的第一个母巢，它是您的殖民地核心。',
 
     'You play by writing code in the panel in the bottom of the screen.':
     '您将通过在屏幕底部的面板中编写代码来进行游戏。',
@@ -37,10 +37,10 @@ const TUTORIAL_CONTENT = {
     '现在，让我们写点真正的代码。',
 
     'Your spawn creates new units called "creeps" by its method <code>spawnCreep</code>.\nUsage of this method is described in the <a href="http://docs.screeps.com" app-nw-external-link="" target="_blank">documentation</a>. Each creep has a name and certain body parts that give it\nvarious skills.':
-    '您的 Spawn 可以通过 <code>spawnCreep</code> 方法创建名为 “creep” 的新单位。可以在 <a href="https://screeps-cn.gitee.io/index.html" app-nw-external-link="" target="_blank">本文档</a> 中找到该方法的介绍。每个 creep 都有一个名字（name）和一定量的身体部件（body part），不同的身体部件会带来不同的能力。',
+    '您的母巢可以通过 <code>spawnCreep</code> 方法创建名为 “creep” 的新单位。可以在 <a href="https://screeps-cn.gitee.io/index.html" app-nw-external-link="" target="_blank">本文档</a> 中找到该方法的介绍。每个 creep 都有一个名字（name）和一定量的身体部件（body part），不同的身体部件会带来不同的能力。',
 
     'You can address your spawn by its name the following way: <code>Game.spawns[\'Spawn1\']</code>.':
-    '您可以使用您 spawn 的名字来获取到它，就像这样：<code>Game.spawns[\'Spawn1\']</code>。',
+    '您可以使用母巢的名字来获取到它，就像这样：<code>Game.spawns[\'Spawn1\']</code>。',
 
     'Great! You now have a creep with the name "Harvester1" that you can control.':
     '棒极了！您现在拥有了一个名为 “Harvester1” 的 creep，您可以控制它做很多事情。',
@@ -52,7 +52,7 @@ const TUTORIAL_CONTENT = {
     '在这里您可以看到选中对象的属性。每个属性的值和身体部件的功能都可以在文档中找到相关介绍。',
 
     'It is time to put the creep to work! This yellow square is an energy source — a valuable game resource.\nIt can be harvested by creeps with one or more <code>WORK</code> body parts and transported to the spawn by creeps with <code>CARRY</code> parts.':
-    '现在是时候让这个 creep 去工作了！这个黄色小方块是一个能量源（Source） —— 一种宝贵的游戏资源。它可以被带有一个或多个 <code>WORK</code> 身体部件的 creep 采集，并由带有 <code>CARRY</code> 部件的 creep 运送到 spawn。',
+    '现在是时候让这个 creep 去工作了！这个黄色小方块是一个能量源（Source） —— 一种宝贵的游戏资源。它可以被带有一个或多个 <code>WORK</code> 身体部件的 creep 采集，并由带有 <code>CARRY</code> 部件的 creep 运送到母巢。',
 
     'To give your creep a permanently working command, the console is not enough, since we want the creep to work all the time.\nSo we\'ll be using the Script tab rather than the console.':
     '要给您的 creep 设置一个永久工作指令光靠控制台是不够的，因为我们更希望 creep 可以一直工作下去。所以我们将使用脚本面板而不是控制台。',
@@ -76,10 +76,10 @@ const TUTORIAL_CONTENT = {
     'creep 身体里逐渐变大的黄色圆点代表它已经开始从能量源中采集能量了。',
 
     'To make the creep transfer energy back to the spawn, you need to use the method\n<code>Creep.transfer</code>.\nHowever, remember that it should be done when the creep is next to the spawn, so the creep needs to walk back.':
-    '想要让 creep 把能量运送回 spawn，您需要使用 <code>Creep.transfer</code> 方法。但是请记住，这个方法只有在 creep 和 spawn 相邻的时候才能正确执行，所以需要让 creep 先走回来。',
+    '想要让 creep 把能量运送回母巢，您需要使用 <code>Creep.transfer</code> 方法。但是请记住，这个方法只有在 creep 和母巢相邻的时候才能正确执行，所以需要让 creep 先走回来。',
 
     'If you modify the code by adding the check <code>.store.getFreeCapacity()&nbsp;&gt;&nbsp;0</code> to the creep,\nit will be able to go back and forth on its own, giving energy to the spawn and returning to the source.':
-    '当您把 <code>.store.getFreeCapacity()&nbsp;&gt;&nbsp;0</code> 作为检查条件添加到代码里时，creep 应该就可以自己一步步的把能量搬运回 spawn 然后走回能量源。',
+    '当您把 <code>.store.getFreeCapacity()&nbsp;&gt;&nbsp;0</code> 作为检查条件添加到代码里时，creep 应该就可以自己一步步的把能量搬运回母巢然后走回能量源。',
 
     'Great! This creep will now work as a harvester until it dies. Remember that almost any creep has a life cycle of 1500\ngame ticks, then it "ages" and dies (this behavior is disabled in the Tutorial).':
     '太好了！现在这个 creep 将会一直作为采集者（harvester）工作直到死亡。请记住，几乎所有的 creep 都有 1500 游戏 tick 的生命周期，在此之后它就会“老去”然后死亡（这个设定在本教程中并不生效）。',
@@ -137,7 +137,7 @@ const OBJECTIVE_CONTENT = {
     '通过在 “脚本” 面板中键入代码来让您的 creep 前去采集能量。',
 
     'Extend the creep program so that it can transfer harvested energy to the spawn and return back to work.':
-    '拓展您的 creep 程序，使其可以将采集到的能量运送（transfer）回 spawn 中并重新开始工作。',
+    '拓展您的 creep 程序，使其可以将采集到的能量运送（transfer）回母巢中并重新开始工作。',
 
     'Spawn a second creep with the body <code>[WORK,CARRY,MOVE]</code> and name <code>Harvester2</code>.':
     '孵化第二个 creep，其身体部件为 <code>[WORK,CARRY,MOVE]</code> 并命名为 <code>Harvester2</code>。',

@@ -28,9 +28,9 @@ const GRAPH_SELECT_LIST: MultipleMap = {
     'Creeps lost for the last 1 hour': '过去1小时的 creep 损失',
     'Creeps lost for the last 24 hours': '过去24小时的 creep 损失',
     'Creeps lost for the last 7 days': '过去7天的 creep 损失',
-    'Power processed for the last 1 hour': '过去1小时的超能量处理量',
-    'Power processed for the last 24 hours': '过去24小时的超能量处理量',
-    'Power processed for the last 7 days': '过去7天的超能量处理量'
+    'Power processed for the last 1 hour': '过去 1 小时的超能处理量',
+    'Power processed for the last 24 hours': '过去 24 小时的超能处理量',
+    'Power processed for the last 7 days': '过去 7 天的超能处理量'
 }
 
 /**
@@ -86,7 +86,7 @@ const content: PageContent = {
         { 'en-US': 'Energy spent:', 'zh-CN': '能量消耗量：', 'reuse': true },
         { 'en-US': 'Body parts produced:', 'zh-CN': '身体部件生产数量：', 'reuse': true },
         { 'en-US': 'Body parts lost:', 'zh-CN': '身体部件损失数量：', 'reuse': true },
-        { 'en-US': 'Power processed:', 'zh-CN': '超能量处理量：', 'reuse': true },
+        { 'en-US': 'Power processed:', 'zh-CN': '超能处理量：', 'reuse': true },
         // 未选择房间时
         { 'en-US': 'Welcome to the', 'zh-CN': '欢迎来到 ', 'reuse': true },
         { 'en-US': 'screeps world', 'zh-CN': 'SCREEPS 世界', 'reuse': true },

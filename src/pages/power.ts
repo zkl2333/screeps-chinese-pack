@@ -87,7 +87,7 @@ const content: PageContent = {
         { 'en-US': 'Cooldown 50 ticks.', 'zh-CN': '冷却 50 tick。', 'reuse': true },
 
         // OPERATE_TOWER
-        { 'en-US': 'Increase damage, repair and heal amount by', 'zh-CN': '提升防御塔的伤害、修复与治疗效果 ', 'reuse': true },
+        { 'en-US': 'Increase damage, repair and heal amount by', 'zh-CN': '提升塔的伤害、修复与治疗效果 ', 'reuse': true },
 
         // OPERATE_STORAGE
         { 'en-US': 'Increase capacity by', 'zh-CN': '提高仓库的容量 ', 'reuse': true },
@@ -108,27 +108,27 @@ const content: PageContent = {
         { 'en-US': 'Pause spawning process.', 'zh-CN': '暂停孵化进程。', 'reuse': true },
 
         // DISRUPT_TOWER
-        { 'en-US': 'Reduce effectiveness by', 'zh-CN': '减少防御塔效果', 'reuse': true },
+        { 'en-US': 'Reduce effectiveness by', 'zh-CN': '减少塔的效果', 'reuse': true },
 
         // DISRUPT_SOURCE
-        { 'en-US': 'Pause energy regeneration.', 'zh-CN': '暂停资源点能量再生。', 'reuse': true },
+        { 'en-US': 'Pause energy regeneration.', 'zh-CN': '暂停能量源能量再生。', 'reuse': true },
 
         // SHIELD
         {
             'en-US': 'Create a temporary non-repairable rampart structure on the same square with',
-            'zh-CN': '在当前位置创建一个临时且无法维修的 Rampart，拥有 ',
+            'zh-CN': '在当前位置创建一个临时且无法维修的城墙，拥有 ',
             'reuse': true
         },
         {
             'en-US': 'hits.\nCannot be used on top of another rampart.',
-            'zh-CN': '点生命值。不能在已有 Rampart 的位置上使用。',
+            'zh-CN': '点生命值。不能在已有城墙的位置上使用。',
             'reuse': true
         },
 
         // FORTIFY
         {
             'en-US': 'Make a wall or rampart tile invulnerable to all creep attacks and powers.',
-            'zh-CN': '使一个墙或 Rampart 地块免疫所有来自 creep 的攻击和超能效果。',
+            'zh-CN': '使一个墙或城墙地块免疫所有来自 creep 的攻击和超能效果。',
             'reuse': true
         },
 
@@ -141,13 +141,13 @@ const content: PageContent = {
 
         // REGEN_SOURCE
         { 'en-US': 'Regenerate', 'zh-CN': '再生 ', 'reuse': true },
-        { 'en-US': 'energy units in a source every 15 ticks.', 'zh-CN': '点能量（每 15 tick，在资源点中）。', 'reuse': true },
+        { 'en-US': 'energy units in a source every 15 ticks.', 'zh-CN': '点能量（每 15 tick，在能量源中）。', 'reuse': true },
 
         // REGEN_MINERAL
         { 'en-US': 'mineral units in a deposit every 10 ticks.', 'zh-CN': '点矿物（沉积物中，每 10 tick）。', 'reuse': true },
 
         // OPERATE_POWER
-        { 'en-US': 'Increase power processing speed of a Power Spawn by', 'zh-CN': '使超能 Spawn 的超能量处理速度每 tick 提高 ', 'reuse': true },
+        { 'en-US': 'Increase power processing speed of a Power Spawn by', 'zh-CN': '使超能母巢的超能处理速度每 tick 提高 ', 'reuse': true },
         { 'en-US': 'units per tick.', 'zh-CN': '点。', 'reuse': true },
 
         // DISRUPT_TERMINAL

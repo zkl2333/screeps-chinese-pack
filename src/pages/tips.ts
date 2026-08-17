@@ -11,10 +11,10 @@ const TIP_CONTENT = {
     '每个会影响游戏世界的动作都有 0.2 CPU 的固定成本。',
 
     'Towers can aim at any object in a room even through walls and obstacles.':
-    'tower 可以透过墙和障碍物瞄准同房间中的任何对象。',
+    '塔可以透过墙和障碍物瞄准同房间中的任何对象。',
 
     'Power banks appear only in neutral rooms that divide living sectors on the map.':
-    '超能量仓只会出现在地图上分隔各个活跃分区的中立过道房间中。',
+    '超能宝库只会出现在地图上分隔各个活跃分区的中立过道房间中。',
 
     'Modular architecture of a script will allow easy testing of individual functions in the simulator.':
     '脚本的模块化架构使得您可以在模拟器中轻松测试单个函数。',
@@ -23,16 +23,16 @@ const TIP_CONTENT = {
     '在模拟器中测试各种游戏场景，以应对随时可能发生的意外。',
 
     'Sources in neutral rooms have reduced capacity. Reserve or claim the room to restore it to full capacity.':
-    '中立房间中资源点的容量较低。预订（reserve）或占领（claim）房间可以使其恢复到最大容量。',
+    '中立房间中能量源的容量较低。预订（reserve）或占领（claim）房间可以使其恢复到最大容量。',
 
     'To save your CPU, use less creeps of a larger size.':
     '生成数量更少、身体部件更多的 creep 来节省您的 CPU。',
 
     'Spawn extensions capacity increases on room levels 7 and 8.':
-    'RCL7 和 RCL8 将提升 extension 的容量。',
+    'RCL7 和 RCL8 将提升扩展的容量。',
 
     'Use towers to set up automatic defense of your room.':
-    '使用防御塔来建立您房间的自动防御。',
+    '使用塔来建立您房间的自动防御。',
 
     'If CPU limit raises, your script will execute only partially.':
     '如果运算量超过 CPU 限制，未执行的脚本将会被强行终止。',
@@ -44,7 +44,7 @@ const TIP_CONTENT = {
     '可以把不需要每个 tick 都运行的逻辑放在 loop 之外执行。',
 
     'A tower’s effectiveness depends on the distance to the target.':
-    '防御塔的工作效率取决于该防御塔到目标的距离。',
+    '塔的工作效率取决于该塔到目标的距离。',
 
     'You can create any objects in the simulator to test your script.':
     '您可以在模拟器中创建任何对象来测试脚本。',
@@ -59,25 +59,25 @@ const TIP_CONTENT = {
     '您的 CPU 使用量可以在短时间内超过您的 CPU 上限。（“短时间”取决于 CPU 桶中的余额）',
 
     'Energy in a storage can not be used to spawn creeps. Transfer it to a spawn or extensions instead.':
-    'storage 里储存的能量不能直接用来孵化 creep，要先将能量转移到一个 spawn 或 extension 中。',
+    '仓库里储存的能量不能直接用来孵化 creep，要先将能量转移到一个母巢或扩展中。',
 
     'The more body parts of one type a creep has, the greater its productivity.':
     '一个 creep 拥有的同类型身体部件越多，该类型对应的工作效率就越高。',
 
     'More spawns in a room allows building more creeps at a time.':
-    '一个房间中存在的 spawn 越多，能同时孵化的 creep 也就越多。',
+    '一个房间中存在的母巢越多，能同时孵化的 creep 也就越多。',
 
     'The more spawn extensions in a room, the more energy you can spend on building one creep.':
-    '一个房间中的 spawn 和 extension 越多，可以用来孵化单个 creep 的能量也就越多。',
+    '一个房间中的母巢和扩展越多，可以用来孵化单个 creep 的能量也就越多。',
 
     'You can address from your script only those rooms that contain your creeps or structures.':
-    '只有房间中存在你的 creep 或者建筑时，你的代码才可以访问到它。',
+    '只有房间中存在您的 creep 或者建筑时，您的代码才可以访问到它。',
 
     'Ramparts can be built not just on empty squares but on existing structures too.':
-    'Rampart 不仅可以在空旷的地块上建造，还可以建造在已有的建筑上。',
+    '城墙不仅可以在空旷的地块上建造，还可以建造在已有的建筑上。',
 
     'Ramparts and walls initially have 1 hit point. Repair them after construction.':
-    'Rampart 和墙最初仅有 1 点生命值（hit），记得在建造好后及时进行维修（repair）。',
+    '城墙和墙最初仅有 1 点生命值（hit），记得在建造好后及时进行维修（repair）。',
 
     'It is too costly and senseless to maintain an army of military creeps in the peacetime.':
     '在和平时期维持一支由战斗 creep 组成的军队代价太高且毫无意义。',
@@ -89,7 +89,7 @@ const TIP_CONTENT = {
     '缓存常用路径是节省 CPU 的好方法。',
 
     'While not destroyed, a rampart protects a creep or building on its square from any type of attack.':
-    '只要一个 Rampart 没有被摧毁，它就可以保护同地块上的 creep 或者建筑免受任何形式的攻击。',
+    '只要一个城墙没有被摧毁，它就可以保护同地块上的 creep 或者建筑免受任何形式的攻击。',
 
     'The game is fully recorded, so you can see replay of any room for the past several days.':
     '游戏已经被完整录制，所以您可以随时回放过去几天发生的事情。',
@@ -107,7 +107,7 @@ const TIP_CONTENT = {
     '两个相邻的 creep 如果同时相向移动，或者前后紧跟着移动，可能会彼此错过。',
 
     'If you want to play from scratch, you can always Respawn in a new room.':
-    '如果你想从头开始玩，你可以随时在一个新房间里重生。',
+    '如果您想从头开始玩，您可以随时在一个新房间里重生。',
 
     'You can output HTML content to the console, like links to rooms.':
     '您可以将 HTML 内容输出到控制台，例如一个跳转到指定房间的超链接。',
@@ -122,7 +122,7 @@ const TIP_CONTENT = {
     '<code>require</code> 所花费的 CPU 取决于要加载模块的大小及复杂度。',
 
     'Spawn extensions do not have to be placed near spawns, their range is the whole room.':
-    'extension 不用放在 spawn 的边上，它们的有效范围是整个房间。',
+    '扩展不用放在母巢的边上，它们的有效范围是整个房间。',
 
     'You can speed up downgrading of hostile room controller by using <code>Creep.attackController</code> on it.':
     '您可以通过使用 <code>Creep.attackController</code> 方法来加速敌对房间控制器的降级。',
@@ -149,7 +149,7 @@ const TIP_CONTENT = {
     '<code>RANGED_ATTACK</code> 身体部件的相对伤害是 <code>ATTACK</code> 部件的 1/3，但是其造价却是 <code>ATTACK</code> 的两倍。',
 
     'Use <code>Room.energyAvailable</code> and <code>Room.energyCapacityAvailable</code> to determine how much energy all the spawns and extensions in the room contain.':
-    '使用 <code>Room.energyAvailable</code> 和 <code>Room.energyCapacityAvailable</code> 来确定房间中所有 spawn 和 extensions 包含多少能量及能量上限是多少。',
+    '使用 <code>Room.energyAvailable</code> 和 <code>Room.energyCapacityAvailable</code> 来确定房间中所有母巢和扩展包含多少能量及能量上限是多少。',
 
     'Observers allow to get the <code>Room</code> object for the rooms that have no objects of yours.':
     '观察器可以让您获取那些没有己方 creep 或建筑的房间所对应的 <code>Room</code> 对象。',
@@ -197,7 +197,7 @@ const TIP_CONTENT = {
     '拥有 <code>ATTACK</code> 部件的 creep 会使用 <code>ATTACK</code> 自动反击每个攻击者。',
 
     'A spawn automatically replenishes itself with power until the energy in the room reaches 300 units.':
-    '当房间中用于孵化的能量小于 300 时，spawn 将会自动开始恢复能量，直到其能量等于 300 点。',
+    '当房间中用于孵化的能量小于 300 时，母巢将会自动开始恢复能量，直到其能量等于 300 点。',
 
     'Leaderboards reset to zero each month, while your game process continues.':
     '排行榜每个月都会重置，您的游戏进度并不会受到影响。',

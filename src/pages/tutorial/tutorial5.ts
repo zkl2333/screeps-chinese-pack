@@ -25,31 +25,31 @@ const TUTORIAL_CONTENT = {
     '现在，让我们把这些不速之客清理掉。',
 
     'Towers are the easiest way to actively defend a room. They use energy and can be targeted at any creep in a room\nto attack or heal it. The effect depends on the distance between the tower and the target.':
-    '防御塔（tower）是防御房间最简单直接的手段。它们可以消耗能量来治疗或攻击房间中的任何 creep。治疗/攻击效果取决于 tower 和目标之间的直线距离。',
+    '塔是防御房间最简单直接的手段。它们可以消耗能量来治疗或攻击房间中的任何 creep。治疗/攻击效果取决于塔和目标之间的直线距离。',
 
     'To start with, let’s lay a foundation for our new tower. You can set any place you wish inside the walls\nand place the construction site there with the help of the button “Construct” on the upper panel.':
-    '首先，让我们给新的防御塔打好地基。您可以在墙之内的任何位置放置防御塔的建筑工地，通过顶部面板中的“建造”按钮找到它。',
+    '首先，让我们给新的塔打好地基。您可以在墙之内的任何位置放置塔的建筑工地，通过顶部面板中的“建造”按钮找到它。',
 
     'The creep Builder1 has immediately started the construction. Let’s wait until it finishes.':
     'creep Builder1 立刻反应过来并开始了建造。现在让我们等它造好。',
 
     'A tower uses energy, so let’s set the harvester role to bring energy to the tower along with other structures.\nTo do this, you need to add the constant <code>STRUCTURE_TOWER</code> to the filter of structures your\nharvester is aimed at.':
-    'tower 需要能量，所以让我们改造一下 harvester 角色，让其可以把能量带到 tower 和其他建筑中。想要实现这个功能，您需要将 <code>STRUCTURE_TOWER</code> 常量添加到用于筛选您采集单位目标的 filter 中。',
+    '塔需要能量，所以让我们改造一下 harvester 角色，让其可以把能量带到塔和其他建筑中。想要实现这个功能，您需要将 <code>STRUCTURE_TOWER</code> 常量添加到用于筛选您采集单位目标的 filter 中。',
 
     'Excellent, your tower is ready to use!':
-    '棒极了，您的 tower 已经准备就绪了！',
+    '棒极了，您的塔已经准备就绪了！',
 
     'Like a creep, a tower has several similar methods: <code>attack</code>, <code>heal</code>, and\n<code>repair</code>. Each action spends 10 energy units. We need to use <code>attack</code> on the closest\nenemy creep upon its discovery. Remember that distance is vital: the effect can be several times stronger\nwith the same energy cost!':
-    '就像 creep 一样，tower 也有几个类似的方法：<code>attack</code> - 攻击，<code>heal</code> - 治疗，以及 <code>repair</code> - 维修。每个操作都会消耗 10 点能量。一旦发现了敌人，我们就需要使用 <code>attack</code> 方法攻击距离最近的敌方 creep。请记住，距离非常重要：在相同的能量消耗下，操作带来的效果可能会有好几倍的差距。',
+    '就像 creep 一样，塔也有几个类似的方法：<code>attack</code> - 攻击，<code>heal</code> - 治疗，以及 <code>repair</code> - 维修。每个操作都会消耗 10 点能量。一旦发现了敌人，我们就需要使用 <code>attack</code> 方法攻击距离最近的敌方 creep。请记住，距离非常重要：在相同的能量消耗下，操作带来的效果可能会有好几倍的差距。',
 
     'To get the tower object directly you can use its ID from the right panel and the method <code>Game.getObjectById</code>.':
-    '想要获取 tower 的对象，您可以使用它的 ID（右侧面板中）以及 <code>Game.getObjectById</code> 方法。',
+    '想要获取塔的对象，您可以使用它的 ID（右侧面板中）以及 <code>Game.getObjectById</code> 方法。',
 
     'The enemy creep is eliminated and our colony can breathe easy. However, the invader has damaged some walls during the brief\nattack. You’d better set up auto-repair.':
     '敌方 creep 被消灭，我们终于可以松口气了。但是，在刚才短暂的袭击中，入侵者还是对一些墙造成了伤害。您最好设置一下自动维修机制。',
 
     'Damaged structures can be repaired by both creeps and towers. Let’s try to use a tower for that.\nWe’ll need the method <code>repair</code>. You will also need the method <code>Room.find</code> and a filter to locate the damaged walls.':
-    'creep 和防御塔都可以修复受损的建筑，这次让我们用防御塔来试一下。使用 <code>repair</code> 方法可以完成这个任务。除此之外，您还需要使用 <code>Room.find</code> 方法和一个 filter 去筛选那些受损的墙。',
+    'creep 和塔都可以修复受损的建筑，这次让我们用塔来试一下。使用 <code>repair</code> 方法可以完成这个任务。除此之外，您还需要使用 <code>Room.find</code> 方法和一个 filter 去筛选那些受损的墙。',
 
     'Note that since walls don’t belong to any player, finding them requires the constant <code>FIND_STRUCTURES</code>\nrather than <code>FIND_MY_STRUCTURES</code>.':
     '请注意，由于墙不属于任何玩家，所以我们需要使用 <code>FIND_STRUCTURES</code> 常量进行搜索而不是 <code>FIND_MY_STRUCTURES</code>。',
@@ -75,13 +75,13 @@ const OBJECTIVE_CONTENT = {
     '激活安全模式。',
 
     'Place the construction site for the tower (manually or using the code below).':
-    '放置 Tower 的工地（手动或使用下面的代码）。',
+    '放置塔的建筑工地（手动或使用下面的代码）。',
 
     'Add <code>STRUCTURE_TOWER</code> to the module <code>role.harvester</code> and wait for the energy to appear in the tower.':
-    '在 <code>role.harvester</code> 模块中添加 <code>STRUCTURE_TOWER</code>，然后等待能量运送到 tower 中。',
+    '在 <code>role.harvester</code> 模块中添加 <code>STRUCTURE_TOWER</code>，然后等待能量运送到塔中。',
 
     'Destroy the enemy creep with the help of the tower.':
-    '使用 tower 消灭敌方 creep。',
+    '使用塔消灭敌方 creep。',
 
     'Repair all the damaged walls.':
     '修复所有受损的墙。'

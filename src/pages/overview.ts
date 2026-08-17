@@ -10,14 +10,14 @@ const OVERVIEW_HEADER: MultipleMap = {
     'Energy<br>on creeps': '生产 creep 消耗的能量',
     'Creeps<br>produced': '生产的 creep 数',
     'Creeps<br>lost': '损失的 creep 数',
-    'Power<br>processed': '超能量处理量'
+    'Power<br>processed': '超能处理量'
 }
 
 /**
  * 图表右上角的下拉框选项
  */
 const GRAPH_SELECT_LIST: MultipleMap = {
-    'Power processed': '超能量处理量',
+    'Power processed': '超能处理量',
     'Control points': '控制点数',
     'Energy harvested': '能量采集量',
     'Energy spent on construction': '建造消耗的能量',

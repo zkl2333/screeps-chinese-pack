@@ -14,7 +14,7 @@ const content: PageContent = {
         },
         {
             'en-US': 'The leaderboard of power gained during a month. You earn rating points for processing power in your Power Spawns.',
-            'zh-CN': '本排行统计了玩家本月获得的超能量。您可以通过在超能 Spawn 中处理超能量来获得排名积分。'
+            'zh-CN': '本排行统计了玩家本月获得的超能。您可以通过在超能母巢中处理超能来获得排名积分。'
         },
         {
             'en-US': 'In the end of the month, your rank is reset.',

@@ -25,7 +25,7 @@ const TUTORIAL_CONTENT = {
     '您可以在左侧的 creep 信息面板或者 “内存” 面板中查看您 creep 的内存。',
 
     'Now let\'s define the behavior of the new creep. Both creeps should harvest energy, but the creep with the role\n<code>harvester</code> should bring it to the spawn, while the creep with the role <code>upgrader</code>\nshould go to the Controller and apply the function <code>upgradeController</code> to it (you can get the\nController object with the help of the <code>Creep.room.controller</code> property).':
-    '现在，让我们来定义新 creep 的行为逻辑。两种 creep 都需要采集能量，但是角色为 <code>harvester</code> 的 creep 需要把能量带回到 spawn，而角色为 <code>upgrader</code> 的 creep 需要走到 controller 旁然后对其执行 <code>upgradeController</code> 方法（您可以通过 <code>Creep.room.controller</code> 属性获取到 creep 所在房间的 controller 对象）。',
+    '现在，让我们来定义新 creep 的行为逻辑。两种 creep 都需要采集能量，但是角色为 <code>harvester</code> 的 creep 需要把能量带回到母巢，而角色为 <code>upgrader</code> 的 creep 需要走到控制器旁然后对其执行 <code>upgradeController</code> 方法（您可以通过 <code>Creep.room.controller</code> 属性获取到 creep 所在房间的控制器对象）。',
 
     'In order to do this, we’ll create a new module called <code>role.upgrader</code>.':
     '为此，我们需要创建一个名为 <code>role.upgrader</code> 的新模块。',

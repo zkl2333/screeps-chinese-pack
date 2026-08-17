@@ -29,7 +29,7 @@ describe('历史汉化质量', () => {
         expect(findTranslation(room.content, 'Decay in:')).toBe('剩余时间：')
         expect(findTranslation(room.content, 'Safe modes available:')).toBe('可用安全模式：')
         expect(findTranslation(room.content, 'Build an extractor here to mine this mineral deposit.'))
-            .toBe('在此建造一座提取器，以开采该矿藏。')
+            .toBe('在此建造一座矿机，以开采该矿藏。')
     })
 
     test('地图与库存词条不应包含已知错译', () => {
@@ -49,9 +49,9 @@ describe('历史汉化质量', () => {
             .toBe('开启 24 小时实验期后，您可以测试超能 creep 的配置而不会损失等级。实验期间：')
     })
 
-    test('分片说明应语义完整且通顺', () => {
+    test('镜面说明应语义完整且通顺', () => {
         expect(findTranslation(shards.content, 'Your creeps can travel between them using special portals.'))
-            .toBe('您的 creep 可通过特殊传送门在不同分片之间穿行。')
+            .toBe('您的 creep 可通过特殊传送门在不同镜面之间穿行。')
     })
 
     test('进入页 CPU 解锁弹窗词条完整', () => {

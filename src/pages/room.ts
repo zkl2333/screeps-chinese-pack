@@ -3,7 +3,7 @@ import getTips from './tips'
 
 const CONSTRUCT_NOTICE: MultipleMap = {
     'Choose location': '选择位置',
-    'Place your spawn': '放置您的 Spawn'
+    'Place your spawn': '放置您的母巢'
 }
 
 const TOOLTIP_LABEL: MultipleMap = {
@@ -20,7 +20,7 @@ const TOOLTIP_LABEL: MultipleMap = {
     'Segments': '分段内存',
     'Hide side panel': '隐藏侧边栏',
     'Display options': '显示设置',
-    'Place spawn': '放置 spawn'
+    'Place spawn': '放置母巢'
 }
 
 const content: PageContent = {
@@ -133,7 +133,7 @@ const content: PageContent = {
         { 'en-US': 'Amount:', 'zh-CN': '剩余量：', 'reuse': true },
         { 'en-US': 'Regeneration in:', 'zh-CN': '再生倒计时：', 'reuse': true },
         { 'en-US': 'Learn more', 'zh-CN': '了解更多', 'reuse': true },
-        { 'en-US': 'Build an extractor here to mine this mineral deposit.', 'zh-CN': '在此建造一座提取器，以开采该矿藏。', 'reuse': true },
+        { 'en-US': 'Build an extractor here to mine this mineral deposit.', 'zh-CN': '在此建造一座矿机，以开采该矿藏。', 'reuse': true },
         { 'en-US': 'Amount:', 'zh-CN': '剩余量：', 'reuse': true },
 
         { 'en-US': 'Level:', 'zh-CN': '等级：', 'reuse': true },
@@ -181,7 +181,7 @@ const content: PageContent = {
         { 'en-US': 'Cancel', 'zh-CN': '取消', 'reuse': true },
         { 'en-US': 'OK', 'zh-CN': '确认', 'reuse': true },
         // 建筑描述
-        { 'en-US': 'Contains additional energy which can be used by spawns for spawning bigger creeps.', 'zh-CN': '为 Spawn 提供生产更大体型 creep 所需的额外储能空间。', 'reuse': true },
+        { 'en-US': 'Contains additional energy which can be used by spawns for spawning bigger creeps.', 'zh-CN': '为母巢提供生产更大体型 creep 所需的额外储能空间。', 'reuse': true },
         { 'en-US': 'Decreases movement cost. Decays over time and requires repair.', 'zh-CN': '降低移动消耗。会随时间衰减，需要维修。', 'reuse': true },
         { 'en-US': 'Blocks movement of all creeps. Requires repair after construction.', 'zh-CN': '能够阻挡所有 creep。建造之后需要维护。', 'reuse': true },
         {
@@ -201,7 +201,7 @@ const content: PageContent = {
         { 'en-US': 'Produces mineral compounds and boosts creeps.', 'zh-CN': '能够制造矿物化合物并强化 creep。', 'reuse': true },
         { 'en-US': 'Sends any resources to a\u00A0Terminal in another room.', 'zh-CN': '能够向另一房间的终端发送任意资源。', 'reuse': true },
         { 'en-US': 'Produces trade commodities.', 'zh-CN': '能够生产可交易商品。', 'reuse': true },
-        { 'en-US': 'Spawns creeps using energy contained in the room spawns and extensions.', 'zh-CN': '使用房间内 Spawn 与 Extension 储备的能量生产 creep。', 'reuse': true },
+        { 'en-US': 'Spawns creeps using energy contained in the room spawns and extensions.', 'zh-CN': '使用房间内母巢与扩展储备的能量生产 creep。', 'reuse': true },
         { 'en-US': 'Provides visibility into a distant room from your script.', 'zh-CN': '能够使您的脚本获取远处一房间的视野。', 'reuse': true },
         { 'en-US': 'Spawns power creeps with special unique powers.', 'zh-CN': '能够生产拥有特殊技能的超能 creep。', 'reuse': true },
         { 'en-US': 'Launches a nuke to a distant room dealing huge damage to the landing area.', 'zh-CN': '能够向远处一房间发射核弹，对命中区域造成巨大伤害。', 'reuse': true },
@@ -275,8 +275,8 @@ const content: PageContent = {
         // 传送门面板
         { 'en-US': 'Portal', 'zh-CN': '传送门', 'reuse': true },
         { 'en-US': 'portal', 'zh-CN': '传送门', 'reuse': true },
-        { 'en-US': 'Inter-shard Portal', 'zh-CN': '跨分片传送门', 'reuse': true },
-        { 'en-US': 'Intra-shard Portal', 'zh-CN': '分片内传送门', 'reuse': true },
+        { 'en-US': 'Inter-shard Portal', 'zh-CN': '跨镜面传送门', 'reuse': true },
+        { 'en-US': 'Intra-shard Portal', 'zh-CN': '镜面内传送门', 'reuse': true },
         { 'en-US': 'Destination:', 'zh-CN': '目的地：', 'reuse': true },
 
 
@@ -302,7 +302,7 @@ const content: PageContent = {
         { 'en-US': 'Last cooldown:', 'zh-CN': '上一次采集冷却：', 'reuse': true },
 
         // powerbank
-        { 'en-US': 'Power:', 'zh-CN': '超能量：', 'reuse': true },
+        { 'en-US': 'Power:', 'zh-CN': '超能：', 'reuse': true },
         { 'en-US': 'This structure emits bright light and splashes of sparks.', 'zh-CN': '这个建筑散发着亮光，飞溅出火星。', 'reuse': true },
 
         // tombstone
@@ -327,32 +327,32 @@ const content: PageContent = {
             'reuse': true
         },
 
-        { 'en-US': 'Rampart', 'zh-CN': 'Rampart', 'reuse': true },
-        { 'en-US': 'Tower', 'zh-CN': '防御塔', 'reuse': true },
+        { 'en-US': 'Rampart', 'zh-CN': '城墙', 'reuse': true },
+        { 'en-US': 'Tower', 'zh-CN': '塔', 'reuse': true },
         { 'en-US': 'Terminal', 'zh-CN': '终端', 'reuse': true },
         { 'en-US': 'Store', 'zh-CN': '存储', 'reuse': true },
         { 'en-US': 'Storage', 'zh-CN': '仓库', 'reuse': true },
         { 'en-US': 'Empty', 'zh-CN': '空', 'reuse': true },
-        { 'en-US': 'rampart', 'zh-CN': 'Rampart', 'reuse': true },
+        { 'en-US': 'rampart', 'zh-CN': '城墙', 'reuse': true },
         { 'en-US': 'road', 'zh-CN': '道路', 'reuse': true },
         { 'en-US': 'Road', 'zh-CN': '道路', 'reuse': true },
         { 'en-US': 'resource', 'zh-CN': '资源', 'reuse': true },
         { 'en-US': 'mineral', 'zh-CN': '矿物', 'reuse': true },
         { 'en-US': 'Mineral', 'zh-CN': '矿物', 'reuse': true },
-        { 'en-US': 'extractor', 'zh-CN': '提取器', 'reuse': true },
-        { 'en-US': 'Extractor', 'zh-CN': '提取器', 'reuse': true },
-        { 'en-US': 'Source', 'zh-CN': '资源点', 'reuse': true },
-        { 'en-US': 'Constructed Wall', 'zh-CN': '墙', 'reuse': true },
+        { 'en-US': 'extractor', 'zh-CN': '矿机', 'reuse': true },
+        { 'en-US': 'Extractor', 'zh-CN': '矿机', 'reuse': true },
+        { 'en-US': 'Source', 'zh-CN': '能量源', 'reuse': true },
+        { 'en-US': 'Constructed Wall', 'zh-CN': '建筑墙壁', 'reuse': true },
 
         // ===== 2026-08 从 build.min.js 补充 =====
 
         // 新手引导 / 放置 spawn
         { 'en-US': 'Go to Novice Area', 'zh-CN': '前往新手区', 'reuse': true },
         { 'en-US': 'Go to Tutorial', 'zh-CN': '前往教程', 'reuse': true },
-        { 'en-US': 'Place first spawn', 'zh-CN': '放置第一个 Spawn', 'reuse': true },
+        { 'en-US': 'Place first spawn', 'zh-CN': '放置第一个母巢', 'reuse': true },
         { 'en-US': 'Before you start in the real World, we recommend you to take the Tutorial that explains the game basics and everything you are going to face step by step. Have you already taken the tutorial? ', 'zh-CN': '在正式开始之前，我们建议您先通过教程了解游戏基础与将要面对的种种挑战。您是否已经完成了教程？', 'reuse': true },
         { 'en-US': 'Yes, I have', 'zh-CN': '是的，已完成', 'reuse': true },
-        { 'en-US': 'Source Keeper', 'zh-CN': '源守卫', 'reuse': true },
+        { 'en-US': 'Source Keeper', 'zh-CN': 'Source Keeper', 'reuse': true },
 
         // 房间 / 建筑限制提示
         { 'en-US': 'It is not allowed to destroy a structure when hostile creeps are in the room.', 'zh-CN': '当房间中存在敌对 creep 时，不允许拆除建筑。', 'reuse': true },
@@ -362,7 +362,7 @@ const content: PageContent = {
         { 'en-US': 'This room is not available for settlement yet. Please choose another room.', 'zh-CN': '该房间暂不开放定居，请选择其他房间。', 'reuse': true },
         { 'en-US': 'You cannot create more than 10,000 flags.', 'zh-CN': '旗帜数量不能超过 10,000 个。', 'reuse': true },
         { 'en-US': 'RCL not enough', 'zh-CN': '房间控制等级不足', 'reuse': true },
-        { 'en-US': "You don't have access to claim rooms on this shard.", 'zh-CN': '您没有权限在该分片上占领房间。', 'reuse': true },
+        { 'en-US': "You don't have access to claim rooms on this shard.", 'zh-CN': '您没有权限在该镜面上占领房间。', 'reuse': true },
         { 'en-US': 'You must own or reserve this room to generate invaders.', 'zh-CN': '您必须拥有或预订该房间，才能生成入侵者。', 'reuse': true },
 
         // 脚本编辑器
