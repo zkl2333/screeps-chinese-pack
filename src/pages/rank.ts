@@ -1,3 +1,5 @@
+import { translateNoRank } from './overview'
+
 const content: PageContent = {
     hashs: ['#!/rank'],
     content: [
@@ -24,6 +26,11 @@ const content: PageContent = {
         { 'en-US': 'Your Rank', 'zh-CN': '您的排名', 'reuse': true },
         { 'en-US': 'Leaderboards', 'zh-CN': '排行榜', 'reuse': true },
         { 'en-US': 'No rank', 'zh-CN': '暂无排名', 'reuse': true },
+        {
+            'en-US': /^No rank in .+$/,
+            'zh-CN': (text: string) => translateNoRank(text),
+            'reuse': true
+        },
         { 'en-US': 'Learn more', 'zh-CN': '了解更多' }
     ]
 }

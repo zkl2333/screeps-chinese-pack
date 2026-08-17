@@ -1,5 +1,30 @@
 import { translateMultiple } from 'utils'
 
+const MONTH_NAMES: Record<string, string> = {
+    January: '1 月',
+    February: '2 月',
+    March: '3 月',
+    April: '4 月',
+    May: '5 月',
+    June: '6 月',
+    July: '7 月',
+    August: '8 月',
+    September: '9 月',
+    October: '10 月',
+    November: '11 月',
+    December: '12 月'
+}
+
+/**
+ * 将 "No rank in August 2026" 译为 "2026 年 8 月暂无排名"
+ */
+export const translateNoRank = function (text: string): string {
+    const matched = text.match(/^No rank in ([A-Za-z]+) (\d{4})$/)
+    if (!matched) return text.replace('No rank in ', '暂无排名：')
+    const month = MONTH_NAMES[matched[1]] || matched[1]
+    return `${matched[2]} 年 ${month}暂无排名`
+}
+
 /**
  * 中间横排的信息一览
  */
@@ -50,8 +75,8 @@ const content: PageContent = {
         { 'en-US': /Rooms: \d+/, 'zh-CN': (text: string) => text.replace('Rooms:', '房间数：'), 'reuse': true },
         { 'en-US': 'Rooms:', 'zh-CN': '房间数：', 'reuse': true },
         {
-            'en-US': /No rank in .+$/,
-            'zh-CN': (text: string) => `${text.replace('No rank in ', '暂无排名（')}）`,
+            'en-US': /^No rank in .+$/,
+            'zh-CN': (text: string) => translateNoRank(text),
             'reuse': true
         },
         {

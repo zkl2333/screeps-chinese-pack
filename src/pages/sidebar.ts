@@ -1,4 +1,5 @@
 import { dontTranslate } from 'utils'
+import { translateNoRank } from './overview'
 
 const content: PageContent = {
     hashs: ['#!/'],
@@ -202,7 +203,12 @@ const content: PageContent = {
             'reuse': true
         },
         { 'en-US': 'Unlock CPU in PTR activated', 'zh-CN': '公共测试服 CPU 解锁已激活', 'reuse': true },
-        { 'en-US': 'Your Global Power Level has been upgraded!', 'zh-CN': '您的全局超能等级已提升！', 'reuse': true }
+        { 'en-US': 'Your Global Power Level has been upgraded!', 'zh-CN': '您的全局超能等级已提升！', 'reuse': true },
+        {
+            'en-US': /^No rank in .+$/,
+            'zh-CN': (text: string) => translateNoRank(text),
+            'reuse': true
+        }
     ]
 }
 

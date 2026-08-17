@@ -1,3 +1,5 @@
+import { translateNoRank } from './overview'
+
 const content: PageContent = {
     hashs: ['#!/inventory'],
     content: [
@@ -43,6 +45,23 @@ const content: PageContent = {
         { 'en-US': 'CPU Unlock', 'zh-CN': 'CPU 解锁', 'reuse': true },
         { 'en-US': 'Pixels', 'zh-CN': '像素', 'reuse': true },
         { 'en-US': 'Access keys', 'zh-CN': '访问密钥', 'reuse': true },
+        { 'en-US': 'Access Keys', 'zh-CN': '访问密钥', 'reuse': true },
+        { 'en-US': 'Buy Access Keys', 'zh-CN': '购买访问密钥', 'reuse': true },
+        { 'en-US': 'Unlimited Access Keys', 'zh-CN': '无限访问密钥', 'reuse': true },
+        { 'en-US': 'Unlimited access', 'zh-CN': '无限访问', 'reuse': true },
+        {
+            'en-US': 'Grants access to special features and events.',
+            'zh-CN': '用于解锁特殊功能与活动。',
+            'reuse': true
+        },
+        {
+            'en-US': 'Get full access to all features once and for all',
+            'zh-CN': '一次性永久解锁全部功能',
+            'reuse': true
+        },
+        { 'en-US': 'Get full access to all', 'zh-CN': '一次性永久解锁全部', 'reuse': true },
+        { 'en-US': 'features once and for all', 'zh-CN': '功能', 'reuse': true },
+        { 'en-US': 'In-game Market', 'zh-CN': '游戏内市场', 'reuse': true },
         {
             'en-US': /Sale! \d+% discount on all items until .+ in our Item Shop/,
             'zh-CN': (text: string) => text
@@ -71,6 +90,23 @@ const content: PageContent = {
         { 'en-US': 'Restrict by theme', 'zh-CN': '限定主题', 'reuse': true },
         { 'en-US': 'How to get pixels?', 'zh-CN': '如何获取像素？', 'reuse': true },
         { 'en-US': 'Pixelization progress', 'zh-CN': '像素收集进度', 'reuse': true },
+        {
+            'en-US': 'Get 500 and pixelize your first decoration!',
+            'zh-CN': '获取 500 像素并抽取您的第一个装饰！',
+            'reuse': true
+        },
+        {
+            'en-US': /^Get [\d,]+ and pixelize your first decoration!$/,
+            'zh-CN': (text: string) => text
+                .replace(/^Get /, '获取 ')
+                .replace(' and pixelize your first decoration!', ' 像素并抽取您的第一个装饰！'),
+            'reuse': true
+        },
+        {
+            'en-US': /^[\d,]+ and pixelize your first decoration!$/,
+            'zh-CN': (text: string) => text.replace(' and pixelize your first decoration!', ' 像素并抽取您的第一个装饰！'),
+            'reuse': true
+        },
         // 侧边栏 Steam 交互相关
         { 'en-US': 'error connecting to Steam', 'zh-CN': '连接至 Steam 时发生错误', 'reuse': true },
         { 'en-US': 'Drag to Transfer to Steam', 'zh-CN': '拖拽物品转移到 Steam 库存', 'reuse': true },
@@ -315,8 +351,13 @@ const content: PageContent = {
         },
         { 'en-US': 'using command', 'zh-CN': '生成 pixel', 'reuse': true },
         {
+            'en-US': /^This will consume [\d,]+ CPU\.$/,
+            'zh-CN': (text: string) => text.replace('This will consume ', '这将消耗 ').replace(' CPU.', ' CPU。'),
+            'reuse': true
+        },
+        {
             'en-US': 'This will consume 5,000 CPU.',
-            'zh-CN': '这会消耗 5000 CPU。',
+            'zh-CN': '这将消耗 5,000 CPU。',
             'reuse': true
         },
         {
@@ -337,7 +378,12 @@ const content: PageContent = {
         {
             'en-US':
                 'Grants access to the Seasonal World or a special event in the Persistent World.',
-            'zh-CN': '获得参与赛季服务器或者特殊事件的权限。',
+            'zh-CN': '获得参与赛季世界或者特殊事件的权限。',
+            'reuse': true
+        },
+        {
+            'en-US': /^No rank in .+$/,
+            'zh-CN': (text: string) => translateNoRank(text),
             'reuse': true
         }
     ]
