@@ -42,6 +42,22 @@ const content: PageContent = {
         },
         { 'en-US': 'or', 'zh-CN': '或者' },
         { 'en-US': 'in-game market', 'zh-CN': '\u00A0游戏内市场' },
+        { 'en-US': 'In-game Market', 'zh-CN': '游戏内市场', 'reuse': true },
+        {
+            'en-US': 'CPU Unlock',
+            'zh-CN': 'CPU 解锁',
+            'reuse': true
+        },
+        {
+            'en-US': 'This item allows you to unlock full CPU in your account for 1 day.',
+            'zh-CN': '此物品可让您的账户解锁完整 CPU，持续 1 天。',
+            'reuse': true
+        },
+        { 'en-US': 'Lifetime CPU Unlock', 'zh-CN': '永久 CPU 解锁', 'reuse': true },
+        { 'en-US': 'Get full CPU permanently', 'zh-CN': '永久获得完整 CPU', 'reuse': true },
+        { 'en-US': 'with no time limit', 'zh-CN': '不受时间限制', 'reuse': true },
+        { 'en-US': 'Activate', 'zh-CN': '激活', 'reuse': true },
+        { 'en-US': 'You have', 'zh-CN': '您拥有', 'reuse': true },
         /* {
             'selector': 'body > app2-router-outlet > app-enter-base > aside > div.__intro.--flex.--hcenter.--vcenter.--column > div.--flex.--column > app-time-left',
             'zh-CN': (el: HTMLElement) => {

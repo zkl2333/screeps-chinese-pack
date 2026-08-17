@@ -6,6 +6,7 @@ import shards from '@/pages/shards'
 import tutorial1 from '@/pages/tutorial/tutorial1'
 import tutorial2 from '@/pages/tutorial/tutorial2'
 import getTips from '@/pages/tips'
+import enter from '@/pages/enter'
 
 type Entry = TranslationContent
 
@@ -51,5 +52,16 @@ describe('历史汉化质量', () => {
     test('分片说明应语义完整且通顺', () => {
         expect(findTranslation(shards.content, 'Your creeps can travel between them using special portals.'))
             .toBe('您的 creep 可通过特殊传送门在不同分片之间穿行。')
+    })
+
+    test('进入页 CPU 解锁弹窗词条完整', () => {
+        expect(findTranslation(enter.content, 'CPU Unlock')).toBe('CPU 解锁')
+        expect(findTranslation(enter.content, 'This item allows you to unlock full CPU in your account for 1 day.'))
+            .toBe('此物品可让您的账户解锁完整 CPU，持续 1 天。')
+        expect(findTranslation(enter.content, 'Lifetime CPU Unlock')).toBe('永久 CPU 解锁')
+        expect(findTranslation(enter.content, 'Get full CPU permanently')).toBe('永久获得完整 CPU')
+        expect(findTranslation(enter.content, 'with no time limit')).toBe('不受时间限制')
+        expect(findTranslation(enter.content, 'In-game Market')).toBe('游戏内市场')
+        expect(findTranslation(enter.content, 'Activate')).toBe('激活')
     })
 })
