@@ -8,7 +8,7 @@ export default `
 // ==UserScript==
 // @name         screeps-chinese-pack
 // @namespace    https://github.com/zkl2333/screeps-chinese-pack
-// @version      1.9.0
+// @version      1.9.1
 // @description  用于汉化 screeps.com 网站的油猴脚本
 // @author       zkl2333
 // @homepageURL  https://github.com/zkl2333/screeps-chinese-pack
