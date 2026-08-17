@@ -1,5 +1,5 @@
 const content: PageContent = {
-    hashs: ['#!/shards'],
+    hashs: ['#!/shards', '#!/shards2'],
     content: [
         { 'en-US': 'Shards', 'zh-CN': '镜面' },
         {

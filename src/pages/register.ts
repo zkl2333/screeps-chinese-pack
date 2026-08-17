@@ -94,6 +94,31 @@ const content: PageContent = {
             'en-US': 'We have sent an e-mail to your account address with the instructions of how to change your password.',
             'zh-CN': '我们已向您的账户地址发送了一封电子邮件，其中包含如何更改密码的说明。',
             'reuse': true
+        },
+
+        { 'en-US': 'I don\'t want to use in-game notifications', 'zh-CN': '我不想使用游戏内通知', 'reuse': true },
+        { 'en-US': 'You can specify your e-mail later in your account settings.', 'zh-CN': '您可以稍后在账户设置中填写邮箱。', 'reuse': true },
+        { 'en-US': 'I have an account at screeps.com', 'zh-CN': '我已有 screeps.com 账户', 'reuse': true },
+        { 'en-US': 'Only alphanumeric and special characters are allowed.', 'zh-CN': '仅允许使用字母、数字和特殊字符。', 'reuse': true },
+        { 'en-US': 'Please include at least one numeric character.', 'zh-CN': '请至少包含一个数字字符。', 'reuse': true },
+        { 'en-US': 'Must be at least 8 characters including at least one numeric letter.', 'zh-CN': '最少需要 8 个字符，包括至少一个数字。', 'reuse': true },
+        { 'en-US': 'Change Password', 'zh-CN': '修改密码', 'reuse': true },
+        { 'en-US': 'Your New Password', 'zh-CN': '新密码', 'reuse': true },
+        { 'en-US': 'An error occured while performing the request', 'zh-CN': '执行请求时发生错误', 'reuse': true },
+        { 'en-US': 'Your password has been changed successfully.', 'zh-CN': '您的密码已成功修改。', 'reuse': true },
+        { 'en-US': 'This password reset link is no longer valid.', 'zh-CN': '此密码重置链接已失效。', 'reuse': true },
+        { 'en-US': 'Done!', 'zh-CN': '完成！', 'reuse': true },
+        { 'en-US': 'Your account has been activated!', 'zh-CN': '您的账户已激活！', 'reuse': true },
+        { 'en-US': 'Click the button below to proceed to the game.', 'zh-CN': '请点击下方按钮进入游戏。', 'reuse': true },
+        { 'en-US': 'Your email has been successfully verified.', 'zh-CN': '您的邮箱已成功验证。', 'reuse': true },
+        { 'en-US': 'Error', 'zh-CN': '错误', 'reuse': true },
+        { 'en-US': 'An error occured while verifying your email.', 'zh-CN': '验证邮箱时发生错误。', 'reuse': true },
+        { 'en-US': 'contact our support', 'zh-CN': '联系我们的支持', 'reuse': true },
+        { 'en-US': 'for further details.', 'zh-CN': '以获取更多信息。', 'reuse': true },
+        {
+            'en-US': 'New account registration is disabled on the Public Test Realm server.',
+            'zh-CN': '公共测试服务器已关闭新账户注册。',
+            'reuse': true
         }
     ]
 }

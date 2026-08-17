@@ -17,6 +17,8 @@ import homePage from './homePage'
 import register from './register'
 import message from './message'
 import lobby from './lobby'
+import cpu from './cpu'
+import reportProblem from './reportProblem'
 
 export default [
     overview,
@@ -37,5 +39,7 @@ export default [
     homePage,
     register,
     message,
-    lobby
+    lobby,
+    cpu,
+    reportProblem
 ]

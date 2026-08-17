@@ -48,6 +48,7 @@ const content: PageContent = {
         { 'en-US': 'Stats Period', 'zh-CN': '统计时长', 'reuse': true },
         { 'en-US': 'Room', 'zh-CN': '房间', 'reuse': true },
         { 'en-US': /Rooms: \d+/, 'zh-CN': (text: string) => text.replace('Rooms:', '房间数：'), 'reuse': true },
+        { 'en-US': 'Rooms:', 'zh-CN': '房间数：', 'reuse': true },
         {
             'en-US': /No rank in .+$/,
             'zh-CN': (text: string) => `${text.replace('No rank in ', '暂无排名（')}）`,

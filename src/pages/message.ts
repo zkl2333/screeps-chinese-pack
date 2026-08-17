@@ -21,6 +21,7 @@ const content: PageContent = {
             'reuse': true
         },
         { 'en-US': 'You can use', 'zh-CN': '您可以使用 ' },
+        { 'en-US': 'Markdown', 'zh-CN': 'Markdown' },
         { 'en-US': 'to format your message', 'zh-CN': ' 来格式化您的消息' },
         {
             'selector': '.page-content.ng-scope textarea',

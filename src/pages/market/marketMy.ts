@@ -1,5 +1,5 @@
 const content: PageContent = {
-    hashs: ['#!/market/my'],
+    hashs: ['#!/market/my', '#!/market2/my'],
     content: [
         // 市场->我的订单
         { 'en-US': 'Refresh', 'zh-CN': '刷新' },

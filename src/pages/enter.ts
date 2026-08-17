@@ -92,7 +92,17 @@ const content: PageContent = {
         { 'en-US': 'and compete for valuable rewards.', 'zh-CN': '争夺丰厚奖励。', 'reuse': true },
         { 'en-US': 'FREE ENTRY', 'zh-CN': '免费参加', 'reuse': true },
         { 'en-US': 'Ok', 'zh-CN': '确定' },
-        { 'en-US': 'Cancel', 'zh-CN': '取消' }
+        { 'en-US': 'Cancel', 'zh-CN': '取消' },
+        {
+            'en-US': 'You already have an active subscription. Would you like to convert this credits coupon into subscription time? The conversion will be done based on 90 credits/day rate.',
+            'zh-CN': '您已有有效订阅。是否要将此点数兑换券转换为订阅时长？兑换比例为每天 90 点。',
+            'reuse': true
+        },
+        {
+            'en-US': 'You still have CPU Credits to spend. To activate your subscription under the new model, please convert your Credits into subscription days.',
+            'zh-CN': '您仍有 CPU 点数未使用。要按新模式激活订阅，请先将点数转换为订阅天数。',
+            'reuse': true
+        }
     ]
 }
 

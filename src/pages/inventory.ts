@@ -249,6 +249,27 @@ const content: PageContent = {
             'zh-CN': '您可以将此图标作为您的账户徽章（头像）',
             'reuse': true
         },
+        {
+            'en-US': 'You can choose this icon as your account badge.',
+            'zh-CN': '您可以将此图标作为您的账户徽章（头像）。',
+            'reuse': true
+        },
+        {
+            'en-US': 'You can use this image to decorate your objects.',
+            'zh-CN': '您可以用此物品来装饰您的对象。',
+            'reuse': true
+        },
+        {
+            'en-US': 'You can place this image as a room-wide texture.',
+            'zh-CN': '您可以将此材质应用于整个房间。',
+            'reuse': true
+        },
+        { 'en-US': 'This room already has an active decoration', 'zh-CN': '该房间已有启用中的装饰', 'reuse': true },
+        {
+            'en-US': 'Сongratulations! You have successfully purchased this decorations.',
+            'zh-CN': '恭喜！您已成功购买这些装饰。',
+            'reuse': true
+        },
         // 购买CPU
         {
             'en-US':

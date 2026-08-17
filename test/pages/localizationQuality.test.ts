@@ -74,4 +74,19 @@ describe('历史汉化质量', () => {
         expect(findTranslation(marketAll.content, 'Back to resources list')).toBe('返回资源列表')
         expect(findTranslation(room.content, 'Clone branch')).toBe('克隆分支')
     })
+
+    test('补充漏译词条应已覆盖', () => {
+        const lobby = require('@/pages/lobby').default
+        const cpu = require('@/pages/cpu').default
+        const reportProblem = require('@/pages/reportProblem').default
+        const register = require('@/pages/register').default
+        expect(findTranslation(lobby.content, 'EARLY PREVIEW STARTS ON MAY 20')).toBe('早期预览将于 5 月 20 日开始')
+        expect(findTranslation(lobby.content, 'Qualify')).toBe('资格')
+        expect(findTranslation(cpu.content, 'Manage your CPU')).toBe('管理您的 CPU')
+        expect(findTranslation(cpu.content, 'Days Left')).toBe('剩余天数')
+        expect(findTranslation(reportProblem.content, 'Report a problem')).toBe('问题上报')
+        expect(findTranslation(register.content, 'Your account has been activated!')).toBe('您的账户已激活！')
+        expect(findTranslation(room.content, 'Create Creep')).toBe('创建 creep')
+        expect(findTranslation(room.content, 'Body:')).toBe('身体：')
+    })
 })

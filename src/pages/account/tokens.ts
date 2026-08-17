@@ -17,8 +17,24 @@ const content: PageContent = {
         { 'en-US': 'Generate token', 'zh-CN': '生成令牌' },
         {
             'en-US': 'You can create tokens to authenticate to our Web API endpoints in external tools.\nThese tokens allow to skip solving CAPTCHA on login, but rate limiting is applied.',
-            'zh-CN': '您可以创建令牌，供外部工具调用我们的 Web API 接口时进行身份验证。这些令牌可让您在登录时跳过验证码，但仍会受到访问速率限制。'
+            'zh-CN': '您可以创建令牌，供外部工具调用我们的 Web API 接口时进行身份验证。这些令牌可让您在登录时跳过验证码，但仍会受到访问速率限制。',
+            'reuse': true
         },
+        {
+            'en-US': 'You can create tokens to authenticate to our Web API endpoints in external tools. These tokens allow to skip solving CAPTCHA on login, but rate limiting is applied.',
+            'zh-CN': '您可以创建令牌，供外部工具调用我们的 Web API 接口时进行身份验证。这些令牌可让您在登录时跳过验证码，但仍会受到访问速率限制。',
+            'reuse': true
+        },
+        { 'en-US': 'Memory segments', 'zh-CN': '内存片段', 'reuse': true },
+        { 'en-US': 'Memory segments:', 'zh-CN': '内存片段：', 'reuse': true },
+        {
+            'en-US': 'Specify memory segments IDs separated by a comma or space. Leave blank to allow access to all memory segments.',
+            'zh-CN': '请用逗号或空格分隔内存片段 ID。留空则允许访问全部内存片段。'
+        },
+        { 'en-US': 'Token:', 'zh-CN': '令牌：', 'reuse': true },
+        { 'en-US': 'Proceed', 'zh-CN': '继续', 'reuse': true },
+        { 'en-US': 'Rate limiting will be turned off for 2 hours.', 'zh-CN': '访问速率限制将关闭 2 小时。', 'reuse': true },
+        { 'en-US': 'Success! You can close this window now.', 'zh-CN': '成功！您现在可以关闭此窗口。', 'reuse': true },
         { 'en-US': 'Full access', 'zh-CN': '完全访问权限', 'reuse': true },
         { 'en-US': 'WebSockets (console)', 'zh-CN': 'WebSockets (控制台)', 'reuse': true },
         { 'en-US': 'WebSockets (rooms)', 'zh-CN': 'WebSockets (房间)', 'reuse': true },

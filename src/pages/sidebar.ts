@@ -142,7 +142,67 @@ const content: PageContent = {
 
         // 其他
         { 'en-US': 'In Development', 'zh-CN': '开发中', 'reuse': true },
-        { 'en-US': 'The game is not launched yet. Please try again on August 12', 'zh-CN': '游戏尚未上线，请于 8 月 12 日再试。', 'reuse': true }
+        { 'en-US': 'The game is not launched yet. Please try again on August 12', 'zh-CN': '游戏尚未上线，请于 8 月 12 日再试。', 'reuse': true },
+
+        // 顶栏 / 系统栏
+        { 'en-US': 'Mem:', 'zh-CN': '内存：', 'reuse': true },
+        { 'en-US': 'Your CPU is disabled!', 'zh-CN': '您的 CPU 已关闭！', 'reuse': true },
+        { 'en-US': 'Manage CPU', 'zh-CN': '管理 CPU', 'reuse': true },
+        { 'en-US': 'New subscription available!', 'zh-CN': '新订阅方式现已推出！', 'reuse': true },
+        { 'en-US': 'Back to main realm', 'zh-CN': '返回正式服', 'reuse': true },
+        { 'en-US': 'Main menu', 'zh-CN': '主菜单', 'reuse': true },
+        { 'en-US': 'Less than a day', 'zh-CN': '不足 1 天', 'reuse': true },
+        { 'en-US': 'You have 1 day', 'zh-CN': '剩余 1 天', 'reuse': true },
+        {
+            'en-US': /^You have \d+ days$/,
+            'zh-CN': (text: string) => text.replace('You have ', '剩余 ').replace(' days', ' 天'),
+            'reuse': true
+        },
+        { 'en-US': '(CTRL+SHIFT+R)', 'zh-CN': '（CTRL+SHIFT+R）', 'reuse': true },
+        { 'en-US': 'New update is available, please restart.', 'zh-CN': '有可用更新，请重启。', 'reuse': true },
+        {
+            'en-US': 'This is the Public Test Realm. This server is intended for testing purposes only.',
+            'zh-CN': '这是公共测试服务器，仅供测试使用。',
+            'reuse': true
+        },
+        { 'en-US': 'Name', 'zh-CN': '名称', 'reuse': true },
+        { 'en-US': 'Email', 'zh-CN': '邮箱', 'reuse': true },
+        { 'en-US': 'Yes', 'zh-CN': '是', 'reuse': true },
+        { 'en-US': 'No', 'zh-CN': '否', 'reuse': true },
+
+        // 订阅转换 / Steam
+        {
+            'en-US': 'You already have an active subscription. Would you like to convert this credits coupon into subscription time? The conversion will be done based on 90 credits/day rate.',
+            'zh-CN': '您已有有效订阅。是否要将此点数兑换券转换为订阅时长？兑换比例为每天 90 点。',
+            'reuse': true
+        },
+        {
+            'en-US': 'You still have CPU Credits to spend. To activate your subscription under the new model, please convert your Credits into subscription days.',
+            'zh-CN': '您仍有 CPU 点数未使用。要按新模式激活订阅，请先将点数转换为订阅天数。',
+            'reuse': true
+        },
+        {
+            'en-US': 'The server is currently under maintenance. Please try again later.',
+            'zh-CN': '服务器正在维护中，请稍后再试。',
+            'reuse': true
+        },
+        {
+            'en-US': 'An error occurred while connecting to the server. Please try again later.',
+            'zh-CN': '连接服务器时发生错误，请稍后再试。',
+            'reuse': true
+        },
+        {
+            'en-US': 'Connection cannot be established. Please check your network settings and try again.',
+            'zh-CN': '无法建立连接，请检查网络设置后重试。',
+            'reuse': true
+        },
+        {
+            'en-US': 'Your client version is incompatible with this server version.',
+            'zh-CN': '您的客户端版本与此服务器版本不兼容。',
+            'reuse': true
+        },
+        { 'en-US': 'Unlock CPU in PTR activated', 'zh-CN': '公共测试服 CPU 解锁已激活', 'reuse': true },
+        { 'en-US': 'Your Global Power Level has been upgraded!', 'zh-CN': '您的全局超能等级已提升！', 'reuse': true }
     ]
 }
 

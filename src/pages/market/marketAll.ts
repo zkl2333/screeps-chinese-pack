@@ -1,5 +1,5 @@
 const content: PageContent = {
-    hashs: ['#!/market/all'],
+    hashs: ['#!/market/all', '#!/market2/all'],
     content: [
         // 市场->全部订单
         { 'en-US': 'Raw resources', 'zh-CN': '原始资源' },
@@ -29,6 +29,12 @@ const content: PageContent = {
         },
         { 'en-US': 'Back to resources list', 'zh-CN': '返回资源列表', 'reuse': true },
         { 'en-US': 'No orders', 'zh-CN': '暂无订单', 'reuse': true },
+        { 'en-US': 'this page', 'zh-CN': '此页面', 'reuse': true },
+        {
+            'en-US': 'A special item that allows its owner to activate 60 days of CPU subscription. You can buy or activate tokens on the',
+            'zh-CN': '此特殊物品可让持有者激活 60 天 CPU 订阅。您可以在',
+            'reuse': true
+        },
 
         // 翻译订单
         {

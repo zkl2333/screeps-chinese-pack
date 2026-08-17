@@ -16,7 +16,7 @@ const changeElementClassName = function (selector: string, oldClass: string, new
 }
 
 const content: PageContent = {
-    hashs: ['#!/overview/power'],
+    hashs: ['#!/overview/power', '#!/power-promo'],
 
     content: [
         // 无 Power Creep 时
@@ -26,6 +26,23 @@ const content: PageContent = {
         { 'en-US': 'Back', 'zh-CN': '返回', 'reuse': true },
 
         { 'en-US': 'Create creep', 'zh-CN': '创建 creep' },
+        { 'en-US': 'Select class', 'zh-CN': '选择职业', 'reuse': true },
+        {
+            'en-US': 'A creep working mainly in the rear, at your base, though it can be used as a saboteur in offensive operations.',
+            'zh-CN': '这种 creep 主要在后方基地工作，不过也可在进攻中充当破坏者。',
+            'reuse': true
+        },
+        {
+            'en-US': 'This power creep is not very useful on its own, but it’s a team player. It influences and affects regular creeps, both friendly and hostile.',
+            'zh-CN': '这种超能 creep 单独作战并不突出，但擅长团队配合，能影响友方和敌方的普通 creep。',
+            'reuse': true
+        },
+        {
+            'en-US': 'This creep class prefers working alone. Due to its skills, it’s a very effective performer in your economy or as a war machine when defending or attacking.',
+            'zh-CN': '这种 creep 更适合单独行动。凭借其技能，无论是发展经济，还是在攻防中作为战争机器，都十分高效。',
+            'reuse': true
+        },
+        { 'en-US': '(Under development)', 'zh-CN': '（开发中）', 'reuse': true },
         { 'en-US': 'Learn more', 'zh-CN': '了解更多' },
         { 'en-US': 'Global Power Level:', 'zh-CN': '全局超能等级：', 'reuse': true },
         { 'en-US': '.', 'zh-CN': '。', 'reuse': true },
@@ -203,7 +220,14 @@ const content: PageContent = {
             'en-US': 'Experimentation period active:',
             'zh-CN': '实验期已激活，剩余时间：',
             'reuse': true
-        }
+        },
+        { 'en-US': 'Do you really want to delete this creep?', 'zh-CN': '确定要删除这个 creep 吗？', 'reuse': true },
+        { 'en-US': 'Do you really want to rename this creep?', 'zh-CN': '确定要重命名这个 creep 吗？', 'reuse': true },
+        { 'en-US': 'This creep is being deleted', 'zh-CN': '此 creep 正在删除中', 'reuse': true },
+        { 'en-US': 'This creep will be deleted soon', 'zh-CN': '此 creep 即将被删除', 'reuse': true },
+        { 'en-US': 'Cancel deletion', 'zh-CN': '取消删除', 'reuse': true },
+        { 'en-US': 'You have reached the maximum creep level', 'zh-CN': '您已达到 creep 等级上限', 'reuse': true },
+        { 'en-US': 'You need to have a Power Spawn in the world.', 'zh-CN': '您需要在世界中拥有一座超能母巢。', 'reuse': true }
     ]
 }
 

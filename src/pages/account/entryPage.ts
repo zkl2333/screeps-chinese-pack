@@ -36,7 +36,28 @@ const content: PageContent = {
         { 'en-US': 'Notify on new messages', 'zh-CN': '有新消息时通知', 'reuse': true },
 
         // 通知间隔与说明
+        { 'en-US': 'Yes', 'zh-CN': '是', 'reuse': true },
+        { 'en-US': 'No', 'zh-CN': '否', 'reuse': true },
+        { 'en-US': 'Steam', 'zh-CN': 'Steam', 'reuse': true },
+        { 'en-US': 'GitHub', 'zh-CN': 'GitHub', 'reuse': true },
+        { 'en-US': 'Lifetime', 'zh-CN': '永久', 'reuse': true },
+        { 'en-US': 'Active', 'zh-CN': '已激活', 'reuse': true },
+        { 'en-US': 'Inactive', 'zh-CN': '未激活', 'reuse': true },
+        { 'en-US': 'No tokens', 'zh-CN': '暂无令牌', 'reuse': true },
+        {
+            'en-US': /^(\d+) tokens?$/,
+            'zh-CN': (text: string) => text.replace(/(\d+) tokens?/, '$1 个令牌'),
+            'reuse': true
+        },
+        { 'en-US': '5 min', 'zh-CN': '5 分钟', 'reuse': true },
+        { 'en-US': '10 min', 'zh-CN': '10 分钟', 'reuse': true },
+        { 'en-US': '30 min', 'zh-CN': '30 分钟', 'reuse': true },
+        { 'en-US': '3 hours', 'zh-CN': '3 小时', 'reuse': true },
+        { 'en-US': '6 hours', 'zh-CN': '6 小时', 'reuse': true },
+        { 'en-US': '12 hours', 'zh-CN': '12 小时', 'reuse': true },
+        { 'en-US': '3 days', 'zh-CN': '3 天', 'reuse': true },
         { 'en-US': 'Immediately', 'zh-CN': '立即', 'reuse': true },
+        { 'en-US': 'Every 5 min', 'zh-CN': '每 5 分钟', 'reuse': true },
         { 'en-US': 'Every 10 min', 'zh-CN': '每 10 分钟', 'reuse': true },
         { 'en-US': 'Every 30 min', 'zh-CN': '每 30 分钟', 'reuse': true },
         { 'en-US': 'Every 1 hour', 'zh-CN': '每 1 小时', 'reuse': true },

@@ -2,7 +2,7 @@
  * 游戏大厅 / 赛季排行榜 / 早期预览
  */
 const content: PageContent = {
-    hashs: ['#!/lobby', '#!/game-lobby', '#!/survival', '#!/arena', '#!/early-preview', '#!/early-preview-request'],
+    hashs: ['#!/lobby', '#!/game-lobby', '#!/survival', '#!/arena', '#!/early-preview', '#!/early-preview-request', '#!/g', '#!/ea', '#!/seasons', '#!/season-world-landing'],
     content: [
         // 游戏大厅
         { 'en-US': 'World', 'zh-CN': '世界', 'reuse': true },
@@ -36,6 +36,7 @@ const content: PageContent = {
         { 'en-US': 'Temporarily disabled', 'zh-CN': '暂时停用', 'reuse': true },
         { 'en-US': 'In Development', 'zh-CN': '开发中', 'reuse': true },
         { 'en-US': 'Your Rank', 'zh-CN': '您的排名', 'reuse': true },
+        { 'en-US': 'EARLY PREVIEW STARTS ON MAY 20', 'zh-CN': '早期预览将于 5 月 20 日开始', 'reuse': true },
 
         // 排行榜通用
         { 'en-US': 'Season:', 'zh-CN': '赛季：', 'reuse': true },
@@ -75,7 +76,16 @@ const content: PageContent = {
             'en-US': 'Thank you! Your request has been submitted. We will contact you when we have more capacity available.',
             'zh-CN': '谢谢！您的申请已提交。容量增加后我们会与您联系。',
             'reuse': true
-        }
+        },
+
+        // 早期预览申请表（管理页 /ea）
+        { 'en-US': 'Birth', 'zh-CN': '出生日期', 'reuse': true },
+        { 'en-US': 'Email', 'zh-CN': '邮箱', 'reuse': true },
+        { 'en-US': 'Name', 'zh-CN': '名称', 'reuse': true },
+        { 'en-US': 'Qualify', 'zh-CN': '资格', 'reuse': true },
+        { 'en-US': 'User', 'zh-CN': '用户', 'reuse': true },
+        { 'en-US': 'Description', 'zh-CN': '描述', 'reuse': true },
+        { 'en-US': 'Hide sent', 'zh-CN': '隐藏已发送', 'reuse': true }
     ]
 }
 

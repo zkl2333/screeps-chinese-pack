@@ -406,6 +406,44 @@ const content: PageContent = {
         { 'en-US': 'Always replace without asking', 'zh-CN': '总是直接替换，不再询问', 'reuse': true },
         { 'en-US': 'This action cannot be undone! Are you sure?', 'zh-CN': '该操作无法撤销！确定要继续吗？', 'reuse': true },
 
+        // 创建 creep 对话框
+        { 'en-US': 'Create Creep', 'zh-CN': '创建 creep', 'reuse': true },
+        { 'en-US': 'Body:', 'zh-CN': '身体：', 'reuse': true },
+        {
+            'selector': 'input[placeholder="Name"]',
+            'zh-CN': (el: HTMLElement) => el.setAttribute('placeholder', '名称'),
+            'reuse': true
+        },
+        {
+            'selector': '[title="Hide/show (Alt+Enter)"]',
+            'zh-CN': (el: HTMLElement) => el.setAttribute('title', '隐藏/显示（Alt+Enter）'),
+            'reuse': true
+        },
+        {
+            'selector': '[title="New window"]',
+            'zh-CN': (el: HTMLElement) => el.setAttribute('title', '新窗口'),
+            'reuse': true
+        },
+
+        // 竞技场激活
+        { 'en-US': 'The Arena Mode activation', 'zh-CN': '竞技场模式激活', 'reuse': true },
+        {
+            'en-US': 'For testing purposes, we have temporary limited access only to the',
+            'zh-CN': '出于测试目的，目前仅对 ',
+            'reuse': true
+        },
+        { 'en-US': 'Indiegogo campaign', 'zh-CN': 'Indiegogo 众筹', 'reuse': true },
+        {
+            'en-US': 'backers. Please enter your activation code sent at your email here:',
+            'zh-CN': ' 的支持者开放。请在此输入发送到您邮箱的激活码：',
+            'reuse': true
+        },
+        {
+            'en-US': 'If you did not fund the campaign, but feel that you still have to access the Arena, please email us at',
+            'zh-CN': '如果您并未参与众筹，但仍认为自己应获得竞技场访问权限，请发邮件至',
+            'reuse': true
+        },
+
         ...getTips()
     ]
 }

@@ -28,6 +28,11 @@ const content: PageContent = {
             'zh-CN': (el: HTMLElement) => {
                 el.setAttribute('placeholder', '通过房间名或玩家名搜索……')
             }
+        },
+        {
+            'selector': 'a.__shards',
+            'zh-CN': (el: HTMLElement) => el.setAttribute('title', '切换镜面'),
+            'reuse': true
         }
     ]
 }

@@ -38,7 +38,7 @@ const GRAPH_SELECT_LIST: MultipleMap = {
  * @see https://screeps.com/a/#!/map/shard3
  */
 const content: PageContent = {
-    hashs: ['#!/map/'],
+    hashs: ['#!/map/', '#!/map'],
     content: [
         {
             'en-US': 'Check out alpha version of the new world map with support of Decorations and Map Visuals (coming soon)',

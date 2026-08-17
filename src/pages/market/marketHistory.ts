@@ -1,5 +1,5 @@
 const content: PageContent = {
-    hashs: ['#!/market/history'],
+    hashs: ['#!/market/history', '#!/market2/history'],
     content: [
         // 市场->订单历史
         // 表头
