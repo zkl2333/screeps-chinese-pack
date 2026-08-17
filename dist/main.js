@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         screeps-chinese-pack
 // @namespace    https://github.com/zkl2333/screeps-chinese-pack
-// @version      1.8.1
+// @version      1.9.0
 // @description  用于汉化 screeps.com 网站的油猴脚本
 // @author       zkl2333
 // @homepageURL  https://github.com/zkl2333/screeps-chinese-pack
@@ -628,6 +628,7 @@
             { 'en-US': 'Stats Period', 'zh-CN': '统计时长', 'reuse': true },
             { 'en-US': 'Room', 'zh-CN': '房间', 'reuse': true },
             { 'en-US': /Rooms: \d+/, 'zh-CN': (text) => text.replace('Rooms:', '房间数：'), 'reuse': true },
+            { 'en-US': 'Rooms:', 'zh-CN': '房间数：', 'reuse': true },
             {
                 'en-US': /No rank in .+$/,
                 'zh-CN': (text) => `${text.replace('No rank in ', '暂无排名（')}）`,
@@ -641,6 +642,10 @@
             { 'en-US': /Graph(:|)/, 'zh-CN': '图表', 'reuse': true },
             { 'en-US': 'Owner:', 'zh-CN': '所有者：' },
             { 'en-US': 'View leaderboard', 'zh-CN': '查看排行榜', 'reuse': true },
+            { 'en-US': 'Construction points', 'zh-CN': '建造点数', 'reuse': true },
+            { 'en-US': 'Normalize by tick duration', 'zh-CN': '按 tick 时长归一化', 'reuse': true },
+            { 'en-US': 'Loading replay...', 'zh-CN': '正在加载回放……', 'reuse': true },
+            { 'en-US': 'Replay not found', 'zh-CN': '未找到回放', 'reuse': true },
             getOverviewHeaderContent(),
             // 翻译下拉框当前选中值
             {
@@ -786,7 +791,65 @@
             { 'en-US': 'You must set an email in your account settings to post on the forums.', 'zh-CN': '要在论坛发帖，您必须在账户设置中绑定邮箱。', 'reuse': true },
             // 其他
             { 'en-US': 'In Development', 'zh-CN': '开发中', 'reuse': true },
-            { 'en-US': 'The game is not launched yet. Please try again on August 12', 'zh-CN': '游戏尚未上线，请于 8 月 12 日再试。', 'reuse': true }
+            { 'en-US': 'The game is not launched yet. Please try again on August 12', 'zh-CN': '游戏尚未上线，请于 8 月 12 日再试。', 'reuse': true },
+            // 顶栏 / 系统栏
+            { 'en-US': 'Mem:', 'zh-CN': '内存：', 'reuse': true },
+            { 'en-US': 'Your CPU is disabled!', 'zh-CN': '您的 CPU 已关闭！', 'reuse': true },
+            { 'en-US': 'Manage CPU', 'zh-CN': '管理 CPU', 'reuse': true },
+            { 'en-US': 'New subscription available!', 'zh-CN': '新订阅方式现已推出！', 'reuse': true },
+            { 'en-US': 'Back to main realm', 'zh-CN': '返回正式服', 'reuse': true },
+            { 'en-US': 'Main menu', 'zh-CN': '主菜单', 'reuse': true },
+            { 'en-US': 'Less than a day', 'zh-CN': '不足 1 天', 'reuse': true },
+            { 'en-US': 'You have 1 day', 'zh-CN': '剩余 1 天', 'reuse': true },
+            {
+                'en-US': /^You have \d+ days$/,
+                'zh-CN': (text) => text.replace('You have ', '剩余 ').replace(' days', ' 天'),
+                'reuse': true
+            },
+            { 'en-US': '(CTRL+SHIFT+R)', 'zh-CN': '（CTRL+SHIFT+R）', 'reuse': true },
+            { 'en-US': 'New update is available, please restart.', 'zh-CN': '有可用更新，请重启。', 'reuse': true },
+            {
+                'en-US': 'This is the Public Test Realm. This server is intended for testing purposes only.',
+                'zh-CN': '这是公共测试服务器，仅供测试使用。',
+                'reuse': true
+            },
+            { 'en-US': 'Name', 'zh-CN': '名称', 'reuse': true },
+            { 'en-US': 'Email', 'zh-CN': '邮箱', 'reuse': true },
+            { 'en-US': 'Yes', 'zh-CN': '是', 'reuse': true },
+            { 'en-US': 'No', 'zh-CN': '否', 'reuse': true },
+            // 订阅转换 / Steam
+            {
+                'en-US': 'You already have an active subscription. Would you like to convert this credits coupon into subscription time? The conversion will be done based on 90 credits/day rate.',
+                'zh-CN': '您已有有效订阅。是否要将此点数兑换券转换为订阅时长？兑换比例为每天 90 点。',
+                'reuse': true
+            },
+            {
+                'en-US': 'You still have CPU Credits to spend. To activate your subscription under the new model, please convert your Credits into subscription days.',
+                'zh-CN': '您仍有 CPU 点数未使用。要按新模式激活订阅，请先将点数转换为订阅天数。',
+                'reuse': true
+            },
+            {
+                'en-US': 'The server is currently under maintenance. Please try again later.',
+                'zh-CN': '服务器正在维护中，请稍后再试。',
+                'reuse': true
+            },
+            {
+                'en-US': 'An error occurred while connecting to the server. Please try again later.',
+                'zh-CN': '连接服务器时发生错误，请稍后再试。',
+                'reuse': true
+            },
+            {
+                'en-US': 'Connection cannot be established. Please check your network settings and try again.',
+                'zh-CN': '无法建立连接，请检查网络设置后重试。',
+                'reuse': true
+            },
+            {
+                'en-US': 'Your client version is incompatible with this server version.',
+                'zh-CN': '您的客户端版本与此服务器版本不兼容。',
+                'reuse': true
+            },
+            { 'en-US': 'Unlock CPU in PTR activated', 'zh-CN': '公共测试服 CPU 解锁已激活', 'reuse': true },
+            { 'en-US': 'Your Global Power Level has been upgraded!', 'zh-CN': '您的全局超能等级已提升！', 'reuse': true }
         ]
     };
 
@@ -1263,6 +1326,32 @@
             { 'en-US': "You don't have access to claim rooms on this shard.", 'zh-CN': '您没有权限在该镜面上占领房间。', 'reuse': true },
             { 'en-US': 'You must own or reserve this room to generate invaders.', 'zh-CN': '您必须拥有或预订该房间，才能生成入侵者。', 'reuse': true },
             // 脚本编辑器
+            { 'en-US': 'Clone branch', 'zh-CN': '克隆分支', 'reuse': true },
+            {
+                'en-US': 'This branch will be cloned to the new branch. Please enter a new branch name:',
+                'zh-CN': '该分支将被克隆到新分支，请输入新分支名称：',
+                'reuse': true
+            },
+            {
+                'selector': 'input[placeholder="Branch name"]',
+                'zh-CN': (el) => el.setAttribute('placeholder', '分支名称'),
+                'reuse': true
+            },
+            {
+                'en-US': 'This pop-up editor is out of sync. Please re-open the editor.',
+                'zh-CN': '此弹出式编辑器已不同步，请重新打开编辑器。',
+                'reuse': true
+            },
+            {
+                'selector': '.modal-body, md-dialog-content',
+                'zh-CN': (el) => {
+                    if (!el.innerHTML.includes('only 1 energy source'))
+                        return;
+                    el.innerHTML = el.innerHTML.replace('There is only 1 energy source in this room. It may create a resource deficit when developing your new colony. We recommend to choose a room with 2 energy sources for your first start in the game.<br><br>Do you really want to place your spawn in this room?', '该房间只有 1 个能量源。在发展新殖民地时可能会造成资源短缺。我们建议首次开局选择拥有 2 个能量源的房间。<br><br>您确定要在此房间放置母巢吗？');
+                },
+                'reuse': true,
+                'ingnoreRepeatedCheck': true
+            },
             { 'en-US': 'A branch with this name already exists and will be overwritten!', 'zh-CN': '同名分支已存在，将被覆盖！', 'reuse': true },
             { 'en-US': 'You cannot create more than 30 branches. Please remove some existing branches to clone this branch.', 'zh-CN': '分支数量不能超过 30 个，请先删除部分分支再克隆。', 'reuse': true },
             { 'en-US': 'You have unsaved changes in your current branch! It will be lost if you switch to another branch. Proceed?', 'zh-CN': '当前分支有未保存的修改！切换分支将丢失这些修改，确定继续吗？', 'reuse': true },
@@ -1274,6 +1363,42 @@
             { 'en-US': 'Data length has exceeded 100 KB limit.', 'zh-CN': '数据长度超过 100 KB 限制。', 'reuse': true },
             { 'en-US': 'Always replace without asking', 'zh-CN': '总是直接替换，不再询问', 'reuse': true },
             { 'en-US': 'This action cannot be undone! Are you sure?', 'zh-CN': '该操作无法撤销！确定要继续吗？', 'reuse': true },
+            // 创建 creep 对话框
+            { 'en-US': 'Create Creep', 'zh-CN': '创建 creep', 'reuse': true },
+            { 'en-US': 'Body:', 'zh-CN': '身体：', 'reuse': true },
+            {
+                'selector': 'input[placeholder="Name"]',
+                'zh-CN': (el) => el.setAttribute('placeholder', '名称'),
+                'reuse': true
+            },
+            {
+                'selector': '[title="Hide/show (Alt+Enter)"]',
+                'zh-CN': (el) => el.setAttribute('title', '隐藏/显示（Alt+Enter）'),
+                'reuse': true
+            },
+            {
+                'selector': '[title="New window"]',
+                'zh-CN': (el) => el.setAttribute('title', '新窗口'),
+                'reuse': true
+            },
+            // 竞技场激活
+            { 'en-US': 'The Arena Mode activation', 'zh-CN': '竞技场模式激活', 'reuse': true },
+            {
+                'en-US': 'For testing purposes, we have temporary limited access only to the',
+                'zh-CN': '出于测试目的，目前仅对 ',
+                'reuse': true
+            },
+            { 'en-US': 'Indiegogo campaign', 'zh-CN': 'Indiegogo 众筹', 'reuse': true },
+            {
+                'en-US': 'backers. Please enter your activation code sent at your email here:',
+                'zh-CN': ' 的支持者开放。请在此输入发送到您邮箱的激活码：',
+                'reuse': true
+            },
+            {
+                'en-US': 'If you did not fund the campaign, but feel that you still have to access the Arena, please email us at',
+                'zh-CN': '如果您并未参与众筹，但仍认为自己应获得竞技场访问权限，请发邮件至',
+                'reuse': true
+            },
             ...getTips()
         ]
     };
@@ -1756,7 +1881,7 @@
         };
     };
     const content$b = {
-        hashs: ['#!/overview/power'],
+        hashs: ['#!/overview/power', '#!/power-promo'],
         content: [
             // 无 Power Creep 时
             { 'en-US': 'You have no Power Creeps yet.', 'zh-CN': '您还没有超能 creep。' },
@@ -1764,6 +1889,23 @@
             { 'en-US': 'Upgrade', 'zh-CN': '升级' },
             { 'en-US': 'Back', 'zh-CN': '返回', 'reuse': true },
             { 'en-US': 'Create creep', 'zh-CN': '创建 creep' },
+            { 'en-US': 'Select class', 'zh-CN': '选择职业', 'reuse': true },
+            {
+                'en-US': 'A creep working mainly in the rear, at your base, though it can be used as a saboteur in offensive operations.',
+                'zh-CN': '这种 creep 主要在后方基地工作，不过也可在进攻中充当破坏者。',
+                'reuse': true
+            },
+            {
+                'en-US': 'This power creep is not very useful on its own, but it’s a team player. It influences and affects regular creeps, both friendly and hostile.',
+                'zh-CN': '这种超能 creep 单独作战并不突出，但擅长团队配合，能影响友方和敌方的普通 creep。',
+                'reuse': true
+            },
+            {
+                'en-US': 'This creep class prefers working alone. Due to its skills, it’s a very effective performer in your economy or as a war machine when defending or attacking.',
+                'zh-CN': '这种 creep 更适合单独行动。凭借其技能，无论是发展经济，还是在攻防中作为战争机器，都十分高效。',
+                'reuse': true
+            },
+            { 'en-US': '(Under development)', 'zh-CN': '（开发中）', 'reuse': true },
             { 'en-US': 'Learn more', 'zh-CN': '了解更多' },
             { 'en-US': 'Global Power Level:', 'zh-CN': '全局超能等级：', 'reuse': true },
             { 'en-US': '.', 'zh-CN': '。', 'reuse': true },
@@ -1916,7 +2058,14 @@
                 'en-US': 'Experimentation period active:',
                 'zh-CN': '实验期已激活，剩余时间：',
                 'reuse': true
-            }
+            },
+            { 'en-US': 'Do you really want to delete this creep?', 'zh-CN': '确定要删除这个 creep 吗？', 'reuse': true },
+            { 'en-US': 'Do you really want to rename this creep?', 'zh-CN': '确定要重命名这个 creep 吗？', 'reuse': true },
+            { 'en-US': 'This creep is being deleted', 'zh-CN': '此 creep 正在删除中', 'reuse': true },
+            { 'en-US': 'This creep will be deleted soon', 'zh-CN': '此 creep 即将被删除', 'reuse': true },
+            { 'en-US': 'Cancel deletion', 'zh-CN': '取消删除', 'reuse': true },
+            { 'en-US': 'You have reached the maximum creep level', 'zh-CN': '您已达到 creep 等级上限', 'reuse': true },
+            { 'en-US': 'You need to have a Power Spawn in the world.', 'zh-CN': '您需要在世界中拥有一座超能母巢。', 'reuse': true }
         ]
     };
     // 由于 pc 的血量、容量和升级按钮的文本都是放在 ::before 里的，所以这里需要伪造一个新的 ::before 来替换内容
@@ -1956,7 +2105,7 @@
     document.querySelector('head').appendChild(style);
 
     const content$c = {
-        hashs: ['#!/market/all', '#!/market/my', '#!/market/history'],
+        hashs: ['#!/market/all', '#!/market/my', '#!/market/history', '#!/market2'],
         content: [
             // 市场 header 部分
             { 'en-US': 'Market allows to automatically trade resources with other players.', 'zh-CN': '市场允许您和其他玩家自动交易资源。' },
@@ -1964,15 +2113,20 @@
             { 'en-US': 'All orders', 'zh-CN': '全部订单' },
             { 'en-US': 'My orders', 'zh-CN': '我的订单' },
             { 'en-US': 'History', 'zh-CN': '订单历史' },
+            { 'en-US': 'Choose resource:', 'zh-CN': '选择资源：', 'reuse': true },
+            { 'en-US': 'No orders', 'zh-CN': '暂无订单', 'reuse': true },
+            { 'en-US': 'Back to resources list', 'zh-CN': '返回资源列表', 'reuse': true },
+            { 'en-US': 'Your market history is empty', 'zh-CN': '您的市场历史记录为空', 'reuse': true },
             // 无订单时的翻译
             { 'en-US': 'You have no orders', 'zh-CN': '您还没有订单', 'reuse': true },
             { 'en-US': 'Create an order using the', 'zh-CN': '创建订单请参考', 'reuse': true },
-            { 'en-US': 'Market API.', 'zh-CN': '市场 API。', 'reuse': true }
+            { 'en-US': 'Market API.', 'zh-CN': '市场 API。', 'reuse': true },
+            { 'en-US': 'Create order', 'zh-CN': '创建订单', 'reuse': true }
         ]
     };
 
     const content$d = {
-        hashs: ['#!/market/all'],
+        hashs: ['#!/market/all', '#!/market2/all'],
         content: [
             // 市场->全部订单
             { 'en-US': 'Raw resources', 'zh-CN': '原始资源' },
@@ -1995,6 +2149,19 @@
             { 'en-US': 'Transactions', 'zh-CN': '交易次数' },
             { 'en-US': 'Total volume', 'zh-CN': '总成交量' },
             { 'en-US': 'Price (avg ± stddev)', 'zh-CN': '单价（均价 ± 标准差）' },
+            {
+                'en-US': /Price \(avg .+ stddev\)/,
+                'zh-CN': '单价（均价 ± 标准差）',
+                'reuse': true
+            },
+            { 'en-US': 'Back to resources list', 'zh-CN': '返回资源列表', 'reuse': true },
+            { 'en-US': 'No orders', 'zh-CN': '暂无订单', 'reuse': true },
+            { 'en-US': 'this page', 'zh-CN': '此页面', 'reuse': true },
+            {
+                'en-US': 'A special item that allows its owner to activate 60 days of CPU subscription. You can buy or activate tokens on the',
+                'zh-CN': '此特殊物品可让持有者激活 60 天 CPU 订阅。您可以在',
+                'reuse': true
+            },
             // 翻译订单
             {
                 'selector': '#mat-dialog-0 > app-dlg-resource-orders > header:nth-child(6) > div:nth-child(1) > span',
@@ -2012,7 +2179,7 @@
     };
 
     const content$e = {
-        hashs: ['#!/market/my'],
+        hashs: ['#!/market/my', '#!/market2/my'],
         content: [
             // 市场->我的订单
             { 'en-US': 'Refresh', 'zh-CN': '刷新' },
@@ -2029,7 +2196,7 @@
     };
 
     const content$f = {
-        hashs: ['#!/market/history'],
+        hashs: ['#!/market/history', '#!/market2/history'],
         content: [
             // 市场->订单历史
             // 表头
@@ -2066,6 +2233,7 @@
             },
             // 历史为空
             { 'en-US': 'You have no orders', 'zh-CN': '您还没有订单' },
+            { 'en-US': 'Your market history is empty', 'zh-CN': '您的市场历史记录为空', 'reuse': true },
             { 'en-US': 'Create an order using the', 'zh-CN': '若要创建订单请使用' },
             { 'en-US': 'Market API', 'zh-CN': '市场 API' },
             // 页尾
@@ -2324,6 +2492,27 @@
                 'zh-CN': '您可以将此图标作为您的账户徽章（头像）',
                 'reuse': true
             },
+            {
+                'en-US': 'You can choose this icon as your account badge.',
+                'zh-CN': '您可以将此图标作为您的账户徽章（头像）。',
+                'reuse': true
+            },
+            {
+                'en-US': 'You can use this image to decorate your objects.',
+                'zh-CN': '您可以用此物品来装饰您的对象。',
+                'reuse': true
+            },
+            {
+                'en-US': 'You can place this image as a room-wide texture.',
+                'zh-CN': '您可以将此材质应用于整个房间。',
+                'reuse': true
+            },
+            { 'en-US': 'This room already has an active decoration', 'zh-CN': '该房间已有启用中的装饰', 'reuse': true },
+            {
+                'en-US': 'Сongratulations! You have successfully purchased this decorations.',
+                'zh-CN': '恭喜！您已成功购买这些装饰。',
+                'reuse': true
+            },
             // 购买CPU
             {
                 'en-US': 'This item allows you to unlock full CPU in your account for 1 day.',
@@ -2395,6 +2584,12 @@
         ]
     };
 
+    const PROFILE_SEASON_TITLE = {
+        'POWER<br>POINTS': '超能点数',
+        'POWER<br>RANK': '超能排名',
+        'CONTROL<br>POINTS': '控制点数',
+        'EXPANSION<br>RANK': '扩张排名'
+    };
     const content$h = {
         hashs: ['#!/profile'],
         content: [
@@ -2402,12 +2597,19 @@
             { 'en-US': 'Send message', 'zh-CN': '发送信息' },
             { 'en-US': 'My overview', 'zh-CN': '我的总览' },
             { 'en-US': 'Current month', 'zh-CN': '本月统计' },
+            { 'en-US': 'Last season', 'zh-CN': '上一赛季', 'reuse': true },
             { 'en-US': 'EXPANSION', 'zh-CN': '扩张' },
             { 'en-US': 'CONTROL', 'zh-CN': '控制' },
             { 'en-US': 'POINTS', 'zh-CN': '点数', 'reuse': true },
             { 'en-US': 'RANK', 'zh-CN': '排名', 'reuse': true },
             { 'en-US': 'Show all', 'zh-CN': '显示全部', 'reuse': true },
             { 'en-US': 'Hide', 'zh-CN': '收起', 'reuse': true },
+            { 'en-US': 'User not found', 'zh-CN': '未找到该用户', 'reuse': true },
+            {
+                'selector': '.profile-season .title',
+                'zh-CN': translateMultiple(PROFILE_SEASON_TITLE),
+                'reuse': true
+            },
             getOverviewHeaderContent()
         ]
     };
@@ -2435,6 +2637,9 @@
                 'zh-CN': '在月末时您的排名将会被重置。'
             },
             { 'en-US': 'YOUR RANK', 'zh-CN': '您的排名' },
+            { 'en-US': 'Your Rank', 'zh-CN': '您的排名', 'reuse': true },
+            { 'en-US': 'Leaderboards', 'zh-CN': '排行榜', 'reuse': true },
+            { 'en-US': 'No rank', 'zh-CN': '暂无排名', 'reuse': true },
             { 'en-US': 'Learn more', 'zh-CN': '了解更多' }
         ]
     };
@@ -2473,6 +2678,53 @@
             { 'en-US': 'Send when online', 'zh-CN': '在线时是否发送', 'reuse': true },
             { 'en-US': 'Notify on errors', 'zh-CN': '代码异常时通知', 'reuse': true },
             { 'en-US': 'Notify on new messages', 'zh-CN': '有新消息时通知', 'reuse': true },
+            // 通知间隔与说明
+            { 'en-US': 'Yes', 'zh-CN': '是', 'reuse': true },
+            { 'en-US': 'No', 'zh-CN': '否', 'reuse': true },
+            { 'en-US': 'Steam', 'zh-CN': 'Steam', 'reuse': true },
+            { 'en-US': 'GitHub', 'zh-CN': 'GitHub', 'reuse': true },
+            { 'en-US': 'Lifetime', 'zh-CN': '永久', 'reuse': true },
+            { 'en-US': 'Active', 'zh-CN': '已激活', 'reuse': true },
+            { 'en-US': 'Inactive', 'zh-CN': '未激活', 'reuse': true },
+            { 'en-US': 'No tokens', 'zh-CN': '暂无令牌', 'reuse': true },
+            {
+                'en-US': /^(\d+) tokens?$/,
+                'zh-CN': (text) => text.replace(/(\d+) tokens?/, '$1 个令牌'),
+                'reuse': true
+            },
+            { 'en-US': '5 min', 'zh-CN': '5 分钟', 'reuse': true },
+            { 'en-US': '10 min', 'zh-CN': '10 分钟', 'reuse': true },
+            { 'en-US': '30 min', 'zh-CN': '30 分钟', 'reuse': true },
+            { 'en-US': '3 hours', 'zh-CN': '3 小时', 'reuse': true },
+            { 'en-US': '6 hours', 'zh-CN': '6 小时', 'reuse': true },
+            { 'en-US': '12 hours', 'zh-CN': '12 小时', 'reuse': true },
+            { 'en-US': '3 days', 'zh-CN': '3 天', 'reuse': true },
+            { 'en-US': 'Immediately', 'zh-CN': '立即', 'reuse': true },
+            { 'en-US': 'Every 5 min', 'zh-CN': '每 5 分钟', 'reuse': true },
+            { 'en-US': 'Every 10 min', 'zh-CN': '每 10 分钟', 'reuse': true },
+            { 'en-US': 'Every 30 min', 'zh-CN': '每 30 分钟', 'reuse': true },
+            { 'en-US': 'Every 1 hour', 'zh-CN': '每 1 小时', 'reuse': true },
+            { 'en-US': 'Every 3 hours', 'zh-CN': '每 3 小时', 'reuse': true },
+            { 'en-US': 'Every 6 hours', 'zh-CN': '每 6 小时', 'reuse': true },
+            { 'en-US': 'Every 12 hours', 'zh-CN': '每 12 小时', 'reuse': true },
+            { 'en-US': 'Every 24 hours', 'zh-CN': '每 24 小时', 'reuse': true },
+            { 'en-US': 'Every 3 days', 'zh-CN': '每 3 天', 'reuse': true },
+            { 'en-US': 'Never', 'zh-CN': '从不', 'reuse': true },
+            {
+                'en-US': 'All notifications will be grouped and mailed out periodically using this interval.',
+                'zh-CN': '所有通知将按此间隔合并后定期发送邮件。',
+                'reuse': true
+            },
+            {
+                'en-US': 'Send notifications when your script throws an error.',
+                'zh-CN': '当您的脚本抛出错误时发送通知。',
+                'reuse': true
+            },
+            {
+                'en-US': 'Please specify your e-mail address first.',
+                'zh-CN': '请先设置您的邮箱地址。',
+                'reuse': true
+            },
             // steam 关联
             {
                 'en-US': 'Do you really want to unlink your Steam account?',
@@ -2492,6 +2744,11 @@
             { 'en-US': 'GitHub user', 'zh-CN': 'GitHub 用户' },
             { 'en-US': 'Sync from repository', 'zh-CN': '从仓库同步' },
             { 'en-US': 'Not set', 'zh-CN': '未设置' },
+            {
+                'en-US': 'All your scripts in Screeps account will be overwritten with this action! Are you sure?',
+                'zh-CN': '此操作将覆盖您 Screeps 账户中的所有脚本！确定要继续吗？',
+                'reuse': true
+            },
             { 'en-US': 'Cancel', 'zh-CN': '取消', 'reuse': true },
             { 'en-US': 'OK', 'zh-CN': '确定', 'reuse': true },
             { 'en-US': 'Learn how to commit scripts from local machine', 'zh-CN': '了解如何从本地机器提交代码' }
@@ -2528,7 +2785,12 @@
             { 'en-US': 'Change e-mail', 'zh-CN': '邮箱设置' },
             { 'en-US': 'New e-mail', 'zh-CN': '新的邮箱' },
             { 'en-US': 'Save', 'zh-CN': '保存' },
-            { 'en-US': 'Cancel', 'zh-CN': '取消' }
+            { 'en-US': 'Cancel', 'zh-CN': '取消' },
+            {
+                'en-US': 'Please specify your e-mail address first.',
+                'zh-CN': '请先设置您的邮箱地址。',
+                'reuse': true
+            }
         ]
     };
 
@@ -2574,8 +2836,24 @@
             { 'en-US': 'Generate token', 'zh-CN': '生成令牌' },
             {
                 'en-US': 'You can create tokens to authenticate to our Web API endpoints in external tools.\nThese tokens allow to skip solving CAPTCHA on login, but rate limiting is applied.',
-                'zh-CN': '您可以创建令牌，供外部工具调用我们的 Web API 接口时进行身份验证。这些令牌可让您在登录时跳过验证码，但仍会受到访问速率限制。'
+                'zh-CN': '您可以创建令牌，供外部工具调用我们的 Web API 接口时进行身份验证。这些令牌可让您在登录时跳过验证码，但仍会受到访问速率限制。',
+                'reuse': true
             },
+            {
+                'en-US': 'You can create tokens to authenticate to our Web API endpoints in external tools. These tokens allow to skip solving CAPTCHA on login, but rate limiting is applied.',
+                'zh-CN': '您可以创建令牌，供外部工具调用我们的 Web API 接口时进行身份验证。这些令牌可让您在登录时跳过验证码，但仍会受到访问速率限制。',
+                'reuse': true
+            },
+            { 'en-US': 'Memory segments', 'zh-CN': '内存片段', 'reuse': true },
+            { 'en-US': 'Memory segments:', 'zh-CN': '内存片段：', 'reuse': true },
+            {
+                'en-US': 'Specify memory segments IDs separated by a comma or space. Leave blank to allow access to all memory segments.',
+                'zh-CN': '请用逗号或空格分隔内存片段 ID。留空则允许访问全部内存片段。'
+            },
+            { 'en-US': 'Token:', 'zh-CN': '令牌：', 'reuse': true },
+            { 'en-US': 'Proceed', 'zh-CN': '继续', 'reuse': true },
+            { 'en-US': 'Rate limiting will be turned off for 2 hours.', 'zh-CN': '访问速率限制将关闭 2 小时。', 'reuse': true },
+            { 'en-US': 'Success! You can close this window now.', 'zh-CN': '成功！您现在可以关闭此窗口。', 'reuse': true },
             { 'en-US': 'Full access', 'zh-CN': '完全访问权限', 'reuse': true },
             { 'en-US': 'WebSockets (console)', 'zh-CN': 'WebSockets (控制台)', 'reuse': true },
             { 'en-US': 'WebSockets (rooms)', 'zh-CN': 'WebSockets (房间)', 'reuse': true },
@@ -2597,9 +2875,79 @@
         ]
     };
 
-    var account = [content$j, content$k, content$l, content$m, content$n];
-
+    /**
+     * GitHub 集成
+     * @see https://screeps.com/a/#!/account/github
+     */
     const content$o = {
+        hashs: ['#!/account/github'],
+        content: [
+            { 'en-US': 'GitHub Integration', 'zh-CN': 'GitHub 集成' },
+            { 'en-US': 'Sync from:', 'zh-CN': '同步来源：' },
+            { 'en-US': 'Reset', 'zh-CN': '重置', 'reuse': true },
+            { 'en-US': 'Sync', 'zh-CN': '同步', 'reuse': true },
+            { 'en-US': 'Cancel', 'zh-CN': '取消', 'reuse': true },
+            {
+                'selector': '[placeholder="Select repository"]',
+                'zh-CN': (el) => el.setAttribute('placeholder', '选择仓库'),
+                'reuse': true
+            },
+            {
+                'selector': 'input[placeholder="Folder"]',
+                'zh-CN': (el) => el.setAttribute('placeholder', '文件夹'),
+                'reuse': true
+            }
+        ]
+    };
+
+    /**
+     * 运行时设置
+     * @see https://screeps.com/a/#!/account/runtime
+     */
+    const content$p = {
+        hashs: ['#!/account/runtime'],
+        content: [
+            { 'en-US': 'Runtime', 'zh-CN': '运行时' },
+            {
+                'en-US': 'These settings control how your script is executed in runtime.',
+                'zh-CN': '这些设置控制您的脚本在运行时如何执行。'
+            },
+            { 'en-US': 'Virtual machine', 'zh-CN': '虚拟机' },
+            { 'en-US': 'Isolated (default)', 'zh-CN': '隔离（默认）', 'reuse': true },
+            { 'en-US': 'Shared (legacy)', 'zh-CN': '共享（旧版）', 'reuse': true }
+        ]
+    };
+
+    /**
+     * CPU 解锁 / 订阅
+     * @see https://screeps.com/a/#!/account/subscription
+     */
+    const content$q = {
+        hashs: ['#!/account/subscription'],
+        content: [
+            { 'en-US': 'CPU Unlock', 'zh-CN': 'CPU 解锁', 'reuse': true },
+            { 'en-US': 'CPU Unlock:', 'zh-CN': 'CPU 解锁：', 'reuse': true },
+            { 'en-US': 'Lifetime', 'zh-CN': '永久', 'reuse': true },
+            { 'en-US': 'Active', 'zh-CN': '已激活', 'reuse': true },
+            { 'en-US': 'Inactive', 'zh-CN': '未激活', 'reuse': true },
+            { 'en-US': 'Next renewal:', 'zh-CN': '下次续订：' },
+            { 'en-US': 'There is a problem with your Steam subscription', 'zh-CN': '您的 Steam 订阅出现问题' },
+            { 'en-US': 'View on Steam', 'zh-CN': '在 Steam 上查看' },
+            { 'en-US': 'Order', 'zh-CN': '订购', 'reuse': true },
+            { 'en-US': 'Cancel subscription', 'zh-CN': '取消订阅' },
+            { 'en-US': 'Activate', 'zh-CN': '激活', 'reuse': true },
+            { 'en-US': 'You have got', 'zh-CN': '您已获得', 'reuse': true },
+            {
+                'en-US': 'of game subscription time converted from your CPU Credits. Please note that once activated, you will not be able to suspend this subscription.',
+                'zh-CN': '的游戏订阅时长（由 CPU 点数转换而来）。请注意，激活后将无法暂停此订阅。',
+                'reuse': true
+            }
+        ]
+    };
+
+    var account = [content$j, content$k, content$l, content$m, content$n, content$o, content$p, content$q];
+
+    const content$r = {
         hashs: ['#!/enter'],
         content: [
             { 'en-US': 'Persistent World', 'zh-CN': '永恒世界' },
@@ -2693,12 +3041,22 @@
             { 'en-US': 'and compete for valuable rewards.', 'zh-CN': '争夺丰厚奖励。', 'reuse': true },
             { 'en-US': 'FREE ENTRY', 'zh-CN': '免费参加', 'reuse': true },
             { 'en-US': 'Ok', 'zh-CN': '确定' },
-            { 'en-US': 'Cancel', 'zh-CN': '取消' }
+            { 'en-US': 'Cancel', 'zh-CN': '取消' },
+            {
+                'en-US': 'You already have an active subscription. Would you like to convert this credits coupon into subscription time? The conversion will be done based on 90 credits/day rate.',
+                'zh-CN': '您已有有效订阅。是否要将此点数兑换券转换为订阅时长？兑换比例为每天 90 点。',
+                'reuse': true
+            },
+            {
+                'en-US': 'You still have CPU Credits to spend. To activate your subscription under the new model, please convert your Credits into subscription days.',
+                'zh-CN': '您仍有 CPU 点数未使用。要按新模式激活订阅，请先将点数转换为订阅天数。',
+                'reuse': true
+            }
         ]
     };
 
-    const content$p = {
-        hashs: ['#!/shards'],
+    const content$s = {
+        hashs: ['#!/shards', '#!/shards2'],
         content: [
             { 'en-US': 'Shards', 'zh-CN': '镜面' },
             {
@@ -2765,8 +3123,8 @@
      * 旧版本地图
      * @see https://screeps.com/a/#!/map/shard3
      */
-    const content$q = {
-        hashs: ['#!/map/'],
+    const content$t = {
+        hashs: ['#!/map/', '#!/map'],
         content: [
             {
                 'en-US': 'Check out alpha version of the new world map with support of Decorations and Map Visuals (coming soon)',
@@ -2866,7 +3224,7 @@
      * 新版本地图
      * @see https://screeps.com/a/#!/map2/shard3
      */
-    const content$r = {
+    const content$u = {
         hashs: ['#!/map2'],
         content: [
             { 'en-US': 'Owner:', 'zh-CN': '所有者：', 'reuse': true },
@@ -2891,17 +3249,22 @@
                 'zh-CN': (el) => {
                     el.setAttribute('placeholder', '通过房间名或玩家名搜索……');
                 }
+            },
+            {
+                'selector': 'a.__shards',
+                'zh-CN': (el) => el.setAttribute('title', '切换镜面'),
+                'reuse': true
             }
         ]
     };
 
-    var map = [content$q, content$r];
+    var map = [content$t, content$u];
 
     /**
      * 游戏首页
      * @see https://screeps.com/
      */
-    const content$s = {
+    const content$v = {
         hashs: [''],
         content: [
             // 右顶栏
@@ -3000,7 +3363,7 @@
      * 注册页
      * @see https://screeps.com/a/#!/register
      */
-    const content$t = {
+    const content$w = {
         hashs: ['#!/register'],
         content: [
             { 'en-US': 'Player Name', 'zh-CN': '玩家名' },
@@ -3076,6 +3439,7 @@
                 'zh-CN': '提交这些信息，即表示您确认您已阅读并同意 '
             },
             { 'en-US': 'Register', 'zh-CN': '注册' },
+            { 'en-US': 'Set username', 'zh-CN': '设置用户名', 'reuse': true },
             // 重置密码
             { 'en-US': 'Password Reset', 'zh-CN': '重置密码' },
             { 'en-US': 'Please specify your account e-mail address.', 'zh-CN': '请输入您账户的邮箱地址。' },
@@ -3085,6 +3449,30 @@
                 'en-US': 'We have sent an e-mail to your account address with the instructions of how to change your password.',
                 'zh-CN': '我们已向您的账户地址发送了一封电子邮件，其中包含如何更改密码的说明。',
                 'reuse': true
+            },
+            { 'en-US': 'I don\'t want to use in-game notifications', 'zh-CN': '我不想使用游戏内通知', 'reuse': true },
+            { 'en-US': 'You can specify your e-mail later in your account settings.', 'zh-CN': '您可以稍后在账户设置中填写邮箱。', 'reuse': true },
+            { 'en-US': 'I have an account at screeps.com', 'zh-CN': '我已有 screeps.com 账户', 'reuse': true },
+            { 'en-US': 'Only alphanumeric and special characters are allowed.', 'zh-CN': '仅允许使用字母、数字和特殊字符。', 'reuse': true },
+            { 'en-US': 'Please include at least one numeric character.', 'zh-CN': '请至少包含一个数字字符。', 'reuse': true },
+            { 'en-US': 'Must be at least 8 characters including at least one numeric letter.', 'zh-CN': '最少需要 8 个字符，包括至少一个数字。', 'reuse': true },
+            { 'en-US': 'Change Password', 'zh-CN': '修改密码', 'reuse': true },
+            { 'en-US': 'Your New Password', 'zh-CN': '新密码', 'reuse': true },
+            { 'en-US': 'An error occured while performing the request', 'zh-CN': '执行请求时发生错误', 'reuse': true },
+            { 'en-US': 'Your password has been changed successfully.', 'zh-CN': '您的密码已成功修改。', 'reuse': true },
+            { 'en-US': 'This password reset link is no longer valid.', 'zh-CN': '此密码重置链接已失效。', 'reuse': true },
+            { 'en-US': 'Done!', 'zh-CN': '完成！', 'reuse': true },
+            { 'en-US': 'Your account has been activated!', 'zh-CN': '您的账户已激活！', 'reuse': true },
+            { 'en-US': 'Click the button below to proceed to the game.', 'zh-CN': '请点击下方按钮进入游戏。', 'reuse': true },
+            { 'en-US': 'Your email has been successfully verified.', 'zh-CN': '您的邮箱已成功验证。', 'reuse': true },
+            { 'en-US': 'Error', 'zh-CN': '错误', 'reuse': true },
+            { 'en-US': 'An error occured while verifying your email.', 'zh-CN': '验证邮箱时发生错误。', 'reuse': true },
+            { 'en-US': 'contact our support', 'zh-CN': '联系我们的支持', 'reuse': true },
+            { 'en-US': 'for further details.', 'zh-CN': '以获取更多信息。', 'reuse': true },
+            {
+                'en-US': 'New account registration is disabled on the Public Test Realm server.',
+                'zh-CN': '公共测试服务器已关闭新账户注册。',
+                'reuse': true
             }
         ]
     };
@@ -3093,17 +3481,239 @@
      * 消息面板
      * @see https://screeps.com/a/#!/messages
      */
-    const content$u = {
+    const content$x = {
         hashs: ['#!/messages'],
         content: [
             { 'en-US': /Messages to \S+/, 'zh-CN': (text) => `${text.replace('Messages to', '与')} 的聊天消息` },
             { 'en-US': 'View user profile', 'zh-CN': '查看用户资料' },
             { 'en-US': 'Send', 'zh-CN': '发送' },
+            { 'en-US': 'Hide sent', 'zh-CN': '隐藏已发送', 'reuse': true },
+            { 'en-US': 'No messages yet', 'zh-CN': '暂无消息', 'reuse': true },
+            {
+                'en-US': 'No messages here yet.',
+                'zh-CN': '这里还没有消息。',
+                'reuse': true
+            },
+            {
+                'en-US': 'You can send a message to another player using his profile page.',
+                'zh-CN': '您可以通过对方的资料页面向其发送消息。',
+                'reuse': true
+            },
             { 'en-US': 'You can use', 'zh-CN': '您可以使用 ' },
+            { 'en-US': 'Markdown', 'zh-CN': 'Markdown' },
             { 'en-US': 'to format your message', 'zh-CN': ' 来格式化您的消息' },
             {
                 'selector': '.page-content.ng-scope textarea',
                 'zh-CN': (el) => el.setAttribute('placeholder', '输入新消息...'),
+                'reuse': true
+            }
+        ]
+    };
+
+    /**
+     * 游戏大厅 / 赛季排行榜 / 早期预览
+     */
+    const content$y = {
+        hashs: ['#!/lobby', '#!/game-lobby', '#!/survival', '#!/arena', '#!/early-preview', '#!/early-preview-request', '#!/g', '#!/ea', '#!/seasons', '#!/season-world-landing'],
+        content: [
+            // 游戏大厅
+            { 'en-US': 'World', 'zh-CN': '世界', 'reuse': true },
+            {
+                'en-US': 'Stake your claim in a huge, constantly expanding, persistent world, and develop your colony as you compete with other players for control over the territory.',
+                'zh-CN': '在广阔且持续扩张的永恒世界中占领领地，与其他玩家竞争并发展您的殖民地。',
+                'reuse': true
+            },
+            { 'en-US': 'Survival', 'zh-CN': '生存', 'reuse': true },
+            {
+                'en-US': 'Defend from NPC creeps, wave after wave, trying to stay as long as you can.',
+                'zh-CN': '抵御一波又一波 NPC creep 的进攻，尽可能长时间坚守。',
+                'reuse': true
+            },
+            {
+                'en-US': 'Defend from computer-lead creeps, wave after wave, trying to stay as long as you can.',
+                'zh-CN': '抵御一波又一波由电脑控制的 creep 进攻，尽可能长时间坚守。',
+                'reuse': true
+            },
+            {
+                'en-US': 'Play against others in a confined arena fighting for energy and points.',
+                'zh-CN': '在封闭竞技场中与其他玩家争夺能量与积分。',
+                'reuse': true
+            },
+            { 'en-US': 'Duel', 'zh-CN': '决斗', 'reuse': true },
+            {
+                'en-US': 'Fight with a random player opponent 1 vs 1 until any of you wins.',
+                'zh-CN': '与随机匹配的玩家进行 1 对 1 对决，直到一方获胜。',
+                'reuse': true
+            },
+            { 'en-US': 'Temporarily disabled', 'zh-CN': '暂时停用', 'reuse': true },
+            { 'en-US': 'In Development', 'zh-CN': '开发中', 'reuse': true },
+            { 'en-US': 'Your Rank', 'zh-CN': '您的排名', 'reuse': true },
+            { 'en-US': 'EARLY PREVIEW STARTS ON MAY 20', 'zh-CN': '早期预览将于 5 月 20 日开始', 'reuse': true },
+            // 排行榜通用
+            { 'en-US': 'Season:', 'zh-CN': '赛季：', 'reuse': true },
+            { 'en-US': 'No results yet', 'zh-CN': '暂无结果', 'reuse': true },
+            { 'en-US': 'Score', 'zh-CN': '得分', 'reuse': true },
+            { 'en-US': 'View replay', 'zh-CN': '查看回放', 'reuse': true },
+            { 'en-US': 'First page', 'zh-CN': '第一页', 'reuse': true },
+            { 'en-US': 'Previous page', 'zh-CN': '上一页', 'reuse': true },
+            { 'en-US': 'Next page', 'zh-CN': '下一页', 'reuse': true },
+            { 'en-US': 'Last page', 'zh-CN': '最后一页', 'reuse': true },
+            // 早期预览申请
+            { 'en-US': 'Early Preview join request', 'zh-CN': '早期预览加入申请', 'reuse': true },
+            {
+                'en-US': 'We gradually invite new players into the Early Preview as the capacity grows. Please fill in the following form if you want to join too.',
+                'zh-CN': '随着容量增加，我们会逐步邀请新玩家加入早期预览。如果您也想加入，请填写以下表单。',
+                'reuse': true
+            },
+            { 'en-US': 'Your name', 'zh-CN': '您的姓名', 'reuse': true },
+            { 'en-US': 'Birth date:', 'zh-CN': '出生日期：', 'reuse': true },
+            { 'en-US': 'Date', 'zh-CN': '日', 'reuse': true },
+            { 'en-US': 'Month', 'zh-CN': '月', 'reuse': true },
+            { 'en-US': 'Year', 'zh-CN': '年', 'reuse': true },
+            { 'en-US': 'You are:', 'zh-CN': '您的身份：', 'reuse': true },
+            { 'en-US': 'Please Select', 'zh-CN': '请选择', 'reuse': true },
+            { 'en-US': 'Student', 'zh-CN': '学生', 'reuse': true },
+            { 'en-US': 'Tech geek', 'zh-CN': '技术爱好者', 'reuse': true },
+            { 'en-US': 'Tech professional', 'zh-CN': '技术从业者', 'reuse': true },
+            { 'en-US': 'None of the above', 'zh-CN': '以上都不是', 'reuse': true },
+            {
+                'en-US': 'Please explain why you would like to access the Early Preview:',
+                'zh-CN': '请说明您希望访问早期预览的原因：',
+                'reuse': true
+            },
+            { 'en-US': 'Submit', 'zh-CN': '提交', 'reuse': true },
+            {
+                'en-US': 'Thank you! Your request has been submitted. We will contact you when we have more capacity available.',
+                'zh-CN': '谢谢！您的申请已提交。容量增加后我们会与您联系。',
+                'reuse': true
+            },
+            // 早期预览申请表（管理页 /ea）
+            { 'en-US': 'Birth', 'zh-CN': '出生日期', 'reuse': true },
+            { 'en-US': 'Email', 'zh-CN': '邮箱', 'reuse': true },
+            { 'en-US': 'Name', 'zh-CN': '名称', 'reuse': true },
+            { 'en-US': 'Qualify', 'zh-CN': '资格', 'reuse': true },
+            { 'en-US': 'User', 'zh-CN': '用户', 'reuse': true },
+            { 'en-US': 'Description', 'zh-CN': '描述', 'reuse': true },
+            { 'en-US': 'Hide sent', 'zh-CN': '隐藏已发送', 'reuse': true }
+        ]
+    };
+
+    /**
+     * CPU 管理页
+     * @see https://screeps.com/a/#!/cpu
+     */
+    const content$z = {
+        hashs: ['#!/cpu'],
+        content: [
+            { 'en-US': 'Manage your CPU', 'zh-CN': '管理您的 CPU' },
+            { 'en-US': 'CPU Credits', 'zh-CN': 'CPU 点数', 'reuse': true },
+            { 'en-US': 'CPU limit', 'zh-CN': 'CPU 限制', 'reuse': true },
+            { 'en-US': 'Credits', 'zh-CN': '点数', 'reuse': true },
+            { 'en-US': 'Get more', 'zh-CN': '获取更多', 'reuse': true },
+            { 'en-US': 'Off', 'zh-CN': '关闭', 'reuse': true },
+            { 'en-US': 'Blocked', 'zh-CN': '已封禁', 'reuse': true },
+            { 'en-US': 'Change', 'zh-CN': '更改', 'reuse': true },
+            { 'en-US': 'Cancel', 'zh-CN': '取消', 'reuse': true },
+            { 'en-US': 'Save', 'zh-CN': '保存', 'reuse': true },
+            { 'en-US': 'Days Left', 'zh-CN': '剩余天数', 'reuse': true },
+            { 'en-US': 'Next charge date:', 'zh-CN': '下次扣费日期：', 'reuse': true },
+            { 'en-US': '1 CPU Credit', 'zh-CN': '1 点 CPU', 'reuse': true },
+            { 'en-US': '1ms CPU time limit', 'zh-CN': '1ms CPU 时间限制', 'reuse': true },
+            { 'en-US': '1 day', 'zh-CN': '1 天', 'reuse': true },
+            {
+                'en-US': 'are spent to execute your scripts on the game server on a daily basis.\nYou can set a',
+                'zh-CN': '会按天消耗，用于在游戏服务器上执行您的脚本。您可以设置',
+                'reuse': true
+            },
+            {
+                'en-US': 'are spent to execute your scripts on the game server on a daily basis. You can set a',
+                'zh-CN': '会按天消耗，用于在游戏服务器上执行您的脚本。您可以设置',
+                'reuse': true
+            },
+            {
+                'en-US': 'for scripts execution in the range between 20 and 300.\nYou can change the value any time without limitation.',
+                'zh-CN': '用于脚本执行，范围为 20 到 300。您可以随时更改该值，没有次数限制。',
+                'reuse': true
+            },
+            {
+                'en-US': 'for scripts execution in the range between 20 and 300. You can change the value any time without limitation.',
+                'zh-CN': '用于脚本执行，范围为 20 到 300。您可以随时更改该值，没有次数限制。',
+                'reuse': true
+            },
+            {
+                'en-US': 'on your game tick execution within',
+                'zh-CN': '用于您每个游戏 tick 的执行，持续',
+                'reuse': true
+            },
+            { 'en-US': 'You have insufficient credits', 'zh-CN': '您的点数不足', 'reuse': true },
+            {
+                'en-US': /^You will be charged \d+ credits$/,
+                'zh-CN': (text) => text.replace('You will be charged ', '将扣除 ').replace(' credits', ' 点'),
+                'reuse': true
+            },
+            {
+                'en-US': /^You will be refunded \d+ credits$/,
+                'zh-CN': (text) => text.replace('You will be refunded ', '将退还 ').replace(' credits', ' 点'),
+                'reuse': true
+            },
+            {
+                'selector': '.cpu-desc',
+                'zh-CN': (el) => {
+                    el.innerHTML = el.innerHTML
+                        .replace('<b>CPU Credits</b> are spent to execute your scripts on the game server on a daily basis.', '<b>CPU 点数</b>会按天消耗，用于在游戏服务器上执行您的脚本。')
+                        .replace('You can set a <b>CPU limit</b> for scripts execution in the range between 20 and 300.', '您可以将脚本执行的 <b>CPU 限制</b>设置在 20 到 300 之间。')
+                        .replace('You can change the value any time without limitation.', '您可以随时更改该值，没有次数限制。')
+                        .replace('<b>1 CPU Credit</b> = <b>1ms CPU time limit</b> on your game tick execution within <b>1 day</b>.', '<b>1 点 CPU</b> = 在 <b>1 天</b>内，每个游戏 tick 可使用 <b>1ms CPU 时间限制</b>。');
+                },
+                'reuse': true
+            }
+        ]
+    };
+
+    /**
+     * 问题上报
+     * @see https://screeps.com/a/#!/report-problem
+     */
+    const content$A = {
+        hashs: ['#!/report-problem'],
+        content: [
+            { 'en-US': 'Report a problem', 'zh-CN': '问题上报' },
+            { 'en-US': 'Before submitting the form below, please note the following:', 'zh-CN': '提交下方表单前，请注意以下事项：' },
+            { 'en-US': 'You can use our', 'zh-CN': '您可以使用我们的 ' },
+            { 'en-US': 'Slack chat', 'zh-CN': 'Slack 聊天室' },
+            { 'en-US': 'to get a quick answer to your question from our community members.', 'zh-CN': ' 向社区成员快速提问。' },
+            { 'en-US': 'Please leave your feature request in', 'zh-CN': '功能建议请发到 ' },
+            { 'en-US': 'this forum section', 'zh-CN': '此论坛分区' },
+            { 'en-US': 'where other players can join its discussion.', 'zh-CN': '，以便其他玩家一起讨论。' },
+            {
+                'en-US': 'If you report a bug, please specify your client and OS and attach a screenshot or screencast showing the issue.',
+                'zh-CN': '如果您要报告缺陷，请注明客户端与操作系统，并附上能复现问题的截图或录屏。'
+            },
+            { 'en-US': 'Urgent', 'zh-CN': '紧急' },
+            {
+                'en-US': 'Check this box if your request requires immediate attention, for example when your account is not functioning properly. Please do so only when absolutely necessary.',
+                'zh-CN': '仅在需要立即处理时勾选此项，例如账户无法正常使用。请务必只在确有必要时勾选。'
+            },
+            { 'en-US': 'Submit', 'zh-CN': '提交', 'reuse': true },
+            { 'en-US': 'Your request has been successfully submitted.', 'zh-CN': '您的请求已成功提交。', 'reuse': true },
+            {
+                'selector': 'input[placeholder="Your email address"]',
+                'zh-CN': (el) => el.setAttribute('placeholder', '您的邮箱地址'),
+                'reuse': true
+            },
+            {
+                'selector': 'input[placeholder="Subject"]',
+                'zh-CN': (el) => el.setAttribute('placeholder', '主题'),
+                'reuse': true
+            },
+            {
+                'selector': 'textarea[placeholder="Description"]',
+                'zh-CN': (el) => el.setAttribute('placeholder', '描述'),
+                'reuse': true
+            },
+            {
+                'selector': 'input[placeholder="Your client and OS version"]',
+                'zh-CN': (el) => el.setAttribute('placeholder', '您的客户端与操作系统版本'),
                 'reuse': true
             }
         ]
@@ -3121,13 +3731,16 @@
         content$h,
         content$i,
         ...account,
-        content$o,
-        content$p,
+        content$r,
+        content$s,
         ...map,
         content$g,
-        content$s,
-        content$t,
-        content$u
+        content$v,
+        content$w,
+        content$x,
+        content$y,
+        content$z,
+        content$A
     ];
 
     try {
