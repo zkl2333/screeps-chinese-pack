@@ -306,6 +306,8 @@ const content: PageContent = {
         { 'en-US': 'This structure emits bright light and splashes of sparks.', 'zh-CN': '这个建筑散发着亮光，飞溅出火星。', 'reuse': true },
 
         // tombstone
+        { 'en-US': 'Tombstone', 'zh-CN': '墓碑', 'reuse': true },
+        { 'en-US': 'tombstone', 'zh-CN': '墓碑', 'reuse': true },
         { 'en-US': 'Death time:', 'zh-CN': '死亡时间：', 'reuse': true },
         // {
         //     'selector': 'div.ng-scope > div.ng-binding.ng-scope',
