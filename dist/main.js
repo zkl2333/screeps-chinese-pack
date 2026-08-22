@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         screeps-chinese-pack
 // @namespace    https://github.com/zkl2333/screeps-chinese-pack
-// @version      1.9.1
+// @version      1.9.2
 // @description  用于汉化 screeps.com 网站的油猴脚本
 // @author       zkl2333
 // @homepageURL  https://github.com/zkl2333/screeps-chinese-pack
@@ -1301,6 +1301,8 @@
             { 'en-US': 'Power:', 'zh-CN': '超能：', 'reuse': true },
             { 'en-US': 'This structure emits bright light and splashes of sparks.', 'zh-CN': '这个建筑散发着亮光，飞溅出火星。', 'reuse': true },
             // tombstone
+            { 'en-US': 'Tombstone', 'zh-CN': '墓碑', 'reuse': true },
+            { 'en-US': 'tombstone', 'zh-CN': '墓碑', 'reuse': true },
             { 'en-US': 'Death time:', 'zh-CN': '死亡时间：', 'reuse': true },
             // {
             //     'selector': 'div.ng-scope > div.ng-binding.ng-scope',
